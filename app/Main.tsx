@@ -1,5 +1,6 @@
 import siteMetadata from '@/data/siteMetadata'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import Image from 'next/image'
 
 const MAX_DISPLAY = 5
 
@@ -99,7 +100,7 @@ export default function Home({ posts }) {
               </div>
               <div className="flex justify-center">
                 <div className="dark:bg-background-dark w-full max-w-lg rounded-xl bg-white p-4 shadow-lg">
-                  <img
+                  <Image
                     className="h-auto w-full rounded-lg"
                     alt="Abstract representation of the Volang software interface"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxwfTx-VI6k4VQpeT1TaUjOFFSE1ysuWA_SR8EArJ329nbW_32rca3Wh1-91gtA_JXSN0tUp-h5UQ1wzB5HE70g130-KuM5c-_U86bIbCwA1y1LAKXJDHgE9pjvOWfm-mQA1v6pBaHRiu2faiIrEPIMIRvSB9yJWfBqRMWoEZJdZiNH9UEbLEIH5scg3ZVzde1UPhZ8Cg2Q5yKPBvbedeJjbNwZrlvXAb_Ny453RCW6lx_MMLsoXoEEMzNRODiC7LP6B2wyPiL1s0"

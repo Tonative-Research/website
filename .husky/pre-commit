@@ -1,1 +1,6 @@
+#!/usr/bin/env sh
+
+echo "----- husky pre-commit hooks running -----"
 npx --no-install lint-staged
+git add -A .
+echo "----- husky pre-commit hooks ends -----"
