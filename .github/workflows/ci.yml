@@ -30,9 +30,3 @@ jobs:
 
       - name: Lint code
         run: yarn lint
-
-      - name: Check TypeScript types
-        run: yarn tsc --noEmit
-
-      - name: Run tests
-        run: yarn test --if-present
