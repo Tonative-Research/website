@@ -27,4 +27,8 @@ Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
+[Deployed](https://website-one-livid-91.vercel.app/)
+
+---
+
 Built using [**Next.js**, **Tailwind CSS**, and **TypeScript** theme](https://github.com/timlrx/tailwind-nextjs-starter-blog)

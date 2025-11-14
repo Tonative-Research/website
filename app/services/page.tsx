@@ -42,7 +42,7 @@ export default async function Page() {
                 <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -56,7 +56,7 @@ export default async function Page() {
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -70,7 +70,7 @@ export default async function Page() {
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -84,7 +84,7 @@ export default async function Page() {
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -98,7 +98,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <div className="mt-auto">
-                  <button className="flex h-12 w-full items-center justify-center rounded-lg bg-teal-700 px-5 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors hover:bg-teal-800">
+                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors">
                     <span className="truncate">Learn More</span>
                   </button>
                 </div>
@@ -125,7 +125,7 @@ export default async function Page() {
                 <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -139,7 +139,7 @@ export default async function Page() {
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -153,7 +153,7 @@ export default async function Page() {
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -167,7 +167,7 @@ export default async function Page() {
                   </li>
                   <li className="flex items-start">
                     <svg
-                      className="text-primary-500 mt-0.5 mr-2 h-5 w-5 flex-shrink-0 dark:text-teal-400"
+                      className="text-primary-500 dark:text-primary-400 mt-0.5 mr-2 h-5 w-5 flex-shrink-0"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -181,7 +181,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <div className="mt-auto">
-                  <button className="flex h-12 w-full items-center justify-center rounded-lg bg-teal-700 px-5 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors hover:bg-teal-800">
+                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors">
                     <span className="truncate">Learn More</span>
                   </button>
                 </div>
@@ -199,7 +199,7 @@ export default async function Page() {
             Have a question or want to get started? Reach out to our team.
           </p>
           <a
-            className="text-primary-500 mt-4 inline-block text-lg font-medium hover:underline dark:text-teal-400"
+            className="text-primary-500 dark:text-primary-400 mt-4 inline-block text-lg font-medium hover:underline"
             href="mailto:services@tonative.org"
           >
             services@tonative.org

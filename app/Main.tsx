@@ -1,4 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
+import Image from 'next/image'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
 
 const MAX_DISPLAY = 5
@@ -15,7 +16,7 @@ export default function Home({ posts }) {
               "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpeHrJ52F6KOyUFDi2MtHS3LhebVAd8iKuqhdJtbF5Re9AiqA7FPi8R0narIuqd94xy7MLYunLnhQOWvOPRBWZfuFJIpfkrNnmSHvI5D0rFov2YMZKOc_KfXC4shdqSlq3j4_u42GSDpAEQr55K4T-oMx0JZlDRsx62z3keD0sBCVf54md6sBFFMEfFFxVUq8cZ1bWKMdCyDB5UzIZu77jxb7UEmwm_6_bKsTA5ERd3_jabLpToJWrc-Y88YtnAQtAxYtCpnHAtpM')",
           }}
         >
-          <div className="absolute inset-0 bg-white/85"></div>
+          <div className="bg-primary-100 absolute inset-0"></div>
           <div className="relative container mx-auto px-6 sm:px-8">
             <div className="flex min-h-[500px] flex-col items-center justify-center py-16 text-center">
               <h1 className="text-primary-900 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
@@ -105,13 +106,15 @@ export default function Home({ posts }) {
                   communication tools. Go beyond mere translation and connect with the world
                   authentically.
                 </p>
-                <button className="text-primary-900 mt-6 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
+                <button className="text-primary-500 mt-6 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
                   Learn More
                 </button>
               </div>
               <div className="flex justify-center">
                 <div className="dark:bg-background-dark w-full max-w-lg rounded-xl bg-white p-4 shadow-lg">
-                  <img
+                  <Image
+                    height={100}
+                    width={100}
                     className="h-auto w-full rounded-lg"
                     alt="Abstract representation of the Tonative software interface"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxwfTx-VI6k4VQpeT1TaUjOFFSE1ysuWA_SR8EArJ329nbW_32rca3Wh1-91gtA_JXSN0tUp-h5UQ1wzB5HE70g130-KuM5c-_U86bIbCwA1y1LAKXJDHgE9pjvOWfm-mQA1v6pBaHRiu2faiIrEPIMIRvSB9yJWfBqRMWoEZJdZiNH9UEbLEIH5scg3ZVzde1UPhZ8Cg2Q5yKPBvbedeJjbNwZrlvXAb_Ny453RCW6lx_MMLsoXoEEMzNRODiC7LP6B2wyPiL1s0"
@@ -215,7 +218,7 @@ export default function Home({ posts }) {
         </section>
       </main>
       {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
+        <div className="flex items-center justify-center pt-4 pb-10">
           <NewsletterForm />
         </div>
       )}
