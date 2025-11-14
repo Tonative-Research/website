@@ -3,11 +3,12 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from 'components/Link'
 import MobileNav from 'components/MobileNav'
-import ThemeSwitch from 'components/ThemeSwitch'
+// import ThemeSwitch from 'components/ThemeSwitch'
 // import SearchButton from 'components/SearchButton'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5'
+  let headerClass =
+    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5 font-header'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -51,7 +52,7 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           {/* this search button to be in the blog page */}
           {/* <SearchButton /> */}
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
 
           <Link
             href="/product"
