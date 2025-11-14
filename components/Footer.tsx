@@ -5,10 +5,10 @@ import SocialIcon from '@/components/social-icons'
 export default function Footer() {
   return (
     <footer className="bg-primary-800 text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+      <div className="px-4 py-12 sm:px-10">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           {/* Brand Section */}
-          <div>
+          <div className="md:col-span-2">
             <h3 className="mb-4 text-xl font-bold">Tonative</h3>
             <p className="text-sm text-gray-300">Language technology for a connected world.</p>
           </div>

@@ -5,6 +5,7 @@ import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'bo
 import { Fragment, useState, useEffect, useRef } from 'react'
 import Link from 'components/Link'
 import headerNavLinks from '@/data/headerNavLinks'
+import siteMetadata from '@/data/siteMetadata'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -83,7 +84,8 @@ const MobileNav = () => {
                   </Link>
                 ))}
                 <Link
-                  href="/product"
+                  href={siteMetadata.volangUrl}
+                  target="_blank"
                   className="bg-primary-500 hover:bg-primary-600 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors"
                 >
                   Discover Tonative

@@ -1,16 +1,16 @@
 'use client'
 import { useState } from 'react'
+import ContactUs from 'components/ContactUs'
 import siteMetadata from 'data/siteMetadata'
-import NewsletterForm from 'pliny/ui/NewsletterForm.js'
 
-export default function Main() {
+export default function DatasetToolsMain() {
   const [activeFilter, setActiveFilter] = useState('All')
 
   const datasets = [
     {
-      name: 'Swahili Corpus',
+      name: 'Swahili Dataset',
       access: {
-        label: 'Open-Sourced',
+        label: 'Request for Access',
         color: 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300',
       },
       validation: 'Peer-Reviewed',
@@ -19,26 +19,37 @@ export default function Main() {
       action: { label: 'Download', href: '#' },
     },
     {
-      name: 'Cherokee Lexicon',
+      name: 'Igbo Dataset',
       access: {
         label: 'Request for Access',
         color: 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300',
       },
       validation: 'Community-Validated',
       size: '500 MB',
-      language: 'Cherokee',
+      language: 'Igbo',
       action: { label: 'Learn More', href: '#' },
     },
     {
-      name: 'Quechua Speech Data',
+      name: 'Hausa Dataset',
       access: {
-        label: 'Open-Sourced',
+        label: 'Request for Access',
         color: 'bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300',
       },
       validation: 'Community-Validated',
       size: '2 GB',
-      language: 'Quechua',
+      language: 'Hausa',
       action: { label: 'Download', href: '#' },
+    },
+    {
+      name: 'Luo Dataset',
+      access: {
+        label: 'Request for Access',
+        color: 'bg-orange-100 text-orange-700 dark:bg-orange-900 dark:text-orange-300',
+      },
+      validation: 'Community-Validated',
+      size: '500 MB',
+      language: 'Luo',
+      action: { label: 'Learn More', href: '#' },
     },
   ]
 
@@ -48,7 +59,7 @@ export default function Main() {
     <main className="flex-1 bg-gray-50 py-10 dark:bg-gray-900">
       {/* Header Section */}
       <div className="mx-auto mb-8 max-w-7xl px-4">
-        <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 dark:text-white">
+        <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
           Our Datasets and AI Tools
         </h1>
         <p className="max-w-3xl text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
@@ -133,7 +144,8 @@ export default function Main() {
                         href={dataset.action.href}
                         className="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-semibold hover:underline"
                       >
-                        {dataset.action.label}
+                        {/* {dataset.action.label} */}
+                        Coming soon
                       </a>
                     </td>
                   </tr>
@@ -161,10 +173,10 @@ export default function Main() {
               </p>
             </div>
             <a
-              href="http://validation.tonative.org"
+              href={siteMetadata.volangUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary-700 hover:bg-primary-800 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-lg px-6 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors"
+              className="bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-lg px-6 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors"
             >
               Access Validation Tool
             </a>
@@ -172,25 +184,7 @@ export default function Main() {
         </div>
       </section>
 
-      {/* Enquiries Section */}
-      <section className="mx-auto max-w-7xl px-4 py-8 text-center">
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          For technical inquiries or data access requests, please contact us at{' '}
-          <a
-            className="text-primary-600 dark:text-primary-400 font-medium hover:underline"
-            href="mailto:services@tonative.org"
-          >
-            services@tonative.org
-          </a>
-        </p>
-      </section>
-
-      {/* Newsletter Section */}
-      {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4">
-          <NewsletterForm />
-        </div>
-      )}
+      <ContactUs heading="For technical inquiries or data access requests, please contact us at" />
     </main>
   )
 }

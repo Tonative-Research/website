@@ -1,8 +1,8 @@
 import { genPageMetadata } from 'app/seo'
-import Main from 'components/social-icons/dataset-tools/Main'
+import DatasetToolsMain from '@/components/dataset-tools/Main'
 
 export const metadata = genPageMetadata({ title: 'Datasets & Tools' })
 
 export default function Page() {
-  return <Main />
+  return <DatasetToolsMain />
 }
