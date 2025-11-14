@@ -1,10 +1,10 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-// import SearchButton from './SearchButton'
+import Link from 'components/Link'
+import MobileNav from 'components/MobileNav'
+import ThemeSwitch from 'components/ThemeSwitch'
+// import SearchButton from 'components/SearchButton'
 
 const Header = () => {
   let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5'
@@ -57,7 +57,7 @@ const Header = () => {
             href="/product"
             className="bg-primary-500 hover:bg-primary-600 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors sm:inline-block"
           >
-            Discover Volang
+            Discover Tonative
           </Link>
 
           {/* Mobile Nav */}

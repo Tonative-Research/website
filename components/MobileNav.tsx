@@ -86,7 +86,7 @@ const MobileNav = () => {
                   href="/product"
                   className="bg-primary-500 hover:bg-primary-600 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors"
                 >
-                  Discover Volang
+                  Discover Tonative
                 </Link>
               </nav>
 

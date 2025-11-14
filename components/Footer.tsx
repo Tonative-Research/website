@@ -1,4 +1,4 @@
-import Link from './Link'
+import Link from 'components/Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
@@ -77,7 +77,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 border-t border-gray-600 pt-6 text-center text-sm text-gray-400">
+        <div className="mt-8 border-t border-gray-300 pt-6 text-center text-sm text-gray-200">
           <p>© {new Date().getFullYear()} Tonative. All rights reserved.</p>
         </div>
       </div>
