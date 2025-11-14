@@ -18,14 +18,17 @@ export default function Page() {
             }}
           />
           <div className="relative container mx-auto px-4 py-24 text-center">
-            <h1 className="mb-4 text-4xl font-bold md:text-5xl">
+            <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-white md:text-5xl">
               Building a More Inclusive
               <br />
               Digital Africa, Together.
             </h1>
-            <button className="bg-accent-500 hover:bg-accent-600 mt-6 rounded-md px-8 py-3 font-semibold text-white transition-colors">
-              Get Involved
-            </button>
+
+            <a href={siteMetadata.volunteerForm} target="_blank">
+              <button className="bg-accent-500 hover:bg-accent-600 mt-6 cursor-pointer rounded-md px-8 py-3 font-semibold text-white transition-colors">
+                Get Involved{' '}
+              </button>
+            </a>
           </div>
         </div>
 
@@ -108,9 +111,11 @@ export default function Page() {
                     in our community. Together, we can ensure that no language is left behind in the
                     digital age.
                   </p>
-                  <button className="bg-primary-600 hover:bg-primary-700 rounded-md px-8 py-3 font-semibold text-white transition-colors">
-                    Join the Movement
-                  </button>
+                  <a href={siteMetadata.volunteerForm} target="_blank">
+                    <button className="bg-primary-600 hover:bg-primary-700 rounded-md px-8 py-3 font-semibold text-white transition-colors">
+                      Join the Movement
+                    </button>
+                  </a>
                 </div>
                 <div className="flex justify-center">
                   <div className="rounded-full bg-green-100 p-12">
@@ -130,7 +135,7 @@ export default function Page() {
 
         {/* Newsletter Section */}
         {siteMetadata.newsletter?.provider && (
-          <div className="flex items-center justify-center pt-4">
+          <div className="flex items-center justify-center pt-4 pb-10">
             <NewsletterForm />
           </div>
         )}

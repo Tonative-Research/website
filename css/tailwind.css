@@ -6,7 +6,7 @@
 
 /* Core theme configuration */
 @theme {
-/* Header font (Cirka) */
+  /* Header font (Cirka) */
   --font-header: var(--font-cirka), ui-sans-serif, system-ui, sans-serif;
 
   /* Body font (Mulish) */
@@ -14,7 +14,7 @@
 
   /* Colors */
   /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
-  --color-primary-50:  oklch(0.955 0.015 220.5);
+  --color-primary-50: oklch(0.955 0.015 220.5);
   --color-primary-100: oklch(0.915 0.028 220.5);
   --color-primary-200: oklch(0.835 0.058 220.5);
   --color-primary-300: oklch(0.735 0.095 220.5);
@@ -26,7 +26,7 @@
   --color-primary-900: oklch(0.29 0.055 220.5);
   --color-primary-950: oklch(0.21 0.045 220.5);
 
-  --color-accent-50:  oklch(0.975 0.045 70.8);
+  --color-accent-50: oklch(0.975 0.045 70.8);
   --color-accent-100: oklch(0.945 0.08 70.8);
   --color-accent-200: oklch(0.885 0.125 70.8);
   --color-accent-300: oklch(0.81 0.165 70.8);
@@ -37,8 +37,6 @@
   --color-accent-800: oklch(0.45 0.105 70.8);
   --color-accent-900: oklch(0.38 0.08 70.8);
   --color-accent-950: oklch(0.29 0.06 70.8);
-
-
 
   --color-gray-50: oklch(0.985 0.002 247.839);
   --color-gray-100: oklch(0.967 0.003 264.542);
@@ -84,7 +82,6 @@
   body {
     font-family: var(--font-body);
   }
-
 
   h1,
   h2,

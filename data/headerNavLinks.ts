@@ -1,10 +1,10 @@
 const headerNavLinks = [
   { href: '/', title: 'Home' },
-  { href: '/blog', title: 'Blog' },
-  { href: '/services', title: 'Services' },
   { href: '/product', title: 'Product' },
-  { href: '/community', title: 'Community' },
   { href: '/dataset-tools', title: 'Dataset & Tools' },
+  { href: '/services', title: 'Services' },
+  { href: '/community', title: 'Community' },
+  { href: '/blog', title: 'Blog' },
 ]
 
 export default headerNavLinks

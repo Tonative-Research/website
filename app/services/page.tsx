@@ -1,4 +1,5 @@
 import { genPageMetadata } from 'app/seo'
+import ContactUs from 'components/ContactUs'
 
 export const metadata = genPageMetadata({ title: 'Services', description: '' })
 
@@ -9,9 +10,9 @@ export default async function Page() {
         {/* Services Header */}
         <div className="flex flex-wrap justify-between gap-3 p-4 py-16">
           <div className="flex w-full min-w-72 flex-col gap-3 text-center">
-            <p className="text-4xl leading-tight font-black tracking-[-0.033em] dark:text-white">
+            <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
               Our Services
-            </p>
+            </h1>
             <p className="mx-auto max-w-2xl text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
               We offer specialized services to enhance language technology and empower communities
               through cultural authenticity and cutting-edge research.
@@ -98,7 +99,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <div className="mt-auto">
-                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors">
+                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
                     <span className="truncate">Learn More</span>
                   </button>
                 </div>
@@ -181,7 +182,7 @@ export default async function Page() {
                   </li>
                 </ul>
                 <div className="mt-auto">
-                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-base leading-normal font-bold tracking-[0.015em] text-white transition-colors">
+                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
                     <span className="truncate">Learn More</span>
                   </button>
                 </div>
@@ -191,20 +192,7 @@ export default async function Page() {
         </div>
 
         {/* Contact Section */}
-        <div className="p-4 py-16 text-center">
-          <h2 className="text-2xl leading-tight font-bold tracking-[-0.015em] dark:text-white">
-            Contact Us
-          </h2>
-          <p className="mt-2 text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
-            Have a question or want to get started? Reach out to our team.
-          </p>
-          <a
-            className="text-primary-500 dark:text-primary-400 mt-4 inline-block text-lg font-medium hover:underline"
-            href="mailto:services@tonative.org"
-          >
-            services@tonative.org
-          </a>
-        </div>
+        <ContactUs />
       </main>
     </>
   )

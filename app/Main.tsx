@@ -9,16 +9,16 @@ export default function Home({ posts }) {
     <>
       <main className="w-full">
         {/* Hero Section */}
-        <div
-          className="relative bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpeHrJ52F6KOyUFDi2MtHS3LhebVAd8iKuqhdJtbF5Re9AiqA7FPi8R0narIuqd94xy7MLYunLnhQOWvOPRBWZfuFJIpfkrNnmSHvI5D0rFov2YMZKOc_KfXC4shdqSlq3j4_u42GSDpAEQr55K4T-oMx0JZlDRsx62z3keD0sBCVf54md6sBFFMEfFFxVUq8cZ1bWKMdCyDB5UzIZu77jxb7UEmwm_6_bKsTA5ERd3_jabLpToJWrc-Y88YtnAQtAxYtCpnHAtpM')",
-          }}
-        >
-          <div className="bg-primary-100 absolute inset-0"></div>
-          <div className="relative container mx-auto px-6 sm:px-8">
-            <div className="flex min-h-[500px] flex-col items-center justify-center py-16 text-center">
+        {/* <section className="relative bg-white py-20 md:py-32 dark:bg-gray-900">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            style={{
+              backgroundImage:
+                "url('https://images.unsplash.com/photo-1526666923127-b2970f64b422?w=1200')",
+            }}
+          />
+          <div className="relative mx-auto px-4 lg:px-10">
+            <div className="mx-auto max-w-4xl text-center">
               <h1 className="text-primary-900 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
                 Introducing Tonative
               </h1>
@@ -26,9 +26,36 @@ export default function Home({ posts }) {
                 Tonative bridges the gap between technology and language preservation for
                 enterprises, fostering authentic communication and cultural understanding.
               </p>
-              <button className="bg-primary-800 hover:bg-primary-700 mt-8 rounded px-8 py-3 text-sm font-medium text-white transition-colors">
-                Discover Tonative
-              </button>
+              <a href={siteMetadata.volunteerForm} target="_blank">
+                <button className="bg-accent-600 hover:bg-accent-700 mt-8 rounded px-8 py-3 text-sm font-medium text-white transition-colors">
+                  Discover Tonative
+                </button>
+              </a>
+            </div>
+          </div>
+        </section> */}
+        <div
+          className="relative bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1526666923127-b2970f64b422?w=1200')",
+          }}
+        >
+          <div className="bg-primary-100 absolute inset-0"></div>
+          <div className="relative container mx-auto px-6 sm:px-8">
+            <div className="flex min-h-[500px] flex-col items-center justify-center py-16 text-center">
+              <h1 className="text-primary-900 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
+                Introducing Volang
+              </h1>
+              <p className="mt-6 max-w-2xl text-base text-gray-700 sm:text-lg">
+                Tonative bridges the gap between technology and language preservation for
+                enterprises, fostering authentic communication and cultural understanding.
+              </p>
+              <a href={siteMetadata.volangUrl} target="_blank">
+                <button className="bg-accent-600 hover:bg-accent-700 mt-8 rounded px-8 py-3 text-sm font-medium text-white transition-colors">
+                  Discover Volang
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -99,16 +126,18 @@ export default function Home({ posts }) {
           <div className="container mx-auto px-6 sm:px-8">
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div className="text-center md:text-left">
-                <h2 className="text-3xl font-bold text-white sm:text-4xl">Introducing Tonative</h2>
+                <h2 className="text-3xl font-bold text-white sm:text-4xl">Introducing Volang</h2>
                 <p className="text-primary-50 mt-4 text-base leading-relaxed">
-                  Tonative is our flagship enterprise software solution, meticulously designed to
+                  Volang is our flagship enterprise software solution, meticulously designed to
                   empower your organization with secure, accurate, and culturally nuanced
                   communication tools. Go beyond mere translation and connect with the world
                   authentically.
                 </p>
-                <button className="text-primary-500 mt-6 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
-                  Learn More
-                </button>
+                <a href={siteMetadata.volangUrl} target="_blank">
+                  <button className="text-primary-500 mt-6 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
+                    Learn More
+                  </button>
+                </a>
               </div>
               <div className="flex justify-center">
                 <div className="dark:bg-background-dark w-full max-w-lg rounded-xl bg-white p-4 shadow-lg">
@@ -211,17 +240,21 @@ export default function Home({ posts }) {
               to supporting linguistic diversity and partner with communities to help preserve and
               promote their languages for future generations.
             </p>
-            <button className="border-primary-800 text-primary-900 hover:bg-primary-50 mx-auto mt-6 rounded border-2 px-6 py-2.5 text-sm font-medium transition-colors">
+            <button className="bg-accent-500 hover:bg-accent-600 mx-auto mt-6 cursor-pointer rounded-sm px-6 py-2.5 text-sm font-medium text-white transition-colors">
               Learn About Our Initiatives
             </button>
           </div>
         </section>
       </main>
-      {siteMetadata.newsletter?.provider && (
-        <div className="flex items-center justify-center pt-4 pb-10">
-          <NewsletterForm />
+      <section className="bg-gray-50 py-16">
+        <div className="container mx-auto px-6 text-center sm:px-8">
+          {siteMetadata.newsletter?.provider && (
+            <div className="flex items-center justify-center pt-4 pb-10">
+              <NewsletterForm />
+            </div>
+          )}
         </div>
-      )}
+      </section>
     </>
   )
 }
