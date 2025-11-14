@@ -19,7 +19,7 @@ export default function Home({ posts }) {
           <div className="relative container mx-auto px-6 sm:px-8">
             <div className="flex min-h-[500px] flex-col items-center justify-center py-16 text-center">
               <h1 className="text-primary-900 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-                Introducting Tonative
+                Introducing Tonative
               </h1>
               <p className="mt-6 max-w-2xl text-base text-gray-700 sm:text-lg">
                 Tonative bridges the gap between technology and language preservation for
@@ -70,7 +70,7 @@ export default function Home({ posts }) {
                   {[
                     "Tonative's advanced language technology and cultural expertise directly address communication hurdles, ensuring clarity and precision.",
                     'Our solutions are built on a foundation of cultural authenticity, helping you build stronger, more respectful relationships.',
-                    'Volang, our flagship product, provides an enterprise-grade platform for seamless, culturally-aware communication.',
+                    'Tonative, our flagship product, provides an enterprise-grade platform for seamless, culturally-aware communication.',
                   ].map((text, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <svg
@@ -98,9 +98,9 @@ export default function Home({ posts }) {
           <div className="container mx-auto px-6 sm:px-8">
             <div className="grid items-center gap-12 md:grid-cols-2">
               <div className="text-center md:text-left">
-                <h2 className="text-3xl font-bold text-white sm:text-4xl">Introducing Volang</h2>
+                <h2 className="text-3xl font-bold text-white sm:text-4xl">Introducing Tonative</h2>
                 <p className="text-primary-50 mt-4 text-base leading-relaxed">
-                  Volang is our flagship enterprise software solution, meticulously designed to
+                  Tonative is our flagship enterprise software solution, meticulously designed to
                   empower your organization with secure, accurate, and culturally nuanced
                   communication tools. Go beyond mere translation and connect with the world
                   authentically.
@@ -110,10 +110,10 @@ export default function Home({ posts }) {
                 </button>
               </div>
               <div className="flex justify-center">
-                <div className="w-full max-w-md rounded-lg bg-white p-6 shadow-xl">
+                <div className="dark:bg-background-dark w-full max-w-lg rounded-xl bg-white p-4 shadow-lg">
                   <img
-                    className="h-auto w-full rounded"
-                    alt="Abstract representation of the Volang software interface"
+                    className="h-auto w-full rounded-lg"
+                    alt="Abstract representation of the Tonative software interface"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxwfTx-VI6k4VQpeT1TaUjOFFSE1ysuWA_SR8EArJ329nbW_32rca3Wh1-91gtA_JXSN0tUp-h5UQ1wzB5HE70g130-KuM5c-_U86bIbCwA1y1LAKXJDHgE9pjvOWfm-mQA1v6pBaHRiu2faiIrEPIMIRvSB9yJWfBqRMWoEZJdZiNH9UEbLEIH5scg3ZVzde1UPhZ8Cg2Q5yKPBvbedeJjbNwZrlvXAb_Ny453RCW6lx_MMLsoXoEEMzNRODiC7LP6B2wyPiL1s0"
                   />
                 </div>

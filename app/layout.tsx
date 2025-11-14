@@ -12,13 +12,6 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 
-/* 👇 Replace Space_Grotesk with Inter */
-// const inter = Inter({
-//   subsets: ['latin'],
-//   display: 'swap',
-//   variable: '--font-inter', // 👈 this replaces --font-space-grotesk
-// })
-
 // Header text
 const cirka = localFont({
   src: [
@@ -141,11 +134,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
+          <Header />
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
+              <main>{children}</main>
             </SearchProvider>
           </SectionContainer>
           <Footer />

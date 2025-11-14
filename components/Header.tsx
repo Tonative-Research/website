@@ -8,7 +8,7 @@ import MobileNav from 'components/MobileNav'
 
 const Header = () => {
   let headerClass =
-    'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5 font-header'
+    'mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-[90%] xl:px-0 flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5 font-header'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }

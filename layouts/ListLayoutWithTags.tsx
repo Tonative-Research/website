@@ -106,22 +106,22 @@ export default function ListLayoutWithTags({
                 <div className="hidden flex-1 justify-end gap-8 md:flex">
                   <div className="flex items-center gap-9">
                     <Link
-                      href="#"
+                      href="/home"
                       className="hover:text-accent dark:hover:text-accent text-sm font-medium"
                     >
                       Home
                     </Link>
                     <Link
-                      href="#"
+                      href="/about"
                       className="hover:text-accent dark:hover:text-accent text-sm font-medium"
                     >
                       About
                     </Link>
-                    <Link href="#" className="text-accent text-sm font-medium">
+                    <Link href="/research" className="text-accent text-sm font-medium">
                       Research
                     </Link>
                     <Link
-                      href="#"
+                      href="/contact"
                       className="hover:text-accent dark:hover:text-accent text-sm font-medium"
                     >
                       Contact
@@ -217,7 +217,7 @@ export default function ListLayoutWithTags({
                           <p className="mt-2 flex-1 text-sm leading-relaxed">{desc}</p>
                         </div>
                         <Link
-                          href="#"
+                          href="/read-full-paper"
                           className="group text-accent mt-4 inline-flex w-fit items-center gap-2 text-sm font-bold"
                         >
                           <span>Read Full Paper</span>
@@ -240,26 +240,26 @@ export default function ListLayoutWithTags({
                       <span className="material-symbols-outlined">chevron_left</span>
                     </button>
                     <Link
-                      href="#"
+                      href="/1"
                       className="bg-primary rounded-lg px-4 py-2 text-sm font-bold text-white"
                     >
                       1
                     </Link>
                     <Link
-                      href="#"
+                      href="/2"
                       className="rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700"
                     >
                       2
                     </Link>
                     <Link
-                      href="#"
+                      href="/3"
                       className="rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700"
                     >
                       3
                     </Link>
                     <span className="px-2 py-2 text-sm font-medium">...</span>
                     <Link
-                      href="#"
+                      href="8"
                       className="rounded-lg px-4 py-2 text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-700"
                     >
                       8
@@ -289,13 +289,19 @@ export default function ListLayoutWithTags({
                     </p>
                   </div>
                   <div className="text-subtle-light dark:text-subtle-dark flex gap-6">
-                    <Link href="#" className="hover:text-accent dark:hover:text-accent">
+                    <Link
+                      href="/privacy-policy"
+                      className="hover:text-accent dark:hover:text-accent"
+                    >
                       Privacy Policy
                     </Link>
-                    <Link href="#" className="hover:text-accent dark:hover:text-accent">
+                    <Link
+                      href="/terms-of-service"
+                      className="hover:text-accent dark:hover:text-accent"
+                    >
                       Terms of Service
                     </Link>
-                    <Link href="#" className="hover:text-accent dark:hover:text-accent">
+                    <Link href="/contact" className="hover:text-accent dark:hover:text-accent">
                       Contact
                     </Link>
                   </div>
