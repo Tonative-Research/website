@@ -1,9 +1,9 @@
 {
-  "name": "",
+  "name": "Tonative Research",
   "short_name": "",
   "icons": [
     {
-      "src": "/android-chrome-96x96.png",
+      "src": "/favicon-32x32.jpg",
       "sizes": "96x96",
       "type": "image/png"
     }

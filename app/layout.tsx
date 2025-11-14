@@ -2,7 +2,6 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-import { Inter } from 'next/font/google'
 import { Analytics, AnalyticsConfig } from 'pliny/analytics'
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import Header from '@/components/Header'
@@ -11,12 +10,50 @@ import Footer from '@/components/Footer'
 import siteMetadata from '@/data/siteMetadata'
 import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
+import localFont from 'next/font/local'
 
-/* 👇 Replace Space_Grotesk with Inter */
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter', // 👈 this replaces --font-space-grotesk
+// Header text
+const cirka = localFont({
+  src: [
+    {
+      path: '../public/static/fonts/Cirka-Light.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Cirka-Variable.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/static/fonts/Cirka-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-cirka',
+})
+
+// MULISH — Body font (all weights)
+const mulish = localFont({
+  src: [
+    { path: '../public/static/fonts/Mulish-ExtraLight.ttf', weight: '200', style: 'normal' },
+    { path: '../public/static/fonts/Mulish-Light.ttf', weight: '300', style: 'normal' },
+    { path: '../public/static/fonts/Mulish-Regular.ttf', weight: '400', style: 'normal' },
+    { path: '../public/static/fonts/Mulish-Medium.ttf', weight: '500', style: 'normal' },
+    { path: '../public/static/fonts/Mulish-SemiBold.ttf', weight: '600', style: 'normal' },
+    { path: '../public/static/fonts/Mulish-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/static/fonts/Mulish-ExtraBold.ttf', weight: '800', style: 'normal' },
+
+    // Italics
+    { path: '../public/static/fonts/Mulish-LightItalic.ttf', weight: '300', style: 'italic' },
+    { path: '../public/static/fonts/Mulish-Italic.ttf', weight: '400', style: 'italic' },
+    { path: '../public/static/fonts/Mulish-MediumItalic.ttf', weight: '500', style: 'italic' },
+    { path: '../public/static/fonts/Mulish-SemiBoldItalic.ttf', weight: '600', style: 'italic' },
+    { path: '../public/static/fonts/Mulish-BoldItalic.ttf', weight: '700', style: 'italic' },
+    { path: '../public/static/fonts/Mulish-BlackItalic.ttf', weight: '900', style: 'italic' },
+  ],
+  variable: '--font-mulish',
 })
 
 export const metadata: Metadata = {
@@ -65,19 +102,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang={siteMetadata.language}
-      className={`${inter.variable} scroll-smooth`} // 👈 updated reference
+      className={`${cirka.variable} ${mulish.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <link
         rel="apple-touch-icon"
         sizes="76x76"
-        href={`${basePath}/static/favicons/apple-touch-icon.png`}
+        href={`${basePath}/static/favicons/favicon-32x32.jpg`}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href={`${basePath}/static/favicons/favicon-32x32.png`}
+        href={`${basePath}/static/favicons/favicon-32x32.jpg`}
       />
       <link
         rel="icon"
@@ -97,11 +134,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
+          <Header />
           <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
           <SectionContainer>
             <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
-              <Header />
-              <main className="mb-auto">{children}</main>
+              <main>{children}</main>
             </SearchProvider>
           </SectionContainer>
           <Footer />

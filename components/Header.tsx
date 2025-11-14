@@ -1,13 +1,14 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
-import Link from './Link'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
-// import SearchButton from './SearchButton'
+import Link from 'components/Link'
+import MobileNav from 'components/MobileNav'
+// import ThemeSwitch from 'components/ThemeSwitch'
+// import SearchButton from 'components/SearchButton'
 
 const Header = () => {
-  let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5'
+  let headerClass =
+    'mx-auto max-w-3xl px-4 sm:px-6 xl:max-w-[90%] xl:px-0 flex items-center w-full bg-white dark:bg-gray-950 justify-between py-5 font-header'
   if (siteMetadata.stickyNav) {
     headerClass += ' sticky top-0 z-50'
   }
@@ -51,13 +52,13 @@ const Header = () => {
         <div className="flex items-center space-x-3">
           {/* this search button to be in the blog page */}
           {/* <SearchButton /> */}
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
 
           <Link
             href="/product"
             className="bg-primary-500 hover:bg-primary-600 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors sm:inline-block"
           >
-            Discover Volang
+            Discover Tonative
           </Link>
 
           {/* Mobile Nav */}

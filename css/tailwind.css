@@ -6,10 +6,12 @@
 
 /* Core theme configuration */
 @theme {
-  /* Font families */
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    
+/* Header font (Cirka) */
+  --font-header: var(--font-cirka), ui-sans-serif, system-ui, sans-serif;
+
+  /* Body font (Mulish) */
+  --font-body: var(--font-mulish), ui-sans-serif, system-ui, sans-serif;
+
   /* Colors */
   /* Copied from https://tailwindcss.com/docs/theme#default-theme-variable-reference */
   --color-primary-50:  oklch(0.955 0.015 220.5);
@@ -77,6 +79,20 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  body {
+    font-family: var(--font-body);
+  }
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-header);
   }
 
   a,
