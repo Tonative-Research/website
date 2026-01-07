@@ -29,6 +29,7 @@ const nextConfig = {
   output: process.env.EXPORT ? 'export' : undefined,
   basePath: process.env.BASE_PATH || undefined,
   reactStrictMode: true,
+  swcMinify: true,
   trailingSlash: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   eslint: {
