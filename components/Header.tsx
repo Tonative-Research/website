@@ -3,6 +3,7 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logo.svg'
 import Link from 'components/Link'
 import MobileNav from 'components/MobileNav'
+import Image from 'next/image'
 // import ThemeSwitch from 'components/ThemeSwitch'
 // import SearchButton from 'components/SearchButton'
 
@@ -19,7 +20,7 @@ const Header = () => {
       <Link href="/" aria-label={siteMetadata.headerTitle}>
         <div className="flex items-center">
           <div className="mr-3">
-            <img src={Logo} alt="" />
+            <Image src={Logo} alt="" />
             {/* <Logo /> */}
           </div>
           {typeof siteMetadata.headerTitle === 'string' ? (
