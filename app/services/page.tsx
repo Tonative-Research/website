@@ -14,8 +14,8 @@ export default async function Page() {
               Our Services
             </h1>
             <p className="mx-auto max-w-2xl text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
-              We offer specialized services to enhance language technology and empower communities
-              through cultural authenticity and cutting-edge research.
+              Bridging cultures through expert language services—empowering communities with
+              cutting-edge translation technology and culturally authentic AI solutions.
             </p>
           </div>
         </div>
@@ -37,8 +37,9 @@ export default async function Page() {
                   Language Translators Training
                 </h3>
                 <p className="mb-4 text-sm leading-normal font-normal text-gray-500 dark:text-gray-400">
-                  Our comprehensive training program is designed to equip language translators with
-                  the skills and knowledge needed to excel in a competitive global market.
+                  Master the art and science of translation. Our comprehensive program equips you
+                  with advanced skills, cultural expertise, and industry-recognized certification to
+                  thrive in the global language market.
                 </p>
                 <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-300">
                   <li className="flex items-start">
@@ -53,7 +54,7 @@ export default async function Page() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Professional development and upskilling
+                    Advanced training in specialized translation domains{' '}
                   </li>
                   <li className="flex items-start">
                     <svg
@@ -67,7 +68,7 @@ export default async function Page() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Improved translation quality and accuracy
+                    Proven techniques for higher accuracy and fluency{' '}
                   </li>
                   <li className="flex items-start">
                     <svg
@@ -95,7 +96,7 @@ export default async function Page() {
                         clipRule="evenodd"
                       />
                     </svg>
-                    Certification and industry recognition
+                    Industry-recognized certification upon completion{' '}
                   </li>
                 </ul>
                 <div className="mt-auto">

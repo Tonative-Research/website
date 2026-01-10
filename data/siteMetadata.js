@@ -24,10 +24,12 @@ const siteMetadata = {
   medium: 'https://medium.com',
   bluesky: 'https://bsky.app/',
   huggingFace: 'https://huggingface.co/tonative-org',
+  validationUrl: 'https://validation.tonative.org/',
   volunteerForm:
     'https://docs.google.com/forms/d/e/1FAIpQLSc2UvPZudC97qCiOPdpqmBEKq6VRqrPfNckhgf7s-aCAiNb0g/viewform?usp=send_form',
   volangUrl: 'https://volang.tonative.org/',
   volangContactEmail: 'volang@tonative.org',
+  volangContactUrl: 'https://volang.app/contact',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: true,

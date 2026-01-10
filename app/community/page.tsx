@@ -26,7 +26,7 @@ export default function Page() {
 
             <a href={siteMetadata.volunteerForm} target="_blank">
               <button className="bg-accent-500 hover:bg-accent-600 mt-6 cursor-pointer rounded-md px-8 py-3 font-semibold text-white transition-colors">
-                Get Involved{' '}
+                Request to Join
               </button>
             </a>
           </div>
@@ -37,10 +37,9 @@ export default function Page() {
           <div className="container mx-auto max-w-4xl px-4 text-center">
             <h2 className="mb-6 text-3xl font-bold">Our Mission</h2>
             <p className="leading-relaxed text-gray-700">
-              Our mission is to empower communities and individuals across Africa and the global
-              diaspora through innovative technology solutions. We believe in fostering digital
-              inclusion by creating tools and resources that bridge language and cultural gaps,
-              enabling authentic expression and meaningful connections in the digital age.
+              Our mission is to empower African language representation in AI technology by creating
+              high-quality datasets, tools, and expertise that can bridge existing language and
+              cultural gaps.
             </p>
           </div>
         </section>
@@ -50,12 +49,12 @@ export default function Page() {
           <div className="container mx-auto px-4">
             <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 md:grid-cols-2">
               <div className="text-center">
-                <div className="mb-2 text-5xl font-bold text-gray-900">2000+</div>
-                <div className="text-gray-600">Empowerments</div>
+                <div className="mb-2 text-5xl font-bold text-gray-900">400+</div>
+                <div className="text-gray-600">Members</div>
               </div>
               <div className="text-center">
-                <div className="mb-2 text-5xl font-bold text-gray-900">13</div>
-                <div className="text-gray-600">Cities on 4 seas</div>
+                <div className="mb-2 text-5xl font-bold text-gray-900">23</div>
+                <div className="text-gray-600">African Countries</div>
               </div>
             </div>
           </div>
@@ -69,18 +68,24 @@ export default function Page() {
               {[
                 {
                   image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
-                  title: 'Linguistic Empowerment',
-                  desc: 'Celebrating and preserving indigenous languages through technology.',
+                  title: 'Tonative Booth at Deep Learning Indaba Conference at Kigali',
+                  desc: 'Engaging with other African NLP enthisiaists and signing new members into our community.',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600',
-                  title: 'Youth Language Initiatives',
-                  desc: 'Engaging young people in language preservation and digital literacy.',
+                  title: 'AfriLang Conference at Kampala',
+                  desc: ' Presenting our paper "Tonative: Community-Driven Extension of African Datasets Through Human-AI Collaboration.',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600',
-                  title: 'Digital Skills Empowerment',
-                  desc: 'Building capacity through workshops and training programs.',
+                  title:
+                    'Centre for Low-Resource Languages and Cultures Workshop at NeurIPs, Mexico City',
+                  desc: 'Founded and chaired by Joy Naomi, with Tonative leaders as part of the co-organisers.',
+                },
+                {
+                  image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
+                  title: 'Mawazo Ideas Night: Is the Algo African?',
+                  desc: 'Cynthia Amol at a public events platform for science engagement and communication.',
                 },
               ].map((card, i) => (
                 <div
@@ -106,14 +111,13 @@ export default function Page() {
                 <div>
                   <h2 className="mb-4 text-3xl font-bold">Become a Language Champion</h2>
                   <p className="mb-6 text-gray-700">
-                    Join us in our mission to preserve and promote linguistic diversity. Whether
-                    you're a language enthusiast, educator, or technologist, there's a place for you
-                    in our community. Together, we can ensure that no language is left behind in the
-                    digital age.
+                    Join us in our mission to preserve and promote Africa linguistic diversity.
+                    Whether you're a language enthusiast, educator, or technologist, there's a place
+                    for you in our community to drive equitable AI.
                   </p>
                   <a href={siteMetadata.volunteerForm} target="_blank">
                     <button className="bg-primary-600 hover:bg-primary-700 rounded-md px-8 py-3 font-semibold text-white transition-colors">
-                      Join the Movement
+                      Request to Join
                     </button>
                   </a>
                 </div>

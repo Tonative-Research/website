@@ -63,8 +63,9 @@ export default function DatasetToolsMain() {
           Our Datasets and AI Tools
         </h1>
         <p className="max-w-3xl text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
-          Explore our curated datasets and leverage our AI-powered tools to advance language
-          technology.
+          Build better language models with expertly curated datasets and enterprise-grade AI tools.
+          Access expertly curated African language datasets and AI-powered tools to build more
+          accurate, inclusive language technology
         </p>
       </div>
 
@@ -168,17 +169,16 @@ export default function DatasetToolsMain() {
                 Language Data Translation Validation Tool
               </h3>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Leverage our AI to validate the accuracy and cultural appropriateness of your
-                translated language data.
+                Automatically validate translation accuracy and cultural appropriateness at scale.
               </p>
             </div>
             <a
-              href={siteMetadata.volangUrl}
+              href={siteMetadata.validationUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-lg px-6 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors"
             >
-              Access Validation Tool
+              Access Custom Language Tools
             </a>
           </div>
         </div>

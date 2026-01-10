@@ -45,15 +45,15 @@ export default function Home({ posts }) {
           <div className="relative container mx-auto px-6 sm:px-8">
             <div className="flex min-h-[500px] flex-col items-center justify-center py-16 text-center">
               <h1 className="text-primary-900 text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-                Introducing Volang
+                Speak your Language
               </h1>
               <p className="mt-6 max-w-2xl text-base text-gray-700 sm:text-lg">
-                Tonative bridges the gap between technology and language preservation for
-                enterprises, fostering authentic communication and cultural understanding.
+                We train African data curators, create custom language datasets and build tools that
+                foster Africa's inclusion in AI technology
               </p>
               <a href={siteMetadata.volangUrl} target="_blank">
                 <button className="bg-accent-600 hover:bg-accent-700 mt-8 rounded px-8 py-3 text-sm font-medium text-white transition-colors">
-                  Discover Volang
+                  Explore Datasets
                 </button>
               </a>
             </div>
@@ -66,12 +66,12 @@ export default function Home({ posts }) {
             <div className="grid gap-12 md:grid-cols-2">
               {/* Problem */}
               <div>
-                <h2 className="text-primary-900 mb-6 text-3xl font-bold">The Problem</h2>
+                <h2 className="text-primary-900 mb-6 text-3xl font-bold">The Challenge</h2>
                 <div className="space-y-5">
                   {[
-                    'Businesses face significant challenges with language barriers, leading to miscommunication and lost opportunities in global markets.',
-                    'Pervasive cultural misunderstandings erode trust and hinder effective collaboration with international partners and customers.',
-                    'Inefficient and culturally unaware communication tools decrease productivity and fail to convey the intended message accurately.',
+                    'Most AI models cannot understand African languages due to insufficient training data, leaving many communities behind.',
+                    'Scaling AI across African languages is nearly impossible without access to trained native speakers and data quality validation tools.',
+                    'Businesses lose customers and revenue in multilingual markets, yet most voice translation apps prioritize only major global languages.',
                   ].map((text, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <svg
@@ -93,12 +93,12 @@ export default function Home({ posts }) {
 
               {/* Solution */}
               <div className="border-primary-600 border-l-4 pl-8">
-                <h2 className="text-primary-900 mb-6 text-3xl font-bold">The Solution</h2>
+                <h2 className="text-primary-900 mb-6 text-3xl font-bold">How we Help</h2>
                 <div className="space-y-5">
                   {[
-                    "Tonative's advanced language technology and cultural expertise directly address communication hurdles, ensuring clarity and precision.",
-                    'Our solutions are built on a foundation of cultural authenticity, helping you build stronger, more respectful relationships.',
-                    'Tonative, our flagship product, provides an enterprise-grade platform for seamless, culturally-aware communication.',
+                    'Dataset Marketplace: Browse open-source datasets or purchase premium African language collections',
+                    'Custom Dataset Curation: Commission bespoke African speech and text datasets for your specific AI training or evaluation needs.',
+                    'Trained Linguist Network: Hire vetted, trained African language experts for translation, annotation, and validation projects.',
                   ].map((text, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <svg
@@ -128,14 +128,13 @@ export default function Home({ posts }) {
               <div className="text-center md:text-left">
                 <h2 className="text-3xl font-bold text-white sm:text-4xl">Introducing Volang</h2>
                 <p className="text-primary-50 mt-4 text-base leading-relaxed">
-                  Volang is our flagship enterprise software solution, meticulously designed to
-                  empower your organization with secure, accurate, and culturally nuanced
-                  communication tools. Go beyond mere translation and connect with the world
-                  authentically.
+                  Volang is a web app that provides real-time conversation translation in a
+                  face-to-face business setting. It supports both African and other global languages
+                  with cultural accuracy, low-latency and data protection.
                 </p>
-                <a href={siteMetadata.volangUrl} target="_blank">
+                <a href={siteMetadata.volangContactUrl} target="_blank">
                   <button className="text-primary-500 mt-6 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
-                    Learn More
+                    Book a Demo
                   </button>
                 </a>
               </div>
@@ -236,9 +235,8 @@ export default function Home({ posts }) {
               Our Commitment to Community
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-gray-700">
-              At Tonative, we believe technology should empower, not erase. We are deeply committed
-              to supporting linguistic diversity and partner with communities to help preserve and
-              promote their languages for future generations.
+              Whether you need custom datasets, want us to demo Volang, or are interested in hiring
+              trained African linguists, let's talk.
             </p>
             <button className="bg-accent-500 hover:bg-accent-600 mx-auto mt-6 cursor-pointer rounded-sm px-6 py-2.5 text-sm font-medium text-white transition-colors">
               Learn About Our Initiatives
