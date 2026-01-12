@@ -115,7 +115,7 @@ export default function DataCurator() {
                   {openIndex === idx && (
                     <div className="px-6 pt-2 pb-5">
                       <p
-                        className="pl-6 leading-relaxed text-gray-700"
+                        className="px-3 leading-relaxed text-gray-700 lg:pl-6"
                         style={{ fontFamily: 'var(--font-body)' }}
                       >
                         {benefit.description}

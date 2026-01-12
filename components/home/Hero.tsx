@@ -5,13 +5,13 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import HeroManSmile from '@/data/images/hero_older_man.png'
 import HeroCommunityWork from '@/data/images/hero_community_work.png'
 import HeroGroupSeated from '@/data/images/hero_group_seated.png'
-import HeroServerCables from '@/data/images/hero_server_cables.png'
+import HeroSoloLady from '@/data/images/hero_solo_lady.png'
 import Image from 'next/image'
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const images = [HeroManSmile, HeroCommunityWork, HeroGroupSeated, HeroServerCables]
+  const images = [HeroManSmile, HeroCommunityWork, HeroSoloLady, HeroGroupSeated]
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % 2)
@@ -28,13 +28,13 @@ export default function Hero() {
       {/* Main content container */}
       <div className="relative container mx-auto px-6 py-20 sm:px-8">
         {/* Badge */}
-        <div className="mb-8 flex justify-center">
+        {/* <div className="mb-8 flex justify-center">
           <div className="bg-accent-600 inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white">
-            {/* <span className="bg-accent-500 rounded-full px-2 py-0.5 text-xs">New</span> */}
+            <span className="bg-accent-500 rounded-full px-2 py-0.5 text-xs">New</span>
             <span>Introducing Tonative</span>
             <ArrowRight className="h-4 w-4" />
           </div>
-        </div>
+        </div> */}
 
         {/* Main heading */}
         <div className="mb-6 text-center">
@@ -128,8 +128,8 @@ export default function Hero() {
           {/* Bottom left decorative image */}
           <div className="absolute -bottom-12 left-0 hidden w-64 xl:block">
             <div className="transform overflow-hidden rounded-2xl shadow-2xl transition-transform duration-300 hover:scale-105">
-              <img
-                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
+              <Image
+                src={HeroGroupSeated}
                 alt="Decorative element"
                 className="h-48 w-full object-cover"
               />

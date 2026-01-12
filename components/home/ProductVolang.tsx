@@ -4,7 +4,7 @@ import HeroBusinessBenefit from '@/data/images/hero_business_benefit.png'
 
 export default function ProductVolang() {
   return (
-    <section className="bg-gray-50 p-16">
+    <section className="bg-gray-50 md:p-16">
       <div className="from-primary-900 via-primary-800 relative overflow-hidden bg-linear-to-br to-slate-950">
         {/* Product Introduction */}
         <section className="bg-primary-800 py-16">

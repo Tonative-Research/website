@@ -72,7 +72,7 @@ export default function ContactForm() {
 
   return (
     <section className="bg-gray-50 py-20 lg:py-32">
-      <div className="container mx-auto px-6 sm:px-8">
+      <div className="container mx-auto px-4 sm:px-8">
         <div className="mx-auto max-w-4xl">
           {/* Header */}
           <div className="mb-12 text-center">
@@ -96,7 +96,7 @@ export default function ContactForm() {
           </div>
 
           {/* Form */}
-          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-8 lg:p-12">
+          <div className="rounded-2xl border border-gray-200 bg-gray-50 p-4 py-6 sm:p-6 lg:p-12">
             {isSuccess ? (
               <div className="py-12 text-center">
                 <div className="mb-4 inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
