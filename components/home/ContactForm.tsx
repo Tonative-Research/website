@@ -35,20 +35,20 @@ export default function ContactForm() {
     setIsSubmitting(true)
     setError('')
 
-    const SCRIPT_URL = process.env.BASE_PATH || ''
+    const SCRIPT_URL = process.env.NEXT_PUBLIC_CONTACT_FORM_APPSCRIPT_URL || ''
 
     try {
-      const response = await fetch(SCRIPT_URL, {
+      // We use a simple fetch with no-cors.
+      // We cannot read the response, so we assume success if the fetch doesn't throw.
+      await fetch(SCRIPT_URL, {
         method: 'POST',
         mode: 'no-cors',
         headers: {
-          'Content-Type': 'application/json',
+          'Content-Type': 'text/plain;charset=utf-8', // Using text/plain avoids some CORS preflight issues
         },
         body: JSON.stringify(formData),
       })
 
-      // Since we're using no-cors, we won't get a readable response
-      // We'll assume success if no error is thrown
       setIsSuccess(true)
       setFormData({
         interest: '',
@@ -57,13 +57,10 @@ export default function ContactForm() {
         organization: '',
         message: '',
       })
-
       // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSuccess(false)
-      }, 5000)
+      setTimeout(() => setIsSuccess(false), 5000)
     } catch (err) {
-      setError('Something went wrong. Please try again or email us directly.')
+      setError('Submission failed. Please try again.')
       console.error('Submission error:', err)
     } finally {
       setIsSubmitting(false)
