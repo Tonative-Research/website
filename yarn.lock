@@ -2929,7 +2929,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/env@npm:16.1.1":
+"@next/env@npm:16.1.1, @next/env@npm:^16.1.1":
   version: 16.1.1
   resolution: "@next/env@npm:16.1.1"
   checksum: 80de9cf87a9074ef0111478e84eb24d63d77cfc50bba05b492f44c812a827f0a3877b7ab1456f04bc5d393ce637949d8baa7671d2c1cf453b2b2f6ec4a4f4237
@@ -5598,6 +5598,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv-expand@npm:^10.0.0":
+  version: 10.0.0
+  resolution: "dotenv-expand@npm:10.0.0"
+  checksum: 2a38b470efe0abcb1ac8490421a55e1d764dc9440fd220942bce40965074f3fb00b585f4346020cb0f0f219966ee6b4ee5023458b3e2953fe5b3214de1b314ee
+  languageName: node
+  linkType: hard
+
+"dotenv-load@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "dotenv-load@npm:3.0.0"
+  dependencies:
+    dotenv: ^16.3.1
+    dotenv-expand: ^10.0.0
+    shelljs: ^0.8.5
+  bin:
+    dotenv-load: cli.js
+  checksum: c465e8b29cadc790b3e9a5d52729544ec2f01cc79d61bd190c38cfdcb27ca3493bd78e9e4010c69b4a129be8f20fcc13f5983f5e02444f8990e334abea95f583
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.3.1":
+  version: 16.6.1
+  resolution: "dotenv@npm:16.6.1"
+  checksum: e8bd63c9a37f57934f7938a9cf35de698097fadf980cb6edb61d33b3e424ceccfe4d10f37130b904a973b9038627c2646a3365a904b4406514ea94d7f1816b69
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^8.2.0":
   version: 8.6.0
   resolution: "dotenv@npm:8.6.0"
@@ -6901,7 +6928,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.5":
+"glob@npm:^7.0.0, glob@npm:^7.0.5":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -7571,6 +7598,13 @@ __metadata:
     hasown: ^2.0.2
     side-channel: ^1.1.0
   checksum: 8e0991c2d048cc08dab0a91f573c99f6a4215075887517ea4fa32203ce8aea60fa03f95b177977fa27eb502e5168366d0f3e02c762b799691411d49900611861
+  languageName: node
+  linkType: hard
+
+"interpret@npm:^1.0.0":
+  version: 1.4.0
+  resolution: "interpret@npm:1.4.0"
+  checksum: 2e5f51268b5941e4a17e4ef0575bc91ed0ab5f8515e3cf77486f7c14d13f3010df9c0959f37063dcc96e78d12dc6b0bb1b9e111cdfe69771f4656d2993d36155
   languageName: node
   linkType: hard
 
@@ -10437,6 +10471,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rechoir@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "rechoir@npm:0.6.2"
+  dependencies:
+    resolve: ^1.1.6
+  checksum: fe76bf9c21875ac16e235defedd7cbd34f333c02a92546142b7911a0f7c7059d2e16f441fe6fb9ae203f459c05a31b2bcf26202896d89e390eda7514d5d2702b
+  languageName: node
+  linkType: hard
+
 "recma-build-jsx@npm:^1.0.0":
   version: 1.0.0
   resolution: "recma-build-jsx@npm:1.0.0"
@@ -11138,7 +11181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.19.0, resolve@npm:^1.22.10, resolve@npm:^1.22.4":
+"resolve@npm:^1.1.6, resolve@npm:^1.19.0, resolve@npm:^1.22.10, resolve@npm:^1.22.4":
   version: 1.22.11
   resolution: "resolve@npm:1.22.11"
   dependencies:
@@ -11164,7 +11207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.10#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.4#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.10#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.4#~builtin<compat/resolve>":
   version: 1.22.11
   resolution: "resolve@patch:resolve@npm%3A1.22.11#~builtin<compat/resolve>::version=1.22.11&hash=c3c19d"
   dependencies:
@@ -11461,6 +11504,19 @@ __metadata:
   version: 3.0.0
   resolution: "shebang-regex@npm:3.0.0"
   checksum: 1a2bcae50de99034fcd92ad4212d8e01eedf52c7ec7830eedcf886622804fe36884278f2be8be0ea5fde3fd1c23911643a4e0f726c8685b61871c8908af01222
+  languageName: node
+  linkType: hard
+
+"shelljs@npm:^0.8.5":
+  version: 0.8.5
+  resolution: "shelljs@npm:0.8.5"
+  dependencies:
+    glob: ^7.0.0
+    interpret: ^1.0.0
+    rechoir: ^0.6.2
+  bin:
+    shjs: bin/shjs
+  checksum: 7babc46f732a98f4c054ec1f048b55b9149b98aa2da32f6cf9844c434b43c6251efebd6eec120937bd0999e13811ebd45efe17410edb3ca938f82f9381302748
   languageName: node
   linkType: hard
 
@@ -11965,6 +12021,7 @@ __metadata:
     "@eslint/js": ^9.39.2
     "@headlessui/react": 2.2.0
     "@next/bundle-analyzer": 15.2.6
+    "@next/env": ^16.1.1
     "@svgr/webpack": ^8.0.1
     "@tailwindcss/forms": ^0.5.9
     "@tailwindcss/postcss": ^4.0.5
@@ -11976,6 +12033,7 @@ __metadata:
     body-scroll-lock: ^4.0.0-beta.0
     contentlayer2: 0.5.5
     cross-env: ^7.0.3
+    dotenv-load: ^3.0.0
     esbuild: 0.25.2
     eslint: ^9.39.2
     eslint-config-next: ^16.1.0

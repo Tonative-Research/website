@@ -47,11 +47,19 @@ const nextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }]
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     })
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+        // Add other Node modules if needed:
+        // path: false,
+        // crypto: false
+      }
+    }
     return config
   },
   turbopack: {},
