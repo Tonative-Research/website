@@ -47,12 +47,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/research" className="text-gray-300 hover:text-white">
+                <Link href="/blog" className="text-gray-300 hover:text-white">
                   Research
                 </Link>
               </li>
               <li>
-                <Link href="mailto:amol@tonative.org" className="text-gray-300 hover:text-white">
+                <Link href="/#contact-form" className="text-gray-300 hover:text-white">
                   Contact
                 </Link>
               </li>
