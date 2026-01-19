@@ -23,7 +23,12 @@ export default function Hero() {
   return (
     <div className="from-primary-900 via-primary-800 relative min-h-screen overflow-hidden bg-linear-to-br to-slate-950">
       {/* Subtle grid pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[42px_42px]"></div>
+      <div className="bg-primary-600/20 absolute top-20 right-1/4 h-72 w-72 animate-pulse rounded-full blur-3xl"></div>
+      <div
+        className="absolute bottom-20 left-1/4 h-72 w-72 animate-pulse rounded-full bg-blue-600/20 blur-3xl"
+        style={{ animationDelay: '1s' }}
+      ></div>
 
       {/* Main content container */}
       <div className="relative container mx-auto px-6 py-20 sm:px-8">

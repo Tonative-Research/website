@@ -8,7 +8,7 @@ export default function Page() {
     <>
       <main className="w-full">
         {/* Hero Section */}
-        <div className="relative bg-gray-900 text-white">
+        {/* <div className="relative bg-gray-900 text-white">
           <div
             className="absolute inset-0 bg-cover bg-center opacity-60"
             style={{
@@ -29,72 +29,150 @@ export default function Page() {
               </button>
             </a>
           </div>
-        </div>
+        </div> */}
 
         {/* Mission Section */}
-        <section className="bg-white py-16">
-          <div className="container mx-auto max-w-4xl px-4 text-center">
-            <h2 className="mb-6 text-3xl font-bold">Our Mission</h2>
-            <p className="leading-relaxed text-gray-700">
+        <section className="bg-primary-800 relative overflow-hidden py-24">
+          {/* Animated background pattern */}
+          <div className="absolute inset-0">
+            <div className="absolute h-full w-full bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-size-[24px_24px]"></div>
+          </div>
+
+          {/* Floating orbs */}
+          <div className="bg-primary-600/20 absolute top-20 right-1/4 h-72 w-72 animate-pulse rounded-full blur-3xl"></div>
+          <div
+            className="absolute bottom-20 left-1/4 h-72 w-72 animate-pulse rounded-full bg-blue-600/20 blur-3xl"
+            style={{ animationDelay: '1s' }}
+          ></div>
+
+          <div className="relative container mx-auto max-w-4xl px-4 text-center">
+            <div className="mb-6 inline-block">
+              <h2 className="relative text-5xl font-black text-white">
+                Our Mission
+                <div className="from-accent-500 to-accent-300 absolute -bottom-2 left-0 h-1 w-20 bg-linear-to-r"></div>
+              </h2>
+            </div>
+            <p className="leading-relaxed text-gray-300 sm:text-xl">
               Our mission is to empower African language representation in AI technology by creating
               high-quality datasets, tools, and expertise that can bridge existing language and
               cultural gaps.
             </p>
+            <a href={siteMetadata.volunteerForm} target="_blank">
+              <button className="bg-accent-500 hover:bg-accent-600 mt-6 cursor-pointer rounded-md px-8 py-3 font-semibold text-white transition-colors sm:mb-10">
+                Request to Join
+              </button>
+            </a>
           </div>
         </section>
 
         {/* Stats Section */}
-        <section className="bg-gray-50 py-12">
+        <section className="relative -mt-16 bg-transparent pb-8 sm:pb-16">
           <div className="container mx-auto px-4">
-            <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 md:grid-cols-2">
-              <div className="text-center">
-                <div className="mb-2 text-5xl font-bold text-gray-900">400+</div>
-                <div className="text-gray-600">Members</div>
+            <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+              {/* Members Card */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl">
+                <div className="bg-primary-500/10 absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full blur-2xl transition-transform group-hover:scale-150"></div>
+                <div className="relative">
+                  <div className="mb-1 text-3xl font-black text-gray-900 md:text-7xl">
+                    <span className="from-primary-600 to-primary-800 bg-linear-to-br bg-clip-text text-transparent">
+                      400
+                    </span>
+                    <span className="text-primary-600">+</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-lg font-semibold text-gray-600">
+                    <div className="bg-primary-500 h-px w-8"></div>
+                    Members
+                  </div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="mb-2 text-5xl font-bold text-gray-900">23</div>
-                <div className="text-gray-600">African Countries</div>
+
+              {/* Countries Card */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl">
+                <div className="absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full bg-blue-500/10 blur-2xl transition-transform group-hover:scale-150"></div>
+                <div className="relative">
+                  <div className="mb-1 text-3xl font-black text-gray-900 md:text-7xl">
+                    <span className="from-accent-600 to-accent-800 bg-linear-to-br bg-clip-text text-transparent">
+                      23
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-lg font-semibold text-gray-600">
+                    <div className="bg-accent-500 h-px w-8"></div>
+                    African Countries
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Community in Action */}
-        <section className="bg-white py-16">
+        <section className="bg-white py-10 sm:py-20">
           <div className="container mx-auto px-4">
-            <h2 className="mb-12 text-center text-3xl font-bold">Community in Action</h2>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="mb-16 text-center">
+              <h2 className="relative inline-block text-3xl font-black text-gray-900 sm:text-5xl">
+                Community in Action
+                <div className="from-primary-500 absolute -bottom-3 left-1/2 h-1 w-24 -translate-x-1/2 bg-linear-to-r via-blue-500 to-purple-500"></div>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
                   image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
                   title: 'Tonative Booth at Deep Learning Indaba Conference at Kigali',
-                  desc: 'Engaging with other African NLP enthisiaists and signing new members into our community.',
+                  desc: 'Engaging with other African NLP enthusiasts and signing new members into our community.',
+                  gradient: 'from-purple-500/90 to-pink-500/90',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600',
                   title: 'AfriLang Conference at Kampala',
-                  desc: ' Presenting our paper "Tonative: Community-Driven Extension of African Datasets Through Human-AI Collaboration.',
+                  desc: 'Presenting our paper "Tonative: Community-Driven Extension of African Datasets Through Human-AI Collaboration.',
+                  gradient: 'from-blue-500/90 to-cyan-500/90',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600',
                   title:
                     'Centre for Low-Resource Languages and Cultures Workshop at NeurIPs, Mexico City',
                   desc: 'Founded and chaired by Joy Naomi, with Tonative leaders as part of the co-organisers.',
+                  gradient: 'from-green-500/90 to-emerald-500/90',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
                   title: 'Mawazo Ideas Night: Is the Algo African?',
                   desc: 'Cynthia Amol at a public events platform for science engagement and communication.',
+                  gradient: 'from-orange-500/90 to-red-500/90',
                 },
               ].map((card, i) => (
                 <div
                   key={i}
-                  className="overflow-hidden rounded-lg bg-white shadow-md transition-shadow hover:shadow-lg"
+                  className="group relative overflow-hidden rounded-2xl bg-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
                 >
-                  <img src={card.image} alt={card.title} className="h-48 w-full object-cover" />
-                  <div className="p-6">
-                    <h3 className="mb-2 text-xl font-bold">{card.title}</h3>
-                    <p className="text-gray-600">{card.desc}</p>
+                  {/* Image Container */}
+                  <div className="relative h-56 overflow-hidden">
+                    <img
+                      src={card.image}
+                      alt={card.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                    {/* Gradient Overlay */}
+                    <div
+                      className={`absolute inset-0 bg-linear-to-br ${card.gradient} opacity-0 mix-blend-multiply transition-opacity duration-500 group-hover:opacity-100`}
+                    ></div>
+
+                    {/* Decorative corner */}
+                    <div className="absolute top-0 right-0 h-16 w-16 bg-linear-to-br from-white/20 to-transparent"></div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative p-6">
+                    <h3 className="group-hover:text-primary-600 mb-3 text-xl leading-tight font-bold text-gray-900 transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-gray-600">{card.desc}</p>
+
+                    {/* Bottom accent line */}
+                    <div className="from-primary-500 mt-4 h-1 w-0 rounded-full bg-linear-to-r to-blue-500 transition-all duration-500 group-hover:w-full"></div>
                   </div>
                 </div>
               ))}
