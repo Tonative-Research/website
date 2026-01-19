@@ -1,6 +1,6 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
+import Logo from '@/data/logos/logo-with-text.png'
 import Link from 'components/Link'
 import MobileNav from 'components/MobileNav'
 import Image from 'next/image'
@@ -18,21 +18,20 @@ const Header = () => {
     <header className={headerClass}>
       {/* Left Section - Logo */}
       <Link href="/" aria-label={siteMetadata.headerTitle}>
-        <div className="flex items-center">
-          <div className="mr-3">
-            <Image src={Logo} alt="" />
-            {/* <Logo /> */}
+        <div className="flex items-center justify-center">
+          <div className="mr-3 flex-shrink-0">
+            <Image src={Logo} alt="Logo" height={30} className="block" priority />
           </div>
           {typeof siteMetadata.headerTitle === 'string' ? (
-            <div className="hidden h-6 text-2xl font-semibold sm:block">
-              {siteMetadata.headerTitle}
-            </div>
+            // <div className="flex hidden h-[40px] items-center text-[40px] leading-[40px] font-bold sm:block">
+            //   {siteMetadata.headerTitle}
+            // </div>
+            <></>
           ) : (
             siteMetadata.headerTitle
           )}
         </div>
       </Link>
-
       {/* Right Section - Full-width nav and actions */}
       <div className="flex flex-1 items-center justify-end space-x-4 sm:space-x-6">
         {/* Navigation Links */}
@@ -59,7 +58,7 @@ const Header = () => {
           <Link
             href={siteMetadata.volangUrl}
             target="_blank"
-            className="bg-primary-500 hover:bg-primary-600 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors sm:inline-block"
+            className="bg-primary-600 hover:bg-primary-500 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors sm:inline-block"
           >
             Discover Volang
           </Link>

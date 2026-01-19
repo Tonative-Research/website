@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Tonative',
   author: 'Tonative Team',
-  headerTitle: 'Tonative Research',
+  headerTitle: 'Tonative',
   description:
     'High-quality, open-source datasets for African languages, ready for your NLP projects.',
   language: 'en-us',
@@ -10,7 +10,7 @@ const siteMetadata = {
   siteUrl: 'https://tonative.org/',
   siteRepo: 'https://github.com/Tonative-Research',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
+  socialBanner: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'services@tonative.org',
   github: 'https://github.com/Tonative-Research',
