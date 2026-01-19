@@ -1,11 +1,9 @@
 'use client'
-
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
 import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 import { Fragment, useState, useEffect, useRef } from 'react'
 import Link from 'components/Link'
 import headerNavLinks from '@/data/headerNavLinks'
-import siteMetadata from '@/data/siteMetadata'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
@@ -84,11 +82,11 @@ const MobileNav = () => {
                   </Link>
                 ))}
                 <Link
-                  href={siteMetadata.volangUrl}
+                  href="/#contact-form"
                   target="_blank"
                   className="bg-primary-500 hover:bg-primary-600 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors"
                 >
-                  Discover Tonative
+                  Contact Us
                 </Link>
               </nav>
 
