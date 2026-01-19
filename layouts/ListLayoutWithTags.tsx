@@ -128,8 +128,8 @@ export default function ListLayoutWithTags({
         {/* Header Section */}
         <div className="mb-8 flex flex-wrap justify-between gap-4">
           <div className="flex flex-col gap-2">
-            <h1 className="font-display text-4xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {title}
+            <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
+              All Posts
             </h1>
             <p className="text-base font-normal text-gray-600 dark:text-gray-400">
               Explore our latest publications and articles on language technology and cultural AI.

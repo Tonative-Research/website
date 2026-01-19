@@ -1,5 +1,5 @@
 import Link from 'components/Link'
-import Logo from '@/data/images/Tonative-logo-white-with-text.png'
+import Logo from '@/data/logos/tonative-all-white-with-text.png'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import Image from 'next/image'
@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <Image src={Logo} alt="Logo" height={50} className="mb-4" />
+            <Image src={Logo} alt="Logo" height={40} className="mb-4" />
             <p className="text-sm text-gray-300">Language technology for a more connected world.</p>
           </div>
 
@@ -47,12 +47,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/research" className="text-gray-300 hover:text-white">
+                <Link href="/blog" className="text-gray-300 hover:text-white">
                   Research
                 </Link>
               </li>
               <li>
-                <Link href="mailto:amol@tonative.org" className="text-gray-300 hover:text-white">
+                <Link href="/#contact-form" className="text-gray-300 hover:text-white">
                   Contact
                 </Link>
               </li>

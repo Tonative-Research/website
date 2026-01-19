@@ -1,5 +1,4 @@
 import { genPageMetadata } from 'app/seo'
-import NewsletterForm from 'pliny/ui/NewsletterForm.js'
 import siteMetadata from 'data/siteMetadata'
 
 export const metadata = genPageMetadata({ title: 'Community' })
@@ -138,11 +137,11 @@ export default function Page() {
         </section>
 
         {/* Newsletter Section */}
-        {siteMetadata.newsletter?.provider && (
+        {/* {siteMetadata.newsletter?.provider && (
           <div className="flex items-center justify-center pt-4 pb-10">
             <NewsletterForm />
           </div>
-        )}
+        )} */}
       </main>
     </>
   )
