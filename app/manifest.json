@@ -1,12 +1,7 @@
 {
-  "name": "Tonative Research",
+  "name": "MyWebSite",
   "short_name": "Tonative",
   "icons": [
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "96x96",
-      "type": "image/png"
-    },
     {
       "src": "/static/favicons/web-app-manifest-192x192.png",
       "sizes": "192x192",
