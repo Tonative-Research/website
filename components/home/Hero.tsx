@@ -1,5 +1,4 @@
 'use client'
-import siteMetadata from '@/data/siteMetadata'
 import { useState } from 'react'
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react'
 import HeroManSmile from '@/data/images/hero_older_man.png'
@@ -7,6 +6,7 @@ import HeroCommunityWork from '@/data/images/hero_community_work.png'
 import HeroGroupSeated from '@/data/images/hero_group_seated.png'
 import HeroSoloLady from '@/data/images/hero_solo_lady.png'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -56,12 +56,12 @@ export default function Hero() {
 
         {/* CTA Button */}
         <div className="mb-20 flex justify-center">
-          <a href={siteMetadata.volangUrl} target="_blank">
+          <Link href="/dataset-tools">
             <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-gray-900 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl">
               Explore Datasets
               <ArrowRight className="h-5 w-5" />
             </button>
-          </a>
+          </Link>
         </div>
 
         {/* Image Grid */}

@@ -32,6 +32,7 @@ const siteMetadata = {
   volangUrl: 'https://volang.tonative.org/',
   volangContactEmail: 'volang@tonative.org',
   volangContactUrl: 'https://volang.app/contact',
+  cynthiaEmail: 'amol@tonative.org',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: true,

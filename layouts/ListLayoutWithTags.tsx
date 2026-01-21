@@ -190,7 +190,7 @@ export default function ListLayoutWithTags({
         </div> */}
 
         {/* Blog Posts Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="space-y-8">
           {displayPosts.map((post) => {
             const { path, date, title, summary, tags, images } = post
             const imageUrl =
@@ -199,52 +199,50 @@ export default function ListLayoutWithTags({
             return (
               <article
                 key={path}
-                className="flex flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-xl dark:bg-gray-800"
+                className="group border-primary-600 dark:border-primary-500 overflow-hidden rounded-lg border-l-4 bg-white shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-gray-800"
               >
                 {/* Image */}
-                <Link href={`/${path}`} className="block">
+                {/* <Link href={`/${path}`} className="block">
                   <div
-                    className="aspect-video w-full bg-cover bg-center bg-no-repeat"
+                    className="aspect-video w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105"
                     style={{ backgroundImage: `url('${imageUrl}')` }}
                   />
-                </Link>
+                </Link> */}
 
                 {/* Content */}
-                <div className="flex flex-1 flex-col p-6">
-                  <div className="flex flex-1 flex-col gap-2">
-                    {/* Tags */}
-                    {tags && tags.length > 0 && (
-                      <p className="text-primary-600 dark:text-primary-400 text-xs font-medium tracking-wider uppercase">
-                        {tags[0]}
-                      </p>
-                    )}
+                <div className="p-6 lg:p-8">
+                  {/* Tags */}
+                  {tags && tags.length > 0 && (
+                    <span className="bg-primary-100 text-primary-900 dark:bg-primary-900 dark:text-primary-100 mb-4 inline-block rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
+                      {tags[0]}
+                    </span>
+                  )}
 
-                    {/* Title */}
-                    <Link href={`/${path}`} className="block">
-                      <h3 className="font-display hover:text-primary-600 dark:hover:text-primary-400 text-xl leading-tight font-bold text-gray-900 transition-colors dark:text-white">
-                        {title}
-                      </h3>
-                    </Link>
+                  {/* Title */}
+                  <Link href={`/${path}`} className="block">
+                    <h3 className="group-hover:text-primary-700 dark:group-hover:text-primary-400 mb-4 text-xl leading-tight font-bold text-gray-900 transition-colors md:text-2xl dark:text-white">
+                      {title}
+                    </h3>
+                  </Link>
 
-                    {/* Date */}
-                    <p className="text-sm font-normal text-gray-600 dark:text-gray-400">
-                      Published on {formatDate(date, siteMetadata.locale)}
-                    </p>
+                  {/* Date */}
+                  <p className="mb-4 text-sm font-medium text-gray-600 italic dark:text-gray-400">
+                    Published on {formatDate(date, siteMetadata.locale)}
+                  </p>
 
-                    {/* Summary */}
-                    <p className="mt-2 flex-1 text-sm leading-relaxed font-normal text-gray-700 dark:text-gray-300">
-                      {summary}
-                    </p>
-                  </div>
+                  {/* Summary */}
+                  <p className="mb-6 text-sm leading-relaxed text-gray-700 md:text-base dark:text-gray-300">
+                    {summary}
+                  </p>
 
                   {/* Read More Link */}
                   <Link
                     href={`/${path}`}
-                    className="group text-primary-600 dark:text-primary-400 mt-4 inline-flex w-fit items-center gap-2 text-sm leading-normal font-bold"
+                    className="group/link text-primary-700 hover:text-primary-900 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-semibold transition-colors md:text-base"
                   >
-                    <span>Read More</span>
+                    <span>Read Full Article</span>
                     <svg
-                      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                      className="ml-2 h-5 w-5 transition-transform group-hover/link:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -253,7 +251,7 @@ export default function ListLayoutWithTags({
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth={2}
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
                     </svg>
                   </Link>

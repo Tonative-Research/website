@@ -20,8 +20,8 @@ export default function Footer() {
             <h4 className="mb-4 text-sm font-semibold">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/product" className="text-gray-300 hover:text-white">
-                  Products
+                <Link href="/dataset-tools" className="text-gray-300 hover:text-white">
+                  Datasets & Tools
                 </Link>
               </li>
               <li>
@@ -30,7 +30,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog/01-our-story" className="text-gray-300 hover:text-white">
+                <Link href="/about" className="text-gray-300 hover:text-white">
                   About Us
                 </Link>
               </li>
@@ -63,7 +63,7 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-semibold">Connect</h4>
             <div className="mb-3 flex space-x-4">
-              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
+              <SocialIcon kind="mail" href={`mailto:${siteMetadata.cynthiaEmail}`} size={6} />
               <SocialIcon kind="github" href={siteMetadata.github} size={6} />
               <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
               <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
@@ -80,7 +80,8 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="mt-8 border-t border-gray-300 pt-6 text-center text-sm text-gray-200">
-          <p>© {new Date().getFullYear()} Tonative. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Tonative Africa Ltd. All rights reserved.</p>
+          <p>Incorporated in Kenya | Company No: PVT-YQ19P9RQ</p>
         </div>
       </div>
     </footer>

@@ -277,7 +277,7 @@ export default function DatasetToolsMain() {
               </p>
             </div>
             <a
-              href={siteMetadata.validationUrl}
+              href={`mailto:${siteMetadata.cynthiaEmail}`}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-lg px-6 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors"
