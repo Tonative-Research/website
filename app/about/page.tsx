@@ -44,7 +44,7 @@ export default function About() {
         {/* Floating orbs */}
         <div className="bg-primary-600/20 absolute top-20 right-1/4 h-72 w-72 animate-pulse rounded-full blur-3xl"></div>
         <div
-          className="absolute bottom-20 left-1/4 h-72 w-72 animate-pulse rounded-full bg-blue-600/20 blur-3xl"
+          className="bg-primary-600/20 absolute bottom-20 left-1/4 h-72 w-72 animate-pulse rounded-full blur-3xl"
           style={{ animationDelay: '1s' }}
         ></div>
 
