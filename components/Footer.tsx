@@ -47,7 +47,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-gray-300 hover:text-white">
+                <Link href="/publications" className="text-gray-300 hover:text-white">
                   Research
                 </Link>
               </li>
