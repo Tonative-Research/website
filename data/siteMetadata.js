@@ -4,7 +4,7 @@ const siteMetadata = {
   author: 'Tonative Team',
   headerTitle: 'Tonative',
   description:
-    'High-quality, open-source datasets for African languages, ready for your NLP projects.',
+    'Tonative is a community-driven initiative focused on AI data curation for under-resourced languages in Africa, combining human expertise and AI tools to build ethical language datasets',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tonative.org/',
@@ -32,6 +32,7 @@ const siteMetadata = {
   volangUrl: 'https://volang.tonative.org/',
   volangContactEmail: 'volang@tonative.org',
   volangContactUrl: 'https://volang.app/contact',
+  cynthiaEmail: 'amol@tonative.org',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: true,

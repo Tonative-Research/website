@@ -58,7 +58,7 @@ const Header = () => {
           <Link
             href="/#contact-form"
             // href={siteMetadata.volangUrl}
-            target="_blank"
+            // target="_blank"
             className="bg-primary-600 hover:bg-primary-500 hidden rounded-lg px-4 py-2 font-medium text-white transition-colors sm:inline-block"
           >
             Conatct Us

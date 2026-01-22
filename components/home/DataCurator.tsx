@@ -36,7 +36,7 @@ export default function DataCurator() {
   ]
 
   return (
-    <section className="bg-gray-50 py-16 lg:pb-32">
+    <section className="bg-gray-50 py-16 lg:pb-32" id="data-curator">
       <div className="container mx-auto px-6 sm:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}

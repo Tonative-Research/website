@@ -3,6 +3,7 @@ import DataCurator from '@/components/home/DataCurator'
 import ContactForm from '@/components/home/ContactForm'
 import ProductVolang from '@/components/home/ProductVolang'
 import ProblemSolution from '@/components/home/ProblemSolution'
+import Link from 'next/link'
 
 export default function Home({ posts }) {
   return (
@@ -19,9 +20,11 @@ export default function Home({ posts }) {
               Whether you need custom datasets, want us to demo Volang, or are interested in hiring
               trained African linguists, let's talk.
             </p>
-            <button className="bg-accent-500 hover:bg-accent-600 mx-auto mt-6 cursor-pointer rounded-sm px-6 py-2.5 text-sm font-medium text-white transition-colors">
-              Learn About Our Initiatives
-            </button>
+            <Link href="/about">
+              <button className="bg-accent-500 hover:bg-accent-600 mx-auto mt-6 cursor-pointer rounded-sm px-6 py-2.5 text-sm font-medium text-white transition-colors">
+                Learn About Our Initiatives
+              </button>
+            </Link>
           </div>
         </section>
         <ContactForm />

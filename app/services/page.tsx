@@ -1,5 +1,6 @@
 import { genPageMetadata } from 'app/seo'
 import ContactUs from 'components/ContactUs'
+import Link from 'next/link'
 
 export const metadata = genPageMetadata({ title: 'Services', description: '' })
 
@@ -100,9 +101,11 @@ export default async function Page() {
                   </li>
                 </ul>
                 <div className="mt-auto">
-                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
-                    <span className="truncate">Learn More</span>
-                  </button>
+                  <Link href="/#data-curator">
+                    <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
+                      <span className="truncate">Learn More</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -183,9 +186,11 @@ export default async function Page() {
                   </li>
                 </ul>
                 <div className="mt-auto">
-                  <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
-                    <span className="truncate">Learn More</span>
-                  </button>
+                  <Link href="/#contact-form">
+                    <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
+                      <span className="truncate">Learn More</span>
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
