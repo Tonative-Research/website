@@ -1,7 +1,7 @@
 ---
 title: Scaling African Language Datasets
 date: '2025-09-22'
-tags: ['datasets', 'AI', 'community', 'NLP']
+tags: ['research paper', 'datasets', 'AI', 'community', 'NLP']
 draft: false
 summary: How Tonative uses human-AI collaboration to grow language resources for low-resource African languages.
 authors:
@@ -9,30 +9,19 @@ authors:
   - cynthia-amol
 ---
 
-# Scaling African Language Datasets
+Recent efforts to create more language resources for Africa have been spearheaded by local communities. While this has improved representation for major African languages, significant gaps persist for the 2,000+ African languages that remain severely low-resource. These initiatives have also highlighted a critical issue – the sustainability and continuity of research efforts are often short-lived. To ensure the longevity of African datasets, encouraging open contributions is essential. Open collaboration allows datasets to evolve far beyond their original scope and incorporate the natural evolution of language over time.
 
-Africa has over 2,000 languages. Most of these languages remain low-resource. Local communities work hard to create new data, but these efforts often stop too soon. We need open collaboration to make sure research lasts. Open data lets datasets grow as language changes over time.
+Dataset curation often faces significant challenges due to the high costs and scalability issues associated with manual human effort. Community-driven efforts produce high-quality, realistic data but suffer from scalability challenges, including cost and uneven contribution distribution. Conversely, synthetic data generation using multilingual models offers greater scale but introduces validity issues, such as artifacts that diverge from native phrasing, limited real-world complexity representation, and the risk of bias amplification from web-trained models that underrepresent African languages. Therefore, while synthetic data generation is more scalable, it must be complemented with human quality checks to ensure the inclusion of cultural expression and fair representation.
 
-### The Challenge of Data Curation
+At the core of Tonative lies the aim to reduce manual human labour while maintaining a crucial human-in-the-loop approach. It extends existing multilingual datasets into more African languages through three interconnected stages:
 
-It is hard to build datasets. Manual work by humans costs a lot of money, and it is slow. Computers can create synthetic data very fast. However, computer-made data has problems. It can be biased. It often misses the way native speakers actually talk. We need a way to get the scale of AI with the quality of humans.
+I Identifying high-quality data resources for extension;
+II Leveraging multilingual models for initial translations;
+III Validating translations with native speakers and linguists.
 
-### Our Three Step Process
+For instance, we extended Mbogho et al.’s dataset of 29,280 sentences, originally comprising Kidaw’ida-Kiswahili, Kalenjin-Kiswahili, and Dholuo-Kiswahili corpora, by adding a Kiswahili-English component. This extension facilitates cross-lingual transfer and lays the groundwork for future translations into other languages. With volunteer data validators already in place, we ensure the quality and authenticity of translations. We adopted a similar methodology with Masakhane’s AfriXNLI, an African adaptation of Facebook’s XNLI dataset, which initially consists of 7,500 samples. Our contribution involved significantly expanding this dataset. For some of the languages already present in AfriXNLI, we increased the sample size from the original 1,050 samples per language to 5,000 samples. Furthermore, we extended the dataset to include new African languages that were not part of the initial AfriXNLI effort.
 
-We use a "human-in-the-loop" model. This reduces manual labor but keeps quality high.
-
-1. **Source.** We find high-quality data that already exists.
-2. **Translate.** We use AI models to create initial translations.
-3. **Validate.** Native speakers and linguists check every sentence for accuracy.
-
-### Our Impact in Practice
-
-We have already used this method to expand important datasets.
-
-- **The Mbogho Dataset.** We added a Kiswahili-English component to a set of 29,280 sentences. This helps computers move knowledge between languages more easily.
-- **AfriXNLI.** This project started with 1,050 samples per language. We grew this to 5,000 samples for several languages. We also added entirely new languages that were not there before.
-
-Our approach shows that human and AI collaboration works. It provides a steady way to build resources for African languages. We will keep looking for better ways to curate data.
+While we shall continue to explore more optimised methods of data curation, our current approach has demonstrated a significant improvement in dataset extension for African languages through human-AI collaboration. By extending existing datasets, leveraging pretrained multilingual models, and embedding community validation, we provide a more sustainable pathway to increasing data resources in Africa.
 
 ---
 
