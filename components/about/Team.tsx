@@ -19,7 +19,6 @@ export default function Team({ authors }: { authors: Authors[] }) {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {authors.map((member, idx) => {
-              console.log('meme', member)
               return (
                 <div
                   key={idx}
@@ -78,7 +77,7 @@ export default function Team({ authors }: { authors: Authors[] }) {
         >
           {/* Main Modal Container: Full Screen Height and Width */}
           <div
-            className="relative flex h-full max-h-screen w-full overflow-hidden bg-white shadow-2xl"
+            className="relative flex h-full max-h-screen w-full overflow-auto bg-white shadow-2xl md:overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Absolute Close Button - Sticks to top right of the whole modal */}
@@ -107,7 +106,7 @@ export default function Team({ authors }: { authors: Authors[] }) {
               </div>
 
               {/* Right: CONTENT SIDE - Fixed Header + Scrollable Bio */}
-              <div className="flex h-1/2 w-full flex-col bg-white md:h-full md:w-3/5 lg:w-1/2">
+              <div className="flex w-full flex-col bg-white md:h-full md:w-3/5 lg:w-1/2">
                 {/* 1. FIXED TOP SECTION (Name & Socials) */}
                 <div className="border-b border-gray-100 p-8 pt-12 md:p-12 md:pb-6">
                   <div className="text-primary-600 mb-2 text-xs font-bold tracking-widest uppercase">
