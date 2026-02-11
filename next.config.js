@@ -5,7 +5,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is https://us-assets.i.posthog.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' giscus.app analytics.umami.is https://eu-assets.i.posthog.com;
   style-src 'self' 'unsafe-inline';
   img-src * blob: data:;
   media-src *.s3.amazonaws.com;
@@ -67,15 +67,15 @@ const nextConfig = {
     return [
       {
         source: '/ingest/static/:path*',
-        destination: 'https://us-assets.i.posthog.com/static/:path*',
+        destination: 'https://eu-assets.i.posthog.com/static/:path*',
       },
       {
         source: '/ingest/:path*',
-        destination: 'https://us.i.posthog.com/:path*',
+        destination: 'https://eu.i.posthog.com/:path*',
       },
       {
         source: '/decide-v2',
-        destination: 'https://us.i.posthog.com/decide-v2',
+        destination: 'https://eu.i.posthog.com/decide-v2',
       },
     ]
   },
