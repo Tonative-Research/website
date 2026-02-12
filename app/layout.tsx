@@ -13,6 +13,7 @@ import { ThemeProviders } from './theme-providers'
 import { Metadata } from 'next'
 import localFont from 'next/font/local'
 import PostHogPageView from '@/components/PostHogPageView'
+import { Suspense } from 'react'
 
 // Header text
 const cirka = localFont({
@@ -130,7 +131,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       <body className="bg-white text-black antialiased dark:bg-gray-950 dark:text-white">
         <PostHogProvider>
-          <PostHogPageView />
+          <Suspense fallback={null}>
+            <PostHogPageView />
+          </Suspense>
           <ThemeProviders>
             <Header />
             <Analytics analyticsConfig={siteMetadata.analytics as AnalyticsConfig} />
