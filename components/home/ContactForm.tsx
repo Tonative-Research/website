@@ -33,35 +33,27 @@ export default function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    setError('')
-
-    const SCRIPT_URL = process.env.NEXT_PUBLIC_CONTACT_FORM_APPSCRIPT_URL || ''
 
     try {
-      // We use a simple fetch with no-cors.
-      // We cannot read the response, so we assume success if the fetch doesn't throw.
-      await fetch(SCRIPT_URL, {
+      const response = await fetch('/api/contact', {
+        // Point to your NEW local API
         method: 'POST',
-        mode: 'no-cors',
         headers: {
-          'Content-Type': 'text/plain;charset=utf-8', // Using text/plain avoids some CORS preflight issues
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       })
 
-      setIsSuccess(true)
-      setFormData({
-        interest: '',
-        name: '',
-        email: '',
-        organization: '',
-        message: '',
-      })
-      // Reset success message after 5 seconds
-      setTimeout(() => setIsSuccess(false), 5000)
+      const result = await response.json()
+
+      if (result.success) {
+        setIsSuccess(true)
+        setFormData({ interest: '', name: '', email: '', organization: '', message: '' })
+      } else {
+        throw new Error(result.error)
+      }
     } catch (err) {
       setError('Submission failed. Please try again.')
-      console.error('Submission error:', err)
     } finally {
       setIsSubmitting(false)
     }

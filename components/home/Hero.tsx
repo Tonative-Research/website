@@ -7,8 +7,21 @@ import HeroGroupSeated from '@/data/images/hero_group_seated.png'
 import HeroSoloLady from '@/data/images/hero_solo_lady.png'
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePostHog } from 'posthog-js/react'
 
 export default function Hero() {
+  const posthog = usePostHog()
+
+  const captureClick = () => {
+    // This sends the event to PostHog
+    posthog.capture('user_clicked_exploredatasets', {
+      button_location: 'hero',
+      color: 'white',
+    })
+
+    // Continue with your signup logic...
+    console.log('Signing up...')
+  }
   const [currentSlide, setCurrentSlide] = useState(0)
 
   const images = [HeroManSmile, HeroCommunityWork, HeroSoloLady, HeroGroupSeated]
@@ -57,7 +70,10 @@ export default function Hero() {
         {/* CTA Button */}
         <div className="mb-20 flex justify-center">
           <Link href="/dataset-tools">
-            <button className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-gray-900 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl">
+            <button
+              className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-gray-900 shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl"
+              onClick={captureClick}
+            >
               Explore Datasets
               <ArrowRight className="h-5 w-5" />
             </button>
