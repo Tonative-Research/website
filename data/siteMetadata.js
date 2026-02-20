@@ -6,7 +6,7 @@ const siteMetadata = {
   description:
     'Tonative is a community-driven initiative focused on AI data curation for under-resourced languages in Africa, combining human expertise and AI tools to build ethical language datasets',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'light', // system, dark or light
   siteUrl: 'https://tonative.org/',
   siteRepo: 'https://github.com/Tonative-Research',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
