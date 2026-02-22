@@ -10,7 +10,7 @@ type ContactUsProps = {
 export default function ContactUs({
   heading = 'Contact Us',
   message = 'Have a question or want to get started? Reach out to our team.',
-  email = siteMetadata.email,
+  email = siteMetadata.cynthiaEmail,
   mailUrl,
 }: ContactUsProps) {
   const finalMailUrl = mailUrl || `mailto:${email}`
