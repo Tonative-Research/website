@@ -18,9 +18,6 @@ export default function Hero() {
       button_location: 'hero',
       color: 'white',
     })
-
-    // Continue with your signup logic...
-    console.log('Signing up...')
   }
   const [currentSlide, setCurrentSlide] = useState(0)
 

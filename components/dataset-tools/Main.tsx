@@ -2,10 +2,20 @@
 import { useState } from 'react'
 import ContactUs from 'components/ContactUs'
 import siteMetadata from 'data/siteMetadata'
+import { usePostHog } from 'posthog-js/react'
 
 export default function DatasetToolsMain() {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
 
+  const posthog = usePostHog()
+
+  const captureClick = (name: string) => {
+    // This sends the event to PostHog
+    posthog.capture(`user_clicked_link_${name}`, {
+      location: 'hero',
+      dataset_name: name,
+    })
+  }
   const datasets = [
     {
       name: 'XNLI',
@@ -244,6 +254,7 @@ export default function DatasetToolsMain() {
                         <a
                           href={dataset.action.href}
                           target="_blank"
+                          onClick={() => captureClick(dataset.name)}
                           className="text-primary-500 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-semibold underline"
                         >
                           {dataset.action.label}
