@@ -12,7 +12,7 @@ export default function DatasetToolsMain() {
   const captureClick = (name: string) => {
     // This sends the event to PostHog
     posthog.capture(`user_clicked_link_${name}`, {
-      location: 'hero',
+      location: 'dataset_tools',
       dataset_name: name,
     })
   }
