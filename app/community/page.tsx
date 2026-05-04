@@ -119,6 +119,18 @@ export default function Page() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
+                  image: 'https://share.cysafepath.com/2026/05/ifs-2026-chinenye-speaker.png',
+                  title: '2026 Impact Fellowship Summit (IFN IREX)',
+                  desc: 'Virtual presentation on April 27, 2026, by Chinenye Anikwenze on "Human-in-the-Loop AI: Centering African Languages in Fellowship Systems" for the summit hosted in Washington, DC.',
+                  gradient: 'from-teal-600/90 to-cyan-500/90',
+                },
+                {
+                  image: 'https://share.cysafepath.com/2026/05/aflc-2026-chinenye-speaker.png',
+                  title: 'African Languages Conference (AFLC)',
+                  desc: 'On February 27, 2026, Chinenye Anikwenze presented "Why Linguists are the Essential Guardrails for African AI," demonstrating how human-in-the-loop validation repairs tonal "Semantic Collapse" in Igbo.',
+                  gradient: 'from-emerald-600/90 to-green-500/90',
+                },
+                {
                   image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
                   title: 'Tonative Booth at Deep Learning Indaba Conference at Kigali',
                   desc: 'Engaging with other African NLP enthusiasts and signing new members into our community.',
