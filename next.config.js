@@ -29,13 +29,8 @@ const nextConfig = {
   output: process.env.EXPORT ? 'export' : undefined,
   basePath: process.env.BASE_PATH || undefined,
   reactStrictMode: true,
-  swcMinify: true,
   trailingSlash: false,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-  eslint: {
-    // We explicitly define these to avoid the "lint directory" bug
-    dirs: ['app', 'components', 'layouts', 'scripts'],
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'picsum.photos' },
@@ -47,6 +42,14 @@ const nextConfig = {
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }]
   },
+  turbopack: {
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
   webpack: (config, { isServer }) => {
     config.module.rules.push({
       test: /\.svg$/,
@@ -55,9 +58,6 @@ const nextConfig = {
     if (!isServer) {
       config.resolve.fallback = {
         fs: false,
-        // Add other Node modules if needed:
-        // path: false,
-        // crypto: false
       }
     }
     return config

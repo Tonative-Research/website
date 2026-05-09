@@ -1,4 +1,5 @@
 import { genPageMetadata } from 'app/seo'
+import NextImage from 'next/image'
 import Link from 'next/link'
 
 export const metadata = genPageMetadata({
@@ -9,20 +10,52 @@ export const metadata = genPageMetadata({
 
 const organizers = [
   {
-    name: 'Chinenye Anikwenze',
+    name: 'Alfred Kondoro',
     role: 'Lead Organiser',
-    bio: 'Founder of Tonative and advocate for inclusive AI. Her work centres on human-in-the-loop validation and community-driven dataset building for African languages.',
-    linkedin: 'https://www.linkedin.com/in/chinenye-anikwenze/',
-    avatar: 'CA',
-    color: 'from-primary-600 to-primary-800',
+    occupation: 'Head of Research',
+    bio: 'Alfred is a researcher in Human-Computer Interaction and AI, with a strong focus on African language technologies and culturally grounded AI systems. He leads community-driven research initiatives aimed at strengthening African representation in AI research and practice.',
+    linkedin: 'https://www.linkedin.com/in/alfred-kondoro-b70605181/',
+    image: '/static/images/authors/alfred_kondoro.png',
+  },
+  {
+    name: 'Sharon Ibejih',
+    role: 'Organiser',
+    occupation: 'Founder, Tonative',
+    bio: 'Sharon is a Senior Data Scientist and African language AI researcher. She founded Tonative to ensure African languages are meaningfully represented in modern AI systems, and has contributed to research on speech processing, machine translation, and African language datasets.',
+    linkedin: 'https://www.linkedin.com/in/sharonibejih/',
+    image: '/static/images/authors/sharon_ibejih.png',
   },
   {
     name: 'Cynthia Amol',
     role: 'Organiser',
-    bio: 'AI researcher and community builder focused on bridging the gap between African language communities and modern NLP research.',
+    occupation: 'Co-Founder & Head of Data',
+    bio: 'Cynthia is a PhD student in Computer Science and NLP researcher focusing on low-resource African languages. A Google PhD Fellow and Deep Learning Indaba Alele-Williams Masters Award recipient, she oversees data validation and coordinates operations at Tonative.',
     linkedin: 'https://www.linkedin.com/in/cynthia-amol/',
-    avatar: 'CA',
-    color: 'from-accent-500 to-accent-700',
+    image: '/static/images/authors/cynthia_amol.png',
+  },
+  {
+    name: 'Joy Naomi Olusanya',
+    role: 'Organiser',
+    occupation: 'Training Manager & NLP Researcher',
+    bio: 'Joy is a linguist and NLP researcher focusing on low-resource languages, machine translation, and multilingual NLP. She chaired the CLRLC–LLMs Workshop at NeurIPS 2025 and is Founder of the Center for Low-Resource Languages and Cultures.',
+    linkedin: 'https://www.linkedin.com/in/joy-olusanya-209340206/',
+    image: '/static/images/authors/joy_naomi.png',
+  },
+  {
+    name: 'Chinenye Anikwenze',
+    role: 'Organiser',
+    occupation: 'Software Engineer & Researcher',
+    bio: 'Chinenye is a software engineer and researcher dedicated to bridging the digital divide for African languages. She leads the development of open-source infrastructure and validation tools that keep native speakers central to the AI development process.',
+    linkedin: 'https://www.linkedin.com/in/chinenye-anikwenze/',
+    image: '/static/images/authors/chinenye_anikwenze.png',
+  },
+  {
+    name: "Okechukwu God'spraise",
+    role: 'Organiser',
+    occupation: 'Software Engineer & Researcher',
+    bio: "God'spraise is a software engineer with a strong interest in NLP research. He plays cross-functional roles in engineering and research, contributing to the validation platform, task automation, and ongoing project leadership at Tonative.",
+    linkedin: null,
+    initials: 'OG',
   },
 ]
 
@@ -33,7 +66,6 @@ const speakers = [
     bio: "Building Rwanda's community-driven digital infrastructure initiative — Digital Umuganda — which harnesses collective civic action to power open language datasets and AI tools for Kinyarwanda.",
     linkedin: 'https://rw.linkedin.com/in/samuel-rutunda-07bb818a',
     avatar: 'SR',
-    color: 'from-teal-600 to-cyan-700',
     org: 'Digital Umuganda',
   },
   {
@@ -42,7 +74,6 @@ const speakers = [
     bio: 'Researcher at KenCorpus dedicated to building large-scale corpora for Kenyan languages, enabling downstream NLP tasks and lowering the barrier for researchers working with East African language data.',
     linkedin: 'https://ke.linkedin.com/in/liliwanzie',
     avatar: 'LW',
-    color: 'from-purple-600 to-pink-600',
     org: 'KenCorpus',
   },
 ]
@@ -284,14 +315,12 @@ export default function Indaba2026Page() {
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* Top accent strip */}
-                <div className={`h-2 w-full bg-linear-to-r ${speaker.color}`}></div>
+                <div className="from-primary-600 to-primary-800 h-2 w-full bg-linear-to-r"></div>
 
                 <div className="p-8">
                   {/* Avatar + name */}
                   <div className="mb-6 flex items-center gap-4">
-                    <div
-                      className={`flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br ${speaker.color} text-xl font-black text-white shadow-lg`}
-                    >
+                    <div className="from-primary-600 to-primary-800 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br text-xl font-black text-white shadow-lg">
                       {speaker.avatar}
                     </div>
                     <div>
@@ -328,40 +357,55 @@ export default function Indaba2026Page() {
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {organizers.map((org, i) => (
               <div
                 key={i}
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <div className={`h-2 w-full bg-linear-to-r ${org.color}`}></div>
+                <div className="from-primary-600 to-primary-800 h-2 w-full bg-linear-to-r"></div>
 
-                <div className="p-8">
-                  <div className="mb-6 flex items-center gap-4">
-                    <div
-                      className={`flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br ${org.color} text-xl font-black text-white shadow-lg`}
-                    >
-                      {org.avatar}
-                    </div>
+                <div className="p-6">
+                  <div className="mb-4 flex items-center gap-3">
+                    {'image' in org && org.image ? (
+                      <div className="h-14 w-14 flex-shrink-0 overflow-hidden rounded-full shadow-md ring-2 ring-white">
+                        <NextImage
+                          src={org.image}
+                          alt={org.name}
+                          width={56}
+                          height={56}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    ) : (
+                      <div className="from-primary-600 to-primary-800 flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br text-lg font-black text-white shadow-md">
+                        {'initials' in org ? org.initials : ''}
+                      </div>
+                    )}
                     <div>
-                      <h3 className="text-xl font-black text-gray-900">{org.name}</h3>
-                      <p className="font-semibold text-gray-500">{org.role}</p>
+                      <h3 className="text-lg leading-tight font-black text-gray-900">{org.name}</h3>
+                      <p className="text-sm font-semibold text-gray-500">{org.occupation}</p>
+                      <p className="text-primary-600 text-xs font-bold tracking-wide uppercase">
+                        {org.role}
+                      </p>
                     </div>
                   </div>
 
-                  <p className="mb-6 leading-relaxed text-gray-600">{org.bio}</p>
+                  <p className="mb-4 text-sm leading-relaxed text-gray-600">{org.bio}</p>
 
-                  <a
-                    href={org.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-800 inline-flex items-center gap-1.5 text-sm font-semibold transition-colors"
-                  >
-                    <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                    </svg>
-                    LinkedIn Profile
-                  </a>
+                  {org.linkedin && (
+                    <a
+                      href={org.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-600 hover:text-primary-800 inline-flex items-center gap-1.5 text-sm font-semibold transition-colors"
+                    >
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                      </svg>
+                      LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
