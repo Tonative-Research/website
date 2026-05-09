@@ -7,6 +7,7 @@ const headerNavLinks = [
   { href: '/services', title: 'Services' },
   // { href: '/research', title: 'Research' },
   { href: '/publications', title: 'Publications' },
+  { href: '/indaba-2026', title: 'Indaba 2026' },
 ]
 
 export default headerNavLinks

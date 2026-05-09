@@ -1,5 +1,6 @@
 import { genPageMetadata } from 'app/seo'
 import siteMetadata from 'data/siteMetadata'
+import Link from 'next/link'
 
 export const metadata = genPageMetadata({ title: 'Community' })
 
@@ -119,6 +120,14 @@ export default function Page() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
+                  image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
+                  title: 'Tonative Workshop at Deep Learning Indaba 2026, Nigeria',
+                  desc: 'Hosting a hands-on workshop on community-driven African language data curation at DLI 2026. Featuring guest speakers from Digital Umuganda and KenCorpus.',
+                  gradient: 'from-primary-700/90 to-primary-500/90',
+                  href: '/indaba-2026',
+                  badge: 'Upcoming',
+                },
+                {
                   image: 'https://share.cysafepath.com/2026/05/ifs-2026-chinenye-speaker.png',
                   title: '2026 Impact Fellowship Summit (IFN IREX)',
                   desc: 'Virtual presentation on April 27, 2026, by Chinenye Anikwenze on "Human-in-the-Loop AI: Centering African Languages in Fellowship Systems" for the summit hosted in Washington, DC.',
@@ -174,6 +183,13 @@ export default function Page() {
 
                     {/* Decorative corner */}
                     <div className="absolute top-0 right-0 h-16 w-16 bg-linear-to-br from-white/20 to-transparent"></div>
+
+                    {/* Upcoming badge */}
+                    {card.badge && (
+                      <div className="bg-accent-500 absolute top-3 left-3 rounded-full px-3 py-1 text-xs font-bold text-white shadow">
+                        {card.badge}
+                      </div>
+                    )}
                   </div>
 
                   {/* Content */}
@@ -185,6 +201,15 @@ export default function Page() {
 
                     {/* Bottom accent line */}
                     <div className="from-primary-500 mt-4 h-1 w-0 rounded-full bg-linear-to-r to-blue-500 transition-all duration-500 group-hover:w-full"></div>
+
+                    {card.href && (
+                      <Link
+                        href={card.href}
+                        className="text-primary-600 mt-3 block text-sm font-semibold"
+                      >
+                        View workshop details →
+                      </Link>
+                    )}
                   </div>
                 </div>
               ))}
