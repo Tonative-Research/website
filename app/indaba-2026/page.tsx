@@ -3,59 +3,76 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 
 export const metadata = genPageMetadata({
-  title: 'DLI 2026 Workshop - Tonative',
+  title: 'DLI 2026 Workshop -Tonative',
   description:
-    'Tonative at Deep Learning Indaba 2026, Nigeria. Workshop on community-driven African language data curation, human-in-the-loop AI, and indigenous dataset building.',
+    "Tonative at Deep Learning Indaba 2026, Nigeria. Workshop on capacity building for community-led dataset creation and sustainable AI pipelines thereby strengthening Africa's human data infrastructure.",
 })
 
 const organizers = [
   {
     name: 'Alfred Kondoro',
     role: 'Lead Organiser',
-    occupation: 'Head of Research',
-    bio: 'Alfred is a researcher in Human-Computer Interaction and AI, with a strong focus on African language technologies and culturally grounded AI systems. He leads community-driven research initiatives aimed at strengthening African representation in AI research and practice.',
+    occupation: 'Head of Research, Tonative Africa',
+    bio: 'Alfred is a Tanzanian PhD researcher in Data Science at Hanyang University, Republic of Korea. He leads community-driven research initiatives at Tonative Africa aimed at strengthening African representation in AI, with work spanning NLP, HCI, and ICTD. His publications have appeared at EACL, AAAI, ACL, CHI, IMWUT, CIKM, CUI, and AfriCHI venues.',
     linkedin: 'https://www.linkedin.com/in/alfred-kondoro-b70605181/',
     image: '/static/images/authors/alfred_kondoro.png',
   },
   {
     name: 'Sharon Ibejih',
     role: 'Organiser',
-    occupation: 'Founder, Tonative',
-    bio: 'Sharon is a Senior Data Scientist and African language AI researcher. She founded Tonative to ensure African languages are meaningfully represented in modern AI systems, and has contributed to research on speech processing, machine translation, and African language datasets.',
+    occupation: 'Founder, Tonative Africa',
+    bio: 'Sharon is a Senior Data Scientist at Ignite Energy Access and the Founder of Tonative Africa. Her work focuses on NLP, data curation, and AI pipeline design for low-resource African languages. She holds an MSc in Data Science and has presented at AfricaNLP, NeurIPS WiML, ICLR workshops, Deep Learning Indaba, and CVPR.',
     linkedin: 'https://www.linkedin.com/in/sharonibejih/',
     image: '/static/images/authors/sharon_ibejih.png',
   },
   {
     name: 'Cynthia Amol',
     role: 'Organiser',
-    occupation: 'Co-Founder & Head of Data',
-    bio: 'Cynthia is a PhD student in Computer Science and NLP researcher focusing on low-resource African languages. A Google PhD Fellow and Deep Learning Indaba Alele-Williams Masters Award recipient, she oversees data validation and coordinates operations at Tonative.',
+    occupation: 'Co-Founder & Head of Data, Tonative Africa',
+    bio: 'Cynthia is a PhD student in Computer Science and Google NLP Fellow at Maseno University, Kenya. A Deep Learning Indaba Alele-Williams Masters Award recipient, she leads the data validation pipeline at Tonative Africa and has co-organised workshops at NeurIPS, LREC-COLING, EACL, and CHI.',
     linkedin: 'https://www.linkedin.com/in/cynthia-amol/',
     image: '/static/images/authors/cynthia_amol.png',
   },
   {
-    name: 'Joy Naomi Olusanya',
-    role: 'Organiser',
-    occupation: 'Training Manager & NLP Researcher',
-    bio: 'Joy is a linguist and NLP researcher focusing on low-resource languages, machine translation, and multilingual NLP. She chaired the CLRLC–LLMs Workshop at NeurIPS 2025 and is Founder of the Center for Low-Resource Languages and Cultures.',
-    linkedin: 'https://www.linkedin.com/in/joy-olusanya-209340206/',
-    image: '/static/images/authors/joy_naomi.png',
-  },
-  {
     name: 'Chinenye Anikwenze',
     role: 'Organiser',
-    occupation: 'Software Engineer & Researcher',
-    bio: 'Chinenye is a software engineer and researcher dedicated to bridging the digital divide for African languages. She leads the development of open-source infrastructure and validation tools that keep native speakers central to the AI development process.',
+    occupation: 'Engineering Lead, Tonative Africa',
+    bio: 'Chinenye is a Software Engineer and Automation Specialist focusing on defensive infrastructure and AI safety. As Engineering Lead at Tonative Africa, she manages technical infrastructure for 400+ contributors. Her research on Semantic Collapse and the security of tonal languages was recently presented at AFLC 2026 and Impact Fellowship Summit IREX 2026.',
     linkedin: 'https://www.linkedin.com/in/chinenye-anikwenze/',
     image: '/static/images/authors/chinenye_anikwenze.png',
   },
   {
-    name: "Okechukwu God'spraise",
+    name: 'Joy Olusanya',
     role: 'Organiser',
-    occupation: 'Software Engineer & Researcher',
-    bio: "God'spraise is a software engineer with a strong interest in NLP research. He plays cross-functional roles in engineering and research, contributing to the validation platform, task automation, and ongoing project leadership at Tonative.",
-    linkedin: null,
-    initials: 'OG',
+    occupation: 'NLP Researcher & Training Manager, Tonative Africa',
+    bio: 'Joy is a linguist and NLP researcher focusing on low-resource language technologies, multilingual NLP, and benchmark evaluation. She served as Workshop Chair for the CLRLC–LLMs Workshop at NeurIPS 2025 and is Founder and CEO of the Center for Low-Resource Languages and Cultures.',
+    linkedin: 'https://www.linkedin.com/in/joy-olusanya-209340206/',
+    image: '/static/images/authors/joy_naomi.png',
+  },
+  {
+    name: 'Armand Bukama',
+    role: 'Organiser',
+    occupation: 'Social Manager, Tonative Africa',
+    bio: 'Armand is a Congolese computer scientist from the DRC with a degree from the Catholic University of Bukavu. He leads community engagement, outreach, and communications at Tonative Africa, and works at the intersection of AI, electronics, and sustainable energy for underserved communities.',
+    linkedin: 'https://www.linkedin.com/in/armandbukama',
+    image: '/static/images/authors/armand_bukama.jpg',
+  },
+  {
+    name: 'Faisal Muhammad Adam',
+    role: 'Organiser',
+    occupation: 'Hausa Language Validation Lead, Tonative Africa',
+    bio: 'Faisal is a lecturer and data science practitioner based in Kano, Nigeria, pursuing graduate studies in Applied Data Science at WorldQuant University. He serves as Hausa Language Validation Lead at Tonative Africa, coordinating contributors on multilingual dataset validation and quality assurance.',
+    linkedin: 'https://www.linkedin.com/in/vafaisalm93/',
+    image: '/static/images/authors/faisal_adam.jpg',
+    initials: 'FA',
+  },
+  {
+    name: 'Godspraise Okechukwu',
+    role: 'Organiser',
+    occupation: 'Project Lead, Tonative Research Group',
+    bio: 'Godspraise is a software engineer and NLP researcher based in Nigeria. As Project Lead in the Tonative Research Group, he contributes to dataset creation, validation, and multilingual resource development for African languages, building community-driven data pipelines for low-resource languages.',
+    linkedin: 'https://www.linkedin.com/in/okechukwu-god-spraise-48464a1a3/',
+    image: '/static/images/authors/godspraise_okechukwu.jpg',
   },
 ]
 
@@ -63,7 +80,7 @@ const speakers = [
   {
     name: 'Samuel Rutunda',
     role: 'Digital Umuganda',
-    bio: "Building Rwanda's community-driven digital infrastructure initiative — Digital Umuganda — which harnesses collective civic action to power open language datasets and AI tools for Kinyarwanda.",
+    bio: "Building Rwanda's community-driven digital infrastructure initiative like Digital Umuganda which harnesses collective civic action to power open language datasets and AI tools for Kinyarwanda.",
     linkedin: 'https://rw.linkedin.com/in/samuel-rutunda-07bb818a',
     avatar: 'SR',
     org: 'Digital Umuganda',
@@ -80,39 +97,33 @@ const speakers = [
 
 const agenda = [
   {
-    time: 'Opening',
-    title: 'Welcome & Framing the Problem',
-    desc: 'Why African languages remain critically under-resourced in AI — and what community-driven curation can change.',
+    time: 'Section 1 · ~3 min',
+    title: 'Opening & Context',
+    desc: 'Welcome, session goals, and introduction to the Tonative Data Academy and African AI data challenges. Facilitated by Cynthia Amol.',
     icon: '🌍',
   },
   {
-    time: 'Talk 1',
-    title: 'Digital Umuganda: Civic Tech for Language Data',
-    desc: "Samuel Rutunda on how Rwanda's collective digital action model creates sustainable, community-owned language datasets.",
+    time: 'Section 2 · ~10 min',
+    title: 'Guest Talk',
+    desc: 'A short invited talk highlighting challenges in African dataset creation, community capacity-building initiatives, and sustainable data pipelines.',
+    icon: '🎙️',
+  },
+  {
+    time: 'Section 3 · ~35 min',
+    title: 'Breakout Discussions',
+    desc: 'Participants split into groups around key pipeline stages which encompasses dataset creation & collection, translation & validation & annotation, and dataset usage & evaluation in order to identify challenges, needs, and opportunities.',
     icon: '🤝',
   },
   {
-    time: 'Talk 2',
-    title: 'KenCorpus: Building East African Language Corpora',
-    desc: 'Lilian Wanzare on corpus construction pipelines, annotation challenges, and lessons from Kenyan language data collection.',
-    icon: '📚',
+    time: 'Section 4 · ~30 min',
+    title: 'Collaborative Roadmap Building',
+    desc: 'Groups share key insights and co-develop a shared roadmap for strengthening capacity, improving coordination across language communities, and designing scalable data pipelines.',
+    icon: '🗺️',
   },
   {
-    time: 'Talk 3',
-    title: 'Human-in-the-Loop AI for African Languages',
-    desc: 'Chinenye Anikwenze on how linguist-led validation catches semantic collapse and cultural misrepresentation in AI outputs.',
-    icon: '🔬',
-  },
-  {
-    time: 'Workshop',
-    title: 'Hands-On: Annotate, Validate, Extend',
-    desc: 'Participants work directly with real African language data — annotating, flagging errors, and experiencing the curation workflow first-hand.',
-    icon: '⚙️',
-  },
-  {
-    time: 'Discussion',
-    title: 'Open Floor: Building Collective Infrastructure',
-    desc: 'Collaborative session on shared tooling, ethical data practices, and how attendees can plug into the broader African NLP ecosystem.',
+    time: 'Section 5 · ~10 min',
+    title: 'Synthesis & Next Steps',
+    desc: 'Key takeaways, opportunities for collaboration, and post-Indaba follow-up plans including a shared resource toolkit and cross-community collaboration network.',
     icon: '💬',
   },
 ]
@@ -121,12 +132,17 @@ const logistics = [
   {
     icon: '📍',
     label: 'Location',
-    value: 'Nigeria — Deep Learning Indaba 2026 (in-person only)',
+    value: 'Nigeria: Deep Learning Indaba 2026 (in-person only)',
   },
   {
     icon: '🗓️',
     label: 'Format',
-    value: 'In-person workshop (virtual or hybrid not supported)',
+    value: 'Forums and dialogues (in-person; virtual or hybrid not supported)',
+  },
+  {
+    icon: '⏱️',
+    label: 'Duration',
+    value: '1 hour, 30 minutes',
   },
   {
     icon: '🎫',
@@ -164,24 +180,23 @@ export default function Indaba2026Page() {
 
         <div className="relative container mx-auto max-w-4xl px-4 text-center">
           {/* Badge */}
-          <div className="bg-accent-500/20 border-accent-400/40 mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-semibold text-white/90 backdrop-blur-sm">
+          <div className="bg-accent-500/20 border-accent-400/40 mb-6 inline-flex items-center gap-2 rounded-md border px-4 py-1.5 text-sm font-semibold text-white/90 backdrop-blur-sm">
             <span className="bg-accent-400 h-1.5 w-1.5 rounded-full"></span>
             Deep Learning Indaba 2026 · Nigeria
           </div>
 
           <h1 className="mb-5 text-4xl leading-tight font-black tracking-tight text-white md:text-6xl">
-            Closing the Data Gap:
+            Building Africa's Human
             <br />
             <span className="from-accent-300 to-accent-500 bg-linear-to-r bg-clip-text text-transparent">
-              Community-Driven Curation
+              Data Infrastructure
             </span>
-            <br />
-            for African Languages
           </h1>
 
           <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-gray-300">
-            A hands-on workshop at DLI 2026 exploring how native speakers, linguists, and AI
-            researchers can build the language infrastructure Africa's AI future depends on.
+            A capacity-building workshop at DLI 2026 on community-led dataset creation and
+            sustainable AI pipelines focused on strengthening the people, skills, and systems
+            Africa's AI future depends on.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -214,21 +229,24 @@ export default function Indaba2026Page() {
           <div className="grid gap-10 md:grid-cols-2">
             <div className="space-y-5 text-lg leading-relaxed text-gray-700">
               <p>
-                Despite the rapid growth of AI globally, the majority of African languages remain
-                critically absent from training datasets, benchmarks, and deployed systems. This
-                workshop brings together practitioners actively building the data infrastructure to
-                change that.
+                The rapid growth of generative AI has intensified demand for high-quality datasets,
+                yet progress in African AI remains constrained by gaps in{' '}
+                <strong className="text-gray-900">human data infrastructure</strong> - the people,
+                skills, and coordinated pipelines required to create, translate, validate, and
+                maintain datasets for African languages and contexts.
               </p>
               <p>
-                Hosted by <strong className="text-gray-900">Tonative</strong> at the{' '}
+                Hosted by <strong className="text-gray-900">Tonative Africa</strong> at the{' '}
                 <strong className="text-gray-900">Deep Learning Indaba 2026</strong> in Nigeria,
-                this session combines short talks from leading African NLP projects with a
-                participatory hands-on exercise — giving attendees direct experience in the
-                annotation, validation, and extension of real African language data.
+                this session focuses on capacity building for creators, translators, validators, and
+                annotators. Through short talks, breakout discussions, and collaborative roadmap
+                design, participants will explore best practices for dataset creation, quality
+                assurance, and long-term capacity development across African language communities.
               </p>
               <p>
-                All participants must be present in person. The workshop cannot be delivered in
-                virtual or hybrid format.
+                The session aims to produce shared guidelines, identify priority challenges, and
+                co-develop a roadmap for strengthening Africa's sovereign, sustainable, and locally
+                owned AI ecosystems. All participants must be present in person.
               </p>
             </div>
 
@@ -298,7 +316,7 @@ export default function Indaba2026Page() {
       </section>
 
       {/* ── Guest Speakers ───────────────────────────────────────────────── */}
-      <section className="bg-white py-20">
+      {/* <section className="bg-white py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
             <h2 className="mb-4 text-4xl font-black text-gray-900">Guest Speakers</h2>
@@ -314,11 +332,9 @@ export default function Indaba2026Page() {
                 key={i}
                 className="group relative overflow-hidden rounded-2xl bg-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                {/* Top accent strip */}
                 <div className="from-primary-600 to-primary-800 h-2 w-full bg-linear-to-r"></div>
 
                 <div className="p-8">
-                  {/* Avatar + name */}
                   <div className="mb-6 flex items-center gap-4">
                     <div className="from-primary-600 to-primary-800 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br text-xl font-black text-white shadow-lg">
                       {speaker.avatar}
@@ -347,7 +363,7 @@ export default function Indaba2026Page() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── Organisers ───────────────────────────────────────────────────── */}
       <section className="bg-gray-50 py-20">
@@ -413,6 +429,123 @@ export default function Indaba2026Page() {
         </div>
       </section>
 
+      {/* ── Target Audience ──────────────────────────────────────────────── */}
+      <section className="bg-white py-20">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="mb-12">
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Who Should Attend</h2>
+            <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
+            <p className="mt-4 text-lg text-gray-600">
+              This workshop is designed for a broad community of African AI practitioners and
+              contributors.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: '🔬',
+                label: 'Researchers',
+                desc: 'Working on African language technologies',
+              },
+              {
+                icon: '✏️',
+                label: 'Dataset Creators & Annotators',
+                desc: 'Building training data for African languages',
+              },
+              {
+                icon: '🌐',
+                label: 'Translators & Validators',
+                desc: 'Ensuring linguistic accuracy and contextual relevance',
+              },
+              {
+                icon: '💻',
+                label: 'Open-Source Contributors',
+                desc: 'Supporting community-driven AI tools and pipelines',
+              },
+              {
+                icon: '🎓',
+                label: 'Students & Educators',
+                desc: 'Working on data-centric AI in academic settings',
+              },
+              {
+                icon: '🏗️',
+                label: 'AI Practitioners',
+                desc: 'Building AI products and services for African users',
+              },
+              {
+                icon: '📖',
+                label: 'African Linguists',
+                desc: 'With an interest in data creation for their languages',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="border-primary-100 flex items-start gap-4 rounded-xl border bg-gray-50 p-5"
+              >
+                <span className="text-2xl">{item.icon}</span>
+                <div>
+                  <p className="font-semibold text-gray-900">{item.label}</p>
+                  <p className="mt-0.5 text-sm text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Expected Outputs ─────────────────────────────────────────────── */}
+      <section className="bg-gray-50 py-20">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="mb-12">
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Expected Outputs</h2>
+            <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
+            <p className="mt-4 text-lg text-gray-600">
+              The workshop aims to produce tangible, community-owned resources and connections.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: '📋',
+                title: 'Community Guidelines',
+                desc: 'Shared guidelines for dataset creation and validation across African language communities.',
+              },
+              {
+                icon: '🧰',
+                title: 'Resource & Toolkit List',
+                desc: 'A curated list of tools, frameworks, and training resources for African language data pipelines.',
+              },
+              {
+                icon: '🗺️',
+                title: 'Capacity-Building Roadmap',
+                desc: 'An actionable roadmap for scaling capacity-building initiatives and governance structures.',
+              },
+              {
+                icon: '🤝',
+                title: 'Collaboration Network',
+                desc: 'A cross-community network linking language teams, researchers, and practitioners.',
+              },
+              {
+                icon: '📄',
+                title: 'Post-Indaba Summary Report',
+                desc: 'A public synthesis of insights and recommendations to inform future collaborations and publications.',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
+              >
+                <div className="mb-4 text-3xl">{item.icon}</div>
+                <h3 className="mb-2 text-lg font-bold text-gray-900">{item.title}</h3>
+                <p className="text-sm leading-relaxed text-gray-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Requirements / What to Expect ────────────────────────────────── */}
       <section className="relative overflow-hidden bg-linear-to-br from-gray-900 to-gray-800 py-24">
         <div className="absolute inset-0 opacity-5">
@@ -471,7 +604,7 @@ export default function Indaba2026Page() {
           <div className="from-primary-500 to-primary-700 mx-auto mb-6 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           <p className="mb-8 text-lg leading-relaxed text-gray-600">
             Interested in collaborating, co-organising, or presenting at this workshop? Reach out to
-            the Tonative team — we want to hear from you.
+            the Tonative team... We want to hear from you.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link

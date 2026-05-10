@@ -15,7 +15,7 @@ export default async function Page() {
               Our Services
             </h1>
             <p className="mx-auto max-w-2xl text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
-              Bridging cultures through expert language services—empowering communities with
+              Bridging cultures through expert language services, empowering communities with
               cutting-edge translation technology and culturally authentic AI solutions.
             </p>
           </div>
