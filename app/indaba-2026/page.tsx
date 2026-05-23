@@ -47,7 +47,7 @@ const organizers = [
     occupation: 'NLP Researcher & Training Manager, Tonative Africa',
     bio: 'Joy is a linguist and NLP researcher focusing on low-resource language technologies, multilingual NLP, and benchmark evaluation. She served as Workshop Chair for the CLRLC–LLMs Workshop at NeurIPS 2025 and is Founder and CEO of the Center for Low-Resource Languages and Cultures.',
     linkedin: 'https://www.linkedin.com/in/joy-olusanya-209340206/',
-    image: '/static/images/authors/joy_naomi.png',
+    image: '/static/images/authors/joy_naomi.jpeg',
   },
   {
     name: 'Armand Bukama',
@@ -180,8 +180,7 @@ export default function Indaba2026Page() {
 
         <div className="relative container mx-auto max-w-4xl px-4 text-center">
           {/* Badge */}
-          <div className="bg-accent-500/20 border-accent-400/40 mb-6 inline-flex items-center gap-2 rounded-md border px-4 py-1.5 text-sm font-semibold text-white/90 backdrop-blur-sm">
-            <span className="bg-accent-400 h-1.5 w-1.5 rounded-full"></span>
+          <div className="border-l-primary-100 mx-auto mb-6 w-fit border-l-[3px] pl-3 text-center text-[13px] font-medium tracking-[0.4px] text-white/55">
             Deep Learning Indaba 2026 · Nigeria
           </div>
 
