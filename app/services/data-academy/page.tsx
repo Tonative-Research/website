@@ -162,7 +162,7 @@ export default function DataAcademyPage() {
                 { value: '6', label: 'Weeks' },
                 { value: '7', label: 'Modules' },
                 { value: '75%', label: 'Min. Attendance' },
-                { value: '$10', label: '2nd Cohort' },
+                { value: '$45', label: '2nd Cohort' },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col">
                   <span className="text-accent-400 text-3xl font-bold">{stat.value}</span>
@@ -571,7 +571,7 @@ export default function DataAcademyPage() {
             <div className="mb-2 text-sm font-medium tracking-wider text-gray-300 uppercase">
               2nd Cohort
             </div>
-            <div className="mb-1 text-5xl font-bold text-white">$10</div>
+            <div className="mb-1 text-5xl font-bold text-white">$45</div>
             <div className="mb-6 text-sm text-gray-400">Limited spots available</div>
 
             <ul className="mb-8 space-y-3 text-left text-sm text-gray-300">
