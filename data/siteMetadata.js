@@ -13,6 +13,7 @@ const siteMetadata = {
   socialBanner: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'services@tonative.org',
+  academyEmail: 'academy@tonative.org',
   github: 'https://github.com/Tonative-Research',
   x: 'https://x.com/tonative_org',
   // twitter: 'https://twitter.com/Twitter',
