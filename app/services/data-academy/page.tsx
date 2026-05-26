@@ -13,6 +13,7 @@ import {
   Lightbulb,
   BarChart3,
 } from 'lucide-react'
+import siteMetadata from '../../../data/siteMetadata'
 
 export const metadata = genPageMetadata({
   title: 'Tonative Data Academy',
@@ -162,7 +163,7 @@ export default function DataAcademyPage() {
                 { value: '6', label: 'Weeks' },
                 { value: '7', label: 'Modules' },
                 { value: '75%', label: 'Min. Attendance' },
-                { value: '$45', label: '2nd Cohort' },
+                // { value: '$45', label: '2nd Cohort' },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col">
                   <span className="text-accent-400 text-3xl font-bold">{stat.value}</span>
@@ -536,7 +537,7 @@ export default function DataAcademyPage() {
                   'Course materials and assignments via Google Classroom',
                   'WhatsApp group for announcements and informal discussions',
                   'All live classes recorded and shared via email',
-                  'Support: amol@tonative.org',
+                  `Support: \`${siteMetadata.academyEmail}\` for any questions or issues`,
                 ].map((ch, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="text-primary-500 mt-0.5 h-5 w-5 flex-shrink-0" />
@@ -590,11 +591,7 @@ export default function DataAcademyPage() {
               ))}
             </ul>
 
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeexgGHi8oPqOgFrIn17xbopQXKnRcCRv_MSrIjtYhW9EkK2Q/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://forms.gle/6GEQ43fD5pTryVvq5" target="_blank" rel="noopener noreferrer">
               <button className="bg-accent-500 hover:bg-accent-600 w-full rounded-lg py-4 text-base font-bold text-white shadow-lg transition-all hover:shadow-xl">
                 Join the Next Cohort
               </button>
@@ -603,24 +600,13 @@ export default function DataAcademyPage() {
             <p className="mt-4 text-xs text-gray-400">
               Questions? Email{' '}
               <a
-                href="mailto:amol@tonative.org"
+                href={`mailto:${siteMetadata.academyEmail}`}
                 className="text-accent-400 underline hover:text-white"
               >
-                amol@tonative.org
+                {siteMetadata.academyEmail}
               </a>
             </p>
           </div>
-
-          {/* Bottom note */}
-          <p className="text-sm text-gray-500">
-            For support, contact{' '}
-            <a
-              href="mailto:amol@tonative.org"
-              className="text-accent-400 underline hover:text-white"
-            >
-              amol@tonative.org
-            </a>{' '}
-          </p>
         </div>
       </section>
     </main>
