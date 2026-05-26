@@ -38,6 +38,56 @@ export default async function Page() {
         {/* Services Cards */}
         <div className="mx-auto max-w-7xl px-4 pb-16">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {/* Tonative Data Academy Card */}
+            <div className="flex flex-col overflow-hidden rounded-xl bg-white shadow-md dark:bg-gray-800">
+              <div
+                className="relative h-48 w-full bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage:
+                    "url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600')",
+                }}
+              >
+                {/* Overlay badge */}
+                <div className="absolute top-4 left-4">
+                  <span className="bg-accent-500 rounded-full px-3 py-1 text-xs font-bold text-white">
+                    Now Enrolling
+                  </span>
+                </div>
+              </div>
+              <div className="flex flex-grow flex-col p-6">
+                <h3 className="mb-2 text-xl leading-tight font-bold tracking-[-0.015em] dark:text-white">
+                  Tonative Data Academy
+                </h3>
+                <p className="mb-4 text-sm leading-normal font-normal text-gray-500 dark:text-gray-400">
+                  A 6-week intensive program in African Language Data Curation for AI and NLP. Open
+                  to all backgrounds. No prior technical experience required.
+                </p>
+                <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <li className="flex items-start">
+                    <CheckIcon />6 weeks of live online sessions
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon />
+                    Expert African linguist tutors
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon />
+                    Certificate of completion
+                  </li>
+                  <li className="flex items-start">
+                    <CheckIcon />
+                    Contribute to open-source African AI datasets
+                  </li>
+                </ul>
+                <div className="mt-auto">
+                  <Link href="/services/data-academy">
+                    <button className="bg-accent-500 hover:bg-accent-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal font-bold text-white transition-colors">
+                      <span className="truncate">Join the Next Cohort</span>
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
             {/* Language Translators Training Card */}
             <div className="flex flex-col overflow-hidden rounded-xl bg-white shadow-md dark:bg-gray-800">
               <div
@@ -203,57 +253,6 @@ export default async function Page() {
                   <Link href="/#contact-form">
                     <button className="bg-primary-500 hover:bg-primary-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal text-white transition-colors">
                       <span className="truncate">Learn More</span>
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Tonative Data Academy Card */}
-            <div className="flex flex-col overflow-hidden rounded-xl bg-white shadow-md dark:bg-gray-800">
-              <div
-                className="relative h-48 w-full bg-cover bg-center bg-no-repeat"
-                style={{
-                  backgroundImage:
-                    "url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600')",
-                }}
-              >
-                {/* Overlay badge */}
-                <div className="absolute top-4 left-4">
-                  <span className="bg-accent-500 rounded-full px-3 py-1 text-xs font-bold text-white">
-                    Now Enrolling
-                  </span>
-                </div>
-              </div>
-              <div className="flex flex-grow flex-col p-6">
-                <h3 className="mb-2 text-xl leading-tight font-bold tracking-[-0.015em] dark:text-white">
-                  Tonative Data Academy
-                </h3>
-                <p className="mb-4 text-sm leading-normal font-normal text-gray-500 dark:text-gray-400">
-                  A 6-week intensive program in African Language Data Curation for AI and NLP. Open
-                  to all backgrounds — no prior technical experience required.
-                </p>
-                <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-300">
-                  <li className="flex items-start">
-                    <CheckIcon />6 weeks of live online sessions
-                  </li>
-                  <li className="flex items-start">
-                    <CheckIcon />
-                    Expert African linguist tutors
-                  </li>
-                  <li className="flex items-start">
-                    <CheckIcon />
-                    Certificate of completion
-                  </li>
-                  <li className="flex items-start">
-                    <CheckIcon />
-                    Contribute to open-source African AI datasets
-                  </li>
-                </ul>
-                <div className="mt-auto">
-                  <Link href="/services/data-academy">
-                    <button className="bg-accent-500 hover:bg-accent-600 flex h-12 w-full items-center justify-center rounded-lg px-5 text-sm leading-normal font-bold text-white transition-colors">
-                      <span className="truncate">Join the Next Cohort</span>
                     </button>
                   </Link>
                 </div>
