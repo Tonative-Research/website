@@ -3,6 +3,7 @@ import DataCurator from '@/components/home/DataCurator'
 import ContactForm from '@/components/home/ContactForm'
 import ProductVolang from '@/components/home/ProductVolang'
 import ProblemSolution from '@/components/home/ProblemSolution'
+import DataAcademy from '@/components/home/DataAcademy'
 import Link from 'next/link'
 
 export default function Home({ posts }) {
@@ -13,6 +14,8 @@ export default function Home({ posts }) {
         <ProblemSolution />
         <ProductVolang />
         <DataCurator />
+        <DataAcademy />
+
         {/* Community Section */}
         <section className="from-primary-900 via-primary-800 relative bg-linear-to-br to-slate-950 py-16 lg:py-32">
           <div className="container mx-auto px-6 text-center sm:px-8">
