@@ -537,7 +537,7 @@ export default function DataAcademyPage() {
                   'Course materials and assignments via Google Classroom',
                   'WhatsApp group for announcements and informal discussions',
                   'All live classes recorded and shared via email',
-                  `Support: \`${siteMetadata.academyEmail}\` for any questions or issues`,
+                  `Support: Email ${siteMetadata.academyEmail} for any questions or issues`,
                 ].map((ch, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle className="text-primary-500 mt-0.5 h-5 w-5 flex-shrink-0" />
