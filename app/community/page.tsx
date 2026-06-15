@@ -151,10 +151,20 @@ export default function Page() {
                   gradient: 'from-teal-600/90 to-cyan-500/90',
                 },
                 {
+                  image: '/static/images/cynthia_webinar_women_leading_ai_for_social_good.jpg',
+                  title: 'Women Leading AI for Social Good in Africa - Tonative × Divas in AI',
+                  desc: 'On April 11, 2026, Tonative co-hosted a webinar with Divas in AI featuring Deborah Arthur, Cynthia Amol, and Tatapong Beyala on using AI to drive meaningful impact across Africa.',
+                  gradient: 'from-pink-600/90 to-rose-500/90',
+                  href: 'https://luma.com/jo494ckj',
+                  linkLabel: 'View Event Details →',
+                },
+                {
                   image: 'https://share.cysafepath.com/2026/05/aflc-2026-chinenye-speaker.png',
                   title: 'African Languages Conference (AFLC)',
                   desc: 'On February 27, 2026, Chinenye Anikwenze presented "Why Linguists are the Essential Guardrails for African AI," demonstrating how human-in-the-loop validation repairs tonal "Semantic Collapse" in Igbo.',
                   gradient: 'from-emerald-600/90 to-green-500/90',
+                  href: 'https://www.youtube.com/live/0eBZ2JJYaLg?t=34876',
+                  linkLabel: 'Watch recording →',
                 },
                 {
                   image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
