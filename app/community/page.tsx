@@ -128,6 +128,23 @@ export default function Page() {
                   badge: 'Upcoming',
                 },
                 {
+                  image: '/static/images/tonative_sharon_at_ypit.jpeg',
+                  title:
+                    'Young People in Tech (YPIT), Artificial Future Conference - Keynote Panel',
+                  desc: 'Sharon Ibejih, Founder of Tonative, spoke on the keynote panel "What It Actually Takes to Build AI in Africa" on June 13, 2026, at the Artificial Future Conference held at Civic Centre, Ozumba Mbadiwe, Victoria Island, Lagos.',
+                  gradient: 'from-violet-600/90 to-indigo-500/90',
+                  href: 'https://www.youtube.com/live/p_tZe1SOXHM?t=6140',
+                  linkLabel: 'Watch recording →',
+                },
+                {
+                  image: 'https://img.youtube.com/vi/wNAJYyTSQPc/maxresdefault.jpg',
+                  title: 'YPIT AF Workshop: Bridging the Data Skills Gap for African Languages',
+                  desc: 'On May 26, 2026, Tonative hosted a virtual workshop as part of The Artificial Future series by Young People In Tech (YPIT), introducing participants to language documentation, translation, validation, and dataset creation for AI. Facilitated by Sharon Ibejih, Cynthia Amol, and Mwihaki Thuo.',
+                  gradient: 'from-sky-600/90 to-blue-500/90',
+                  href: 'https://www.youtube.com/watch?v=wNAJYyTSQPc&t=5323s',
+                  linkLabel: 'Watch recording →',
+                },
+                {
                   image: 'https://share.cysafepath.com/2026/05/ifs-2026-chinenye-speaker.png',
                   title: '2026 Impact Fellowship Summit (IFN IREX)',
                   desc: 'Virtual presentation on April 27, 2026, by Chinenye Anikwenze on "Human-in-the-Loop AI: Centering African Languages in Fellowship Systems" for the summit hosted in Washington, DC.',
@@ -205,9 +222,11 @@ export default function Page() {
                     {card.href && (
                       <Link
                         href={card.href}
+                        target={card.href.startsWith('http') ? '_blank' : undefined}
+                        rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         className="text-primary-600 mt-3 block text-sm font-semibold"
                       >
-                        View workshop details →
+                        {card.linkLabel || 'View workshop details →'}
                       </Link>
                     )}
                   </div>
