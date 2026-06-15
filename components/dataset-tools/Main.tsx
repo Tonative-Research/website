@@ -18,6 +18,22 @@ export default function DatasetToolsMain() {
   }
   const datasets = [
     {
+      name: 'Storytelling',
+      description: 'African language storytelling corpus for speech recognition and NLP tasks',
+      curationMethod: 'Collaborated',
+      recordsCurated: '6',
+      languages: 'Igbo, Hausa, Yoruba, Dholuo',
+      dataType: 'Speech + Transcript',
+      validation: 'Human QA',
+      access: 'Public',
+      tags: ['Public', 'Speech', 'Human QA'],
+      action: {
+        label: 'Direct Access',
+        href: 'https://drive.google.com/drive/folders/1bXFBpYH3v8B612b8mms1fEM7u0e0xS2O?usp=sharing',
+      },
+      curationYear: '2026',
+    },
+    {
       name: 'XNLI',
       description: 'Cross-lingual natural language inference for reasoning tasks',
       curationMethod: 'Adapted',

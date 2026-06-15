@@ -128,6 +128,13 @@ export default function Page() {
                   badge: 'Upcoming',
                 },
                 {
+                  image: '/static/images/tonative_sharon_at_ypit.jpeg',
+                  title:
+                    'Young People in Tech (YPIT), Artificial Future Conference - Keynote Panel',
+                  desc: 'Sharon Ibejih, Founder of Tonative, spoke on the keynote panel "What It Actually Takes to Build AI in Africa" on June 13, 2026, at the Artificial Future Conference held at Civic Centre, Ozumba Mbadiwe, Victoria Island, Lagos.',
+                  gradient: 'from-violet-600/90 to-indigo-500/90',
+                },
+                {
                   image: 'https://share.cysafepath.com/2026/05/ifs-2026-chinenye-speaker.png',
                   title: '2026 Impact Fellowship Summit (IFN IREX)',
                   desc: 'Virtual presentation on April 27, 2026, by Chinenye Anikwenze on "Human-in-the-Loop AI: Centering African Languages in Fellowship Systems" for the summit hosted in Washington, DC.',
