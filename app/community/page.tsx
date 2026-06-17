@@ -2,7 +2,21 @@ import { genPageMetadata } from 'app/seo'
 import siteMetadata from 'data/siteMetadata'
 import Link from 'next/link'
 
-export const metadata = genPageMetadata({ title: 'Community' })
+export const metadata = genPageMetadata({
+  title: 'Community',
+  description:
+    'Join a growing community of 400+ members across 23 African countries working to advance African language representation in AI. Become a Language Champion at Tonative.',
+  keywords: [
+    'African AI community',
+    'language champion Africa',
+    'African language volunteers',
+    'Tonative community',
+    'African NLP community',
+    'African data curators',
+    'language diversity AI',
+    'join African AI community',
+  ],
+})
 
 export default function Page() {
   return (
@@ -120,7 +134,7 @@ export default function Page() {
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {[
                 {
-                  image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
+                  image: '/static/images/tonative_dli2026.png',
                   title: 'Tonative Workshop at Deep Learning Indaba 2026, Nigeria',
                   desc: 'Hosting a hands-on workshop on community-driven African language data curation at DLI 2026. Featuring guest speakers from Digital Umuganda and KenCorpus.',
                   gradient: 'from-primary-700/90 to-primary-500/90',

@@ -4,7 +4,7 @@ const siteMetadata = {
   author: 'Tonative Team',
   headerTitle: 'Tonative',
   description:
-    'Tonative is a community-driven initiative focused on AI data curation for under-resourced languages in Africa, combining human expertise and AI tools to build ethical language datasets',
+    'Tonative trains African data curators, creates custom African language datasets, and builds AI tools to make African languages a first-class part of artificial intelligence.',
   language: 'en-us',
   theme: 'light', // system, dark or light
   siteUrl: 'https://tonative.org/',
