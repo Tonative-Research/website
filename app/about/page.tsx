@@ -2,7 +2,23 @@ import { genPageMetadata } from 'app/seo'
 import Team from 'components/about/Team'
 import { allAuthors } from '.contentlayer/generated'
 
-export const metadata = genPageMetadata({ title: 'About' })
+export const metadata = genPageMetadata({
+  title: 'About',
+  description:
+    'Learn about Tonative — a community-driven initiative bringing together native speakers, linguists, and technologists to build high-quality African language datasets for inclusive AI.',
+  keywords: [
+    'about Tonative',
+    'African language data curation',
+    'community-driven AI',
+    'inclusive AI Africa',
+    'low-resource language datasets',
+    'African linguists',
+    'human-AI collaboration',
+    'ethical AI data',
+    'African NLP research',
+    'language technology Africa',
+  ],
+})
 
 export default function About() {
   // 1. Define the specific list of leaders to show

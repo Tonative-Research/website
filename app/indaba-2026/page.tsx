@@ -3,9 +3,21 @@ import NextImage from 'next/image'
 import Link from 'next/link'
 
 export const metadata = genPageMetadata({
-  title: 'DLI 2026 Workshop -Tonative',
+  title: 'DLI 2026 Workshop - Tonative',
   description:
     "Tonative at Deep Learning Indaba 2026, Nigeria. Workshop on capacity building for community-led dataset creation and sustainable AI pipelines thereby strengthening Africa's human data infrastructure.",
+  keywords: [
+    'Deep Learning Indaba 2026',
+    'DLI 2026 Nigeria',
+    'African AI workshop',
+    'African language dataset workshop',
+    'community-led AI Africa',
+    'African data infrastructure',
+    'NLP capacity building Africa',
+    'Tonative DLI 2026',
+    'African AI pipeline',
+    'dataset creation workshop Africa',
+  ],
 })
 
 const organizers = [

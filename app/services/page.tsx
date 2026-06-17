@@ -2,7 +2,21 @@ import { genPageMetadata } from 'app/seo'
 import ContactUs from 'components/ContactUs'
 import Link from 'next/link'
 
-export const metadata = genPageMetadata({ title: 'Services', description: '' })
+export const metadata = genPageMetadata({
+  title: 'Services',
+  description:
+    'Tonative offers the Data Academy (a 6-week African language data curation program), Language Translators Training, and African language data translation services for AI model development.',
+  keywords: [
+    'African language services',
+    'Tonative Data Academy',
+    'language translators training Africa',
+    'African language data translation',
+    'AI training data Africa',
+    'African language annotation services',
+    'NLP data services Africa',
+    'African language curation program',
+  ],
+})
 
 type Service = {
   title: string

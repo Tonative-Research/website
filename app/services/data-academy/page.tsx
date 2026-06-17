@@ -13,12 +13,24 @@ import {
   Lightbulb,
   BarChart3,
 } from 'lucide-react'
-import siteMetadata from '../../../data/siteMetadata'
+import siteMetadata from 'data/siteMetadata'
 
 export const metadata = genPageMetadata({
   title: 'Tonative Data Academy',
   description:
-    'Join the Tonative Data Academy — a 6-week intensive program in African Language Data Curation for AI and NLP. Learn to collect, annotate, and curate African language data. Join the next cohort.',
+    'Join the Tonative Data Academy, an intensive program in African Language Data Curation for AI and NLP. Learn to collect, annotate, and curate African language data. Join the next cohort.',
+  keywords: [
+    'Tonative Data Academy',
+    'African language data curation course',
+    'NLP training program Africa',
+    'African language annotation training',
+    'data curation certificate Africa',
+    'learn African language AI',
+    'African NLP course online',
+    'language data annotation program',
+    'AI training Africa',
+    'data curation for beginners Africa',
+  ],
 })
 
 const curriculumWeeks = [
