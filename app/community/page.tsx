@@ -167,26 +167,26 @@ export default function Page() {
                   linkLabel: 'Watch recording →',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
+                  image: '/static/images/tonative_booth_dli2025.png',
                   title: 'Tonative Booth at Deep Learning Indaba Conference at Kigali',
                   desc: 'Engaging with other African NLP enthusiasts and signing new members into our community.',
                   gradient: 'from-purple-500/90 to-pink-500/90',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600',
+                  image: '/static/images/Afrilang.jpeg',
                   title: 'AfriLang Conference at Kampala',
                   desc: 'Presenting our paper "Tonative: Community-Driven Extension of African Datasets Through Human-AI Collaboration.',
                   gradient: 'from-blue-500/90 to-cyan-500/90',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600',
+                  image: '/static/images/centre_of_low_resource.png',
                   title:
                     'Centre for Low-Resource Languages and Cultures Workshop at NeurIPs, Mexico City',
                   desc: 'Founded and chaired by Joy Naomi, with Tonative leaders as part of the co-organisers.',
                   gradient: 'from-green-500/90 to-emerald-500/90',
                 },
                 {
-                  image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
+                  image: '/static/images/Mawazo.jpeg',
                   title: 'Mawazo Ideas Night: Is the Algo African?',
                   desc: 'Cynthia Amol at a public events platform for science engagement and communication.',
                   gradient: 'from-orange-500/90 to-red-500/90',
