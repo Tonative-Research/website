@@ -86,16 +86,13 @@ export default function About() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-gray-700">
             <p>
-              Tonative is a community-driven initiative focused on AI data curation for
-              under-resourced languages, with a strong emphasis on African languages. We bring
-              together native speakers, linguists, and technologists to build, validate, and extend
-              high-quality language datasets that enable inclusive and culturally grounded AI
-              systems.
+              Tonative is an African AI data company. 
+              We build, validate, and curate language datasets and domain-specific training data for AI, 
+              across African languages and in English grounded in African contexts.
             </p>
             <p>
-              Our work sits at the intersection of human expertise and machine intelligence, using
-              human-AI collaboration to create datasets that are both scalable and linguistically
-              accurate.
+               Our work is powered by a trained network of linguists and domain specialists who live and work across the continent, 
+               ensuring every dataset is linguistically accurate, contextually grounded, and immediately usable.
             </p>
           </div>
         </div>
@@ -318,13 +315,9 @@ export default function About() {
             <h2 className="mb-8 text-4xl font-black text-white md:text-5xl">Our Vision</h2>
             <div className="space-y-6 text-xl leading-relaxed text-gray-300">
               <p>
-                We envision a future where African languages can meaningfully participate in AI
-                systems, and its communities have agency over how their languages are represented in
-                technology.
-              </p>
-              <p>
-                By combining community knowledge with AI tools, Tonative aims to make high-quality
-                language data more accessible, ethical, and inclusive.
+                We envision a future where African languages can significantly participate in AI systems,
+                 and its communities have agency over how their languages and experiences are represented in technology.
+
               </p>
             </div>
           </div>

@@ -151,11 +151,24 @@ export default function DatasetToolsMain() {
         <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
           Our Datasets and AI Tools
         </h1>
-        <p className="max-w-3xl text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
-          Build better language models with expertly curated datasets and enterprise-grade AI tools.
-          Access expertly curated African language datasets and AI-powered tools to build more
-          accurate, inclusive language technology
-        </p>
+        <div className="max-w-3xl space-y-4 text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
+          <p>
+            Browse our dataset catalog for AI training, evaluation, and benchmarking. Our datasets are available in two tiers:
+          </p>
+          <p>
+            <span className="font-bold text-gray-900 dark:text-white">Public Access:</span> Full datasets available for download under their respective open-source licenses. Suitable for research and non-commercial use.
+          </p>
+          <p>
+            <span className="font-bold text-gray-900 dark:text-white">Commercial License:</span> Preview samples available for review. Full datasets available for purchase for commercial AI development.
+          </p>
+          <p>
+            Contact{' '}
+            <a href="mailto:services@tonative.org" className="text-primary-600 hover:underline dark:text-primary-400">
+              services@tonative.org
+            </a>{' '}
+            for pricing and licensing.
+          </p>
+        </div>
       </div>
 
       {/* Datasets Section */}
@@ -322,34 +335,7 @@ export default function DatasetToolsMain() {
         </div>
       </section>
 
-      {/* AI Tools Section */}
-      <section className="mx-auto mb-12 max-w-7xl px-4">
-        <h2 className="mb-6 text-2xl leading-tight font-bold tracking-[-0.015em] text-gray-900 dark:text-white">
-          AI-Powered Language Tools
-        </h2>
-        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-            <div className="flex-1">
-              <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">
-                Language Data Translation Validation Tool
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Automatically validate translation accuracy and cultural appropriateness at scale.
-              </p>
-            </div>
-            <a
-              href={`mailto:${siteMetadata.cynthiaEmail}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-lg px-6 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors"
-            >
-              Access Custom Language Tools
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <ContactUs heading="For technical inquiries or data access requests, please contact us at" />
+      <ContactUs heading="For custom data requests, please contact us at" message = ""/>
     </main>
   )
 }
