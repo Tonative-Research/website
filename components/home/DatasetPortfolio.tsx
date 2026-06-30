@@ -4,7 +4,7 @@ import DataCuratorImg from '@/data/images/home-data-curator.png'
 import Image from 'next/image'
 import siteMetadata from '@/data/siteMetadata'
 
-export default function DataCurator() {
+export default function DatasetPortfolio() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   const datasets = [

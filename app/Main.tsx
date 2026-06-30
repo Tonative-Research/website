@@ -1,8 +1,10 @@
 import Hero from '@/components/home/Hero'
-import DataCurator from '@/components/home/DataCurator'
+import DatasetPortfolio from '@/components/home/DatasetPortfolio'
 import ContactForm from '@/components/home/ContactForm'
 import OurCoverage from '@/components/home/OurCoverage'
 import DataAcademy from '@/components/home/DataAcademy'
+import Image from 'next/image'
+import HeroBusinessBenefit from '@/data/images/hero_business_benefit.png'
 import Link from 'next/link'
 
 export default function Home({ posts }) {
@@ -11,7 +13,52 @@ export default function Home({ posts }) {
       <main className="w-full">
         <Hero />
         <OurCoverage /> 
-        <DataCurator />
+        
+        {/* CTA Button */}
+        <section className="bg-gray-50 md:p-16">
+          <div className="from-primary-900 via-primary-800 relative overflow-hidden bg-linear-to-br to-slate-950">
+            {/* Product Introduction */}
+            <section className="bg-primary-800 py-16">
+              <div className="container mx-auto px-6 sm:px-8">
+                <div className="grid items-center gap-12 md:grid-cols-2">
+                  <div className="text-center md:text-left">
+                    <h2 className="text-3xl font-bold text-white sm:text-4xl">Work With Us</h2>
+                    <p className="text-primary-50 mt-4 text-base leading-relaxed">
+                      We develop custom, high-fidelity Africa NLP datasets that reflect its local languages, cultural nuances and regional realities. 
+                      You can also explore our pre-built dataset catalog.
+                    </p>
+                    <div className="mt-6 flex flex-wrap gap-4">
+                      <a href="#contact-form">
+                        <button className="text-primary-500 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
+                          Request Custom Dataset
+                        </button>
+                      </a>
+                      <a href="/dataset-tools">
+                        <button className="text-primary-500 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
+                          Browse Our Datasets
+                        </button>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="dark:bg-background-dark w-full max-w-lg rounded-xl bg-white p-4 shadow-lg">
+                      <Image
+                        src={HeroBusinessBenefit}
+                        alt="Abstract representation of the Tonative software interface"
+                        width={600}
+                        height={320}
+                        className="h-auto w-full rounded-lg"
+                        priority
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <DatasetPortfolio />
         <DataAcademy />
 
         {/* Community Section has been removed */}
