@@ -8,6 +8,8 @@ export default function ContactForm() {
     name: '',
     email: '',
     organization: '',
+    industry: '',
+    country : '',
     message: '',
   })
   const [isSubmitting, setIsSubmitting] = React.useState(false)
@@ -19,6 +21,33 @@ export default function ContactForm() {
     'Hire Trained Linguists',
     'Partnership/Collaboration',
     'General Inquiry',
+  ]
+
+const countries = [
+  'Afghanistan','Albania','Algeria','Andorra','Angola','Antigua and Barbuda','Argentina','Armenia','Australia','Austria','Azerbaijan',
+  'Bahamas','Bahrain','Bangladesh','Barbados','Belarus','Belgium','Belize','Benin','Bhutan','Bolivia','Bosnia and Herzegovina','Botswana','Brazil','Brunei','Bulgaria','Burkina Faso','Burundi',
+  'Cabo Verde','Cambodia','Cameroon','Canada','Central African Republic','Chad','Chile','China','Colombia','Comoros','Congo (Brazzaville)','Congo (Kinshasa)','Costa Rica','Côte d\u2019Ivoire','Croatia','Cuba','Cyprus','Czechia',
+  'Denmark','Djibouti','Dominica','Dominican Republic',
+  'Ecuador','Egypt','El Salvador','Equatorial Guinea','Eritrea','Estonia','Eswatini','Ethiopia',
+  'Fiji','Finland','France',
+  'Gabon','Gambia','Georgia','Germany','Ghana','Greece','Grenada','Guatemala','Guinea','Guinea-Bissau','Guyana',
+  'Haiti','Honduras','Hungary',
+  'Iceland','India','Indonesia','Iran','Iraq','Ireland','Israel','Italy',
+  'Jamaica','Japan','Jordan',
+  'Kazakhstan','Kenya','Kiribati','Kosovo','Kuwait','Kyrgyzstan',
+  'Laos','Latvia','Lebanon','Lesotho','Liberia','Libya','Liechtenstein','Lithuania','Luxembourg',
+  'Madagascar','Malawi','Malaysia','Maldives','Mali','Malta','Marshall Islands','Mauritania','Mauritius','Mexico','Micronesia','Moldova','Monaco','Mongolia','Montenegro','Morocco','Mozambique','Myanmar',
+  'Namibia','Nauru','Nepal','Netherlands','New Zealand','Nicaragua','Niger','Nigeria','North Korea','North Macedonia','Norway',
+  'Oman',
+  'Pakistan','Palau','Palestine','Panama','Papua New Guinea','Paraguay','Peru','Philippines','Poland','Portugal',
+  'Qatar',
+  'Romania','Russia','Rwanda',
+  'Saint Kitts and Nevis','Saint Lucia','Saint Vincent and the Grenadines','Samoa','San Marino','Sao Tome and Principe','Saudi Arabia','Senegal','Serbia','Seychelles','Sierra Leone','Singapore','Slovakia','Slovenia','Solomon Islands','Somalia','South Africa','South Korea','South Sudan','Spain','Sri Lanka','Sudan','Suriname','Sweden','Switzerland','Syria',
+  'Taiwan','Tajikistan','Tanzania','Thailand','Timor-Leste','Togo','Tonga','Trinidad and Tobago','Tunisia','Turkey','Turkmenistan','Tuvalu',
+  'Uganda','Ukraine','United Arab Emirates','United Kingdom','United States','Uruguay','Uzbekistan',
+  'Vanuatu','Vatican City','Venezuela','Vietnam',
+  'Yemen',
+  'Zambia','Zimbabwe',
   ]
 
   const handleChange = (e) => {
@@ -47,7 +76,7 @@ export default function ContactForm() {
 
       if (result.success) {
         setIsSuccess(true)
-        setFormData({ interest: '', name: '', email: '', organization: '', message: '' })
+        setFormData({ interest: '', name: '', email: '', organization: '', industry: '', country : '', message: '' })
       } else {
         throw new Error(result.error)
       }
@@ -192,6 +221,56 @@ export default function ContactForm() {
                     style={{ fontFamily: 'var(--font-body)' }}
                     placeholder="Your Company"
                   />
+                </div>
+
+                {/* Industry */}
+                <div>
+                  <label
+                    htmlFor="industry"
+                    className="text-primary-900 mb-2 block text-sm font-bold"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    Industry (optional)
+                  </label>
+                  <input
+                    type="text"
+                    id="industry"
+                    name="industry"
+                    value={formData.industry}
+                    onChange={handleChange}
+                    className="focus:border-primary-500 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 transition-colors focus:outline-none"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                    placeholder="Eg. Healthcare, Education, Fintech"
+                  />
+                </div>
+
+                {/* Country */}
+                <div>
+                  <label
+                    htmlFor="country"
+                    className="text-primary-900 mb-2 block text-sm font-bold"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                  >
+                    Country *
+                  </label>
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    list="country-list"
+                    value={formData.country}
+                    onChange={handleChange}
+                    required
+                    className="focus:border-primary-500 w-full rounded-lg border border-gray-300 bg-white px-4 py-3 transition-colors focus:outline-none"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                    placeholder="Your Country"
+                    autoComplete="off"
+                  />
+                  <datalist id="country-list">
+                    {countries.map((c) => (
+                      <option key={c} value={c} />
+                    ))}
+                  </datalist>
                 </div>
 
                 {/* Message */}
