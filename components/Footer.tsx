@@ -12,7 +12,7 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <Image src={Logo} alt="Logo" height={40} className="mb-4" />
-            <p className="text-sm text-gray-300">Language technology for a more connected world.</p>
+            <p className="text-sm text-gray-300">African Context Intelligence for AI.</p>
           </div>
 
           {/* Quick Links */}

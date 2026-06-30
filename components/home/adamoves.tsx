@@ -7,46 +7,31 @@ import siteMetadata from '@/data/siteMetadata'
 export default function DataCurator() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
-  const datasets = [
+  const benefits = [
     {
-      title: 'Domain-Specific LLM Benchmarks',
+      title: 'Get Trained',
       description:
-        ' Prompt datasets and standardised scoring criteria optimized for easy integration into LLM-as-a-Judge workflows and automated evaluation pipelines to track performance and ensure domain accuracy in specific regions.',
+        'Complete our linguistics training program to learn about data quality standards before starting your first project.',
     },
     {
-      title: 'Agentic Workflow Benchmarks',
+      title: 'Join Our Network',
       description:
-        'Multi-turn evaluation datasets designed to rigorously test AI agents for reliable reasoning, accurate tool calling, and autonomous task execution.',
+        'Upon certification, you will join our community of expert curators who receive project assignments in their languages.',
     },
     {
-      title: 'Reasoning & NLI (Natural Language Inference)',
+      title: 'Language Supervision',
       description:
-        'Advanced logic, comprehension, and text-entailment datasets to test complex problem-solving and reduce model hallucinations.',
+        'Work with a supervisor who speaks your language and provides guidance and support throughout your projects.',
     },
     {
-      title: 'SFT & RLHF Alignment Data',
+      title: 'Data Protection',
       description:
-        'Expert-authored instruction-response pairs for Supervised Fine-Tuning (SFT) and human preference/comparison data for RLHF, optimized to align AI models with localized safety, tone, and cultural guidelines.',
+        'Our secure pipeline ensures your personal information remains confidential in all curated datasets.',
     },
     {
-      title: 'Parallel Text Translation',
+      title: 'Fair Compensation',
       description:
-        'High-quality bilingual and multilingual parallel corpora built to train and validate machine translation models.',
-    },
-    {
-      title: 'African Speech & Transcription',
-      description:
-        'Long- and short-form audio recordings paired with high-accuracy transcripts across major African languages for STT (Speech-to-Text) and TTS (Text-to-Speech) systems.',
-    },
-    {
-      title: 'Localized Image Descriptions',
-      description:
-        'Culturally accurate visual descriptions in African languages to train multimodal models and image-to-text applications.',
-    },
-    {
-      title: 'Cultural Narratives & Idioms',
-      description:
-        'Rich datasets featuring creative storytelling, African proverbs, cultural references, and idiomatic expressions to ensure AI models are culturally aware and contextually accurate.',
+        'Receive competitive hourly rates that are equitable across all contributors, with payment varying by project type.',
     },
   ]
 
@@ -60,14 +45,20 @@ export default function DataCurator() {
               className="text-primary-900 mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
               style={{ fontFamily: 'var(--font-header)' }}
             >
-              Our Dataset Portfolio{' '}
+              Become a Data Curator,{' '}
+              <span className="text-accent-600 relative inline-block">
+                <span className="relative z-10">Shape AI's Future</span>
+                <span className="bg-accent-200 absolute bottom-2 left-0 -z-0 h-3 w-full"></span>
+              </span>
             </h2>
 
             <p
               className="mb-8 text-lg leading-relaxed text-gray-700"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              High-quality African language datasets for training, fine-tuning, and benchmarking AI models.
+              We are constantly accepting applications from fluent African language speakers or
+              writers who are interested in translating, validating or organizing data resources
+              that can be used in improving AI models. No prior experience is required.
             </p>
 
             {/* Stats */}
@@ -77,20 +68,34 @@ export default function DataCurator() {
                   className="text-accent-600 mb-1 text-5xl font-bold"
                   style={{ fontFamily: 'var(--font-header)' }}
                 >
-                  5+
+                  20+
                 </div>
                 <div
                   className="text-sm tracking-wider text-gray-600 uppercase"
                   style={{ fontFamily: 'var(--font-body)' }}
                 >
-                  Datasets
+                  Languages
+                </div>
+              </div>
+              <div>
+                <div
+                  className="text-primary-600 mb-1 text-5xl font-bold"
+                  style={{ fontFamily: 'var(--font-header)' }}
+                >
+                  300+
+                </div>
+                <div
+                  className="text-sm tracking-wider text-gray-600 uppercase"
+                  style={{ fontFamily: 'var(--font-body)' }}
+                >
+                  Curators
                 </div>
               </div>
             </div>
 
-            {/* Accordion datasets */}
+            {/* Accordion Benefits */}
             <div className="space-y-3">
-              {datasets.map((dataset, idx) => (
+              {benefits.map((benefit, idx) => (
                 <div
                   key={idx}
                   className="overflow-hidden rounded-lg border-2 border-gray-200 bg-white"
@@ -103,7 +108,7 @@ export default function DataCurator() {
                       className="text-primary-900 text-lg font-bold"
                       style={{ fontFamily: 'var(--font-header)' }}
                     >
-                      {openIndex === idx ? '−' : '+'} {dataset.title}
+                      {openIndex === idx ? '−' : '+'} {benefit.title}
                     </span>
                   </button>
 
@@ -113,7 +118,7 @@ export default function DataCurator() {
                         className="px-3 leading-relaxed text-gray-700 lg:pl-6"
                         style={{ fontFamily: 'var(--font-body)' }}
                       >
-                        {dataset.description}
+                        {benefit.description}
                       </p>
                     </div>
                   )}
@@ -121,6 +126,16 @@ export default function DataCurator() {
               ))}
             </div>
 
+            {/* CTA */}
+            <a
+              href={siteMetadata.dataCuratorUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-accent-600 hover:bg-accent-700 mt-8 inline-block rounded px-8 py-3 font-bold text-white transition-colors"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              Apply Now
+            </a>
           </div>
 
           {/* Right Image */}

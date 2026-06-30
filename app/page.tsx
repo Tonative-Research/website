@@ -12,7 +12,6 @@ export const metadata = genPageMetadata({
     'AI data curation Africa',
     'NLP African languages',
     'African language AI',
-    'Volang translation app',
     'low-resource language data',
     'African NLP datasets',
     'data curator Africa',

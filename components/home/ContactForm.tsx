@@ -16,7 +16,6 @@ export default function ContactForm() {
 
   const interestOptions = [
     'Request Custom Dataset',
-    'Book Volang Demo',
     'Hire Trained Linguists',
     'Partnership/Collaboration',
     'General Inquiry',
