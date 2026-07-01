@@ -69,9 +69,9 @@ export default function Page() {
               </h2>
             </div>
             <p className="leading-relaxed text-gray-300 sm:text-xl">
-              Our mission is to empower African language representation in AI technology by creating
-              high-quality datasets, tools, and expertise that can bridge existing language and
-              cultural gaps.
+              To empower Africa’s representation in AI technology by creating high-quality datasets,
+               tools, and expertise that can bridge existing language and local domain gaps.
+               Join us if you are a native speaker, industry domain expert, NLP researcher, or software engineer.
             </p>
             <a href={siteMetadata.volunteerForm} target="_blank">
               <button className="bg-accent-500 hover:bg-accent-600 mt-6 cursor-pointer rounded-md px-8 py-3 font-semibold text-white transition-colors sm:mb-10">
@@ -260,39 +260,6 @@ export default function Page() {
           </div>
         </section>
 
-        {/* Language Champions */}
-        <section className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-md md:p-12">
-              <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-                <div>
-                  <h2 className="mb-4 text-3xl font-bold">Become a Language Champion</h2>
-                  <p className="mb-6 text-gray-700">
-                    Join us in our mission to preserve and promote Africa linguistic diversity.
-                    Whether you're a language enthusiast, educator, or technologist, there's a place
-                    for you in our community to drive equitable AI.
-                  </p>
-                  <a href={siteMetadata.volunteerForm} target="_blank">
-                    <button className="bg-primary-600 hover:bg-primary-700 rounded-md px-8 py-3 font-semibold text-white transition-colors">
-                      Request to Join
-                    </button>
-                  </a>
-                </div>
-                <div className="flex justify-center">
-                  <div className="rounded-full bg-green-100 p-12">
-                    <svg
-                      className="text-primary-600 h-32 w-32"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Newsletter Section */}
         {/* {siteMetadata.newsletter?.provider && (
