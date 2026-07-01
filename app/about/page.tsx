@@ -5,7 +5,7 @@ import { allAuthors } from '.contentlayer/generated'
 export const metadata = genPageMetadata({
   title: 'About',
   description:
-    'Learn about Tonative — a community-driven initiative bringing together native speakers, linguists, and technologists to build high-quality African language datasets for inclusive AI.',
+    'Tonative is an African AI data company building the data layer that enables African AI innovation. NeurIPS 2025 published. Trusted by research institutions and AI companies.',
   keywords: [
     'about Tonative',
     'African language data curation',

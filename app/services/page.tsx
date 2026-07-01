@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata = genPageMetadata({
   title: 'Services',
   description:
-    'Tonative offers the Data Academy (a 6-week African language data curation program), Language Translators Training, and African language data translation services for AI model development.',
+    'Custom data curation, validation, dataset localization, QA, and expert staffing for AI that works in Africa. Language datasets, domain-specific training data, and evaluation benchmarks across many African languages.',
   keywords: [
     'African language services',
     'Tonative Data Academy',

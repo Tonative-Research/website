@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata = genPageMetadata({
   title: 'Community',
   description:
-    'Join a growing community of 400+ members across 23 African countries working to advance African language representation in AI. Become a Language Champion at Tonative.',
+    'Join Tonative\'s network of trained linguists and domain specialists across many African countries. Get trained through the Data Academy, contribute to real projects, and earn from commercial work.',
   keywords: [
     'African AI community',
     'language champion Africa',

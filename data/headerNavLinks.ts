@@ -6,7 +6,7 @@ const headerNavLinks = [
   // { href: '/product', title: 'Product' },
   { href: '/community', title: 'Community' },
   // { href: '/research', title: 'Research' },
-  { href: '/publications', title: 'Publications' },
+  { href: '/publications', title: 'Research' },
   { href: '/indaba-2026', title: 'Indaba 2026' },
 ]
 
