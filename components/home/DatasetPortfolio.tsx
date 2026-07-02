@@ -70,23 +70,6 @@ export default function DatasetPortfolio() {
               High-quality African language datasets for training, fine-tuning, and benchmarking AI models.
             </p>
 
-            {/* Stats */}
-            <div className="mb-10 flex gap-8">
-              <div>
-                <div
-                  className="text-accent-600 mb-1 text-5xl font-bold"
-                  style={{ fontFamily: 'var(--font-header)' }}
-                >
-                  5+
-                </div>
-                <div
-                  className="text-sm tracking-wider text-gray-600 uppercase"
-                  style={{ fontFamily: 'var(--font-body)' }}
-                >
-                  Datasets
-                </div>
-              </div>
-            </div>
 
             {/* Accordion datasets */}
             <div className="space-y-3">

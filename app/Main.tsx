@@ -29,12 +29,12 @@ export default function Home({ posts }) {
                     </p>
                     <div className="mt-6 flex flex-wrap gap-4">
                       <a href="#contact-form">
-                        <button className="text-primary-500 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
+                        <button className="bg-accent-500 hover:bg-accent-600 w-full cursor-pointer rounded-lg px-8 py-3.5 text-sm font-bold text-white transition-colors sm:w-auto">
                           Request Custom Dataset
                         </button>
                       </a>
                       <a href="/dataset-tools">
-                        <button className="text-primary-500 rounded bg-white px-6 py-2.5 text-sm font-medium transition-colors hover:bg-gray-100">
+                        <button className="w-full cursor-pointer rounded-lg border border-white/30 bg-white/10 px-8 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20 sm:w-auto">
                           Browse Our Datasets
                         </button>
                       </a>

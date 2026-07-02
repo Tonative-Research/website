@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/dataset-tools" className="text-gray-300 hover:text-white">
-                  Datasets & Tools
+                  Datasets 
                 </Link>
               </li>
               <li>

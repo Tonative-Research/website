@@ -2,7 +2,7 @@ import { genPageMetadata } from 'app/seo'
 import DatasetToolsMain from '@/components/dataset-tools/Main'
 
 export const metadata = genPageMetadata({
-  title: 'Datasets & Tools',
+  title: 'Datasets',
   description:
     'Browse and download African language datasets for NLP and AI training. Translation, reasoning, evaluation benchmarks, speech, domain-specific and cultural narrative datasets across many languages.',
   keywords: [

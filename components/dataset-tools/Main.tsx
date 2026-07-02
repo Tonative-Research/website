@@ -256,7 +256,10 @@ export default function DatasetToolsMain() {
                     Action
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-700 uppercase dark:text-gray-300">
-                    Curation Year
+                    Metadata
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-700 uppercase dark:text-gray-300">
+                    Licensing
                   </th>
                 </tr>
               </thead>
@@ -323,9 +326,7 @@ export default function DatasetToolsMain() {
                           {dataset.action.label}
                         </a>
                       </td>
-                      <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">
-                        {dataset.curationYear}
-                      </td>
+                      
                     </tr>
                   ))
                 )}

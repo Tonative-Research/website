@@ -55,7 +55,6 @@ export default function Hero() {
         <div className="mb-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
             African Context Intelligence 
-            <span className="block"> for AI</span>
           </h1>
         </div>
 

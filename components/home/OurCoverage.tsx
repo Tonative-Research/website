@@ -4,16 +4,7 @@ export default function OurCoverage() {
   return (
     <section className="bg-gray-50 py-16">
       <div className="container mx-auto px-6 sm:px-8">
-        {/* Main Heading */}
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 sm:text-5xl">
-            Our Coverage
-          </h2>
-          <p className="mx-auto mt-4 max-w-3xl text-lg text-gray-600">
-            Empowering AI with diverse African languages, domains, and regions
-          </p>
-        </div>
-
+        
         <div className="space-y-10">
           {/* Languages */}
           <div>
@@ -66,7 +57,7 @@ export default function OurCoverage() {
               ].map(({ name, Flag }) => (
                 <span
                   key={name}
-                  className="flex items-center gap-2 rounded-full bg-purple-100 px-4 py-2 text-sm font-medium text-purple-800"
+                  className="flex items-center gap-2 rounded-full bg-teal-100 px-4 py-2 text-sm font-medium text-teal-800"
                 >
                   <Flag title={name} className="h-4 w-auto rounded-sm" />
                   {name}

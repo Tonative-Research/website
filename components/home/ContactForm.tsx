@@ -17,7 +17,8 @@ export default function ContactForm() {
   const [error, setError] = React.useState('')
 
   const interestOptions = [
-    'Request Custom Dataset',
+    'Custom Data Curation',
+    'Data Validation & Evaluation',
     'Hire Trained Linguists',
     'Partnership/Collaboration',
     'General Inquiry',

@@ -155,22 +155,22 @@ export default function About() {
 
             {[
               {
-                logo: '/static/images/credentials/indaba.png',
+                logo: '/static/images/neurips.png',
                 title: 'Published at NeurIPS 2025 Conference',
                 desc: 'Human-AI collaborative data curation methodology.',
               },
               {
-                logo: '/static/images/credentials/neurips.png',
+                logo: '/static/images/HealthBench.png',
                 title: 'HealthBench Extended',
                 desc: 'Localised OpenAI HealthBench dataset to 6 Nigerian languages with medical practitioners rewriting scoring rubrics to match the Nigerian healthcare system.',
               },
               {
-                logo: '/static/images/credentials/neurips.png',
+                logo: '/static/images/mlc.png',
                 title: 'MLC data validation partner',
                 desc: 'Validated custom dataset for research purposes.',
               },
               {
-                logo: '/static/images/credentials/neurips.png',
+                logo: '/static/images/techcabal.png',
                 title: 'Featured in TechCabal YPIT',
                 desc: 'Recognized in Africa\'s AI ecosystem as a dataset infrastructure provider.',
               },
@@ -179,11 +179,11 @@ export default function About() {
                 key={i}
                 className="group flex items-start gap-6 rounded-xl border-l-4 border-primary-700 bg-white p-6 shadow-md transition-all hover:shadow-lg"
               >
-                <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center">
+                <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center">
                   <img
                     src={item.logo}
                     alt={item.title}
-                    className="max-h-16 w-auto object-contain"
+                    className="max-h-24 w-auto object-contain"
                   />
                 </div>
                 <div>
