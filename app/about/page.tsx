@@ -86,13 +86,15 @@ export default function About() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-gray-700">
             <p>
-              Tonative is an African AI data company. 
-              We build, validate, and curate language datasets and domain-specific training data for AI, 
-              across African languages and in English grounded in African contexts.
+              Tonative is an African AI data company. Our goal is to ethically provide high-quality 
+              datasets that teach AI to understand Africans better. 
+              This means the data we curate reflects how Africans actually speak a language,
+              and how they interact with industry domains in ways unique to their country or region.
             </p>
             <p>
-               Our work is powered by a trained network of linguists and domain specialists who live and work across the continent, 
-               ensuring every dataset is linguistically accurate, contextually grounded, and immediately usable.
+               By closing this data gap, we enable AI models to become more reliable and serve a wider audience than it currently does. 
+               Our work is successful because we collaborate with a trained network of linguists 
+               and industry experts who live and work across the continent
             </p>
           </div>
         </div>
@@ -105,18 +107,18 @@ export default function About() {
             <h2 className="mb-4 text-4xl font-black text-gray-900">Founder's narrative</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           </div>
-          <p className="mb-12 text-lg text-gray-700">
-            The rapid growth of AI research and innovation across Africa has created unprecedented opportunities for the continent.
-            As global investment, research partnerships, and technological interest in African markets continue to increase,
-            so does the demand for language technologies that can understand the linguistic and contextual diversity of Africans.
-            But the continent's AI data needs have outgrown what grant-funded and volunteer-driven efforts alone can sustain.
-            Meeting this demand requires a scalable commercial data infrastructure.
+          <p className="mb-3 text-lg text-gray-700">
+            The rapid growth of AI research and innovation across Africa has created unprecedented opportunities. 
+            As global investment, research partnerships, and technological interest in African markets accelerate, 
+            the demand for language models that understand local linguistic and contextual diversity has increased.
           </p>
           <p className="mb-12 text-lg text-gray-700">
-            Our role at Tonative is to be the data layer that enables African AI innovation.
-            By combining trained language and domain experts with AI-assisted curation workflows,
-            we make it possible to create data resources that maintain Africa’s cultural and contextual knowledge.
-
+            However, the continent's data needs have outgrown what grant-funded and volunteer-driven efforts can sustain. 
+            Meeting this demand requires a scalable, commercial-grade data infrastructure.   
+          </p>
+          <p className="mb-12 text-lg text-gray-700">
+            Tonative was built to be the data layer that enables African AI innovation by combining trained 
+            domain experts with AI-assisted curation workflows to preserve and scale Africa’s cultural and contextual knowledge
           </p>
 
         </div>
