@@ -4,6 +4,23 @@ import ContactUs from 'components/ContactUs'
 import siteMetadata from 'data/siteMetadata'
 import { usePostHog } from 'posthog-js/react'
 
+type Dataset = {
+  name: string
+  description: string
+  curationMethod: string
+  recordsCurated: string
+  languages: string
+  languagesExtendable?: boolean
+  dataType: string
+  validation: string
+  access: string
+  tags: string[]
+  action: { label: string; href: string }
+  curationYear: string
+  metadata?: { label: string; href: string }
+  licensing?: string
+}
+
 export default function DatasetToolsMain() {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
 
@@ -16,39 +33,50 @@ export default function DatasetToolsMain() {
       dataset_name: name,
     })
   }
-  const datasets = [
+
+  const datasets: Dataset[] = [
     {
-      name: 'Storytelling',
-      description: 'African language storytelling corpus for speech recognition and NLP tasks',
-      curationMethod: 'Collaborated',
-      recordsCurated: '24',
+      name: 'African Storytelling',
+      description: 'Multilingual dataset of African contemporary and folk stories featuring 5–10 minute natural narrations for ASR, TTS, and speech-text alignment research',
+      curationMethod: 'Commissioned',
+      recordsCurated: '5',
       languages: 'Igbo, Hausa, Yoruba, Dholuo',
       dataType: 'Speech + Transcript',
       validation: 'Human QA',
       access: 'Public',
       tags: ['Public', 'Speech', 'Human QA'],
       action: {
-        label: 'Direct Access',
-        href: 'https://drive.google.com/drive/folders/1bXFBpYH3v8B612b8mms1fEM7u0e0xS2O?usp=sharing',
+        label: 'Preview Sample',
+        href: 'https://github.com/Tonative/open_files/tree/main/storytelling',
       },
       curationYear: '2026',
+      metadata: {
+        label: 'Croissant Metadata',
+        href: 'https://raw.githubusercontent.com/Tonative/open_files/refs/heads/main/storytelling/croissant_metadata.json',
+      },
+      licensing: 'CC BY-NC-ND 4.0',
     },
     {
-      name: 'HealthBench-Africa Extension',
+      name: 'NaijaHealthBench',
       description:
-        'Multilingual medical evaluation dataset extending the OpenAI HealthBench benchmark into African languages for AI safety and cross-lingual model evaluation',
+        ' Benchmarking dataset for evaluating LLM performance on medical queries within the Nigerian healthcare context, and across different Nigerian languages',
       curationMethod: 'Adapted',
       recordsCurated: '500',
-      languages: 'Igbo, Yoruba, Nigerian Pidgin, Kikuyu',
-      dataType: 'Non-Parallel Text',
-      validation: 'AI Validated + Human QA',
-      access: 'Public',
-      tags: ['Public', 'Text', 'AI-Validated', 'Human QA'],
+      languages: 'English, Nigerian Pidgin, Igbo, Yoruba, Hausa, Fula',
+      dataType: 'Parallel Text',
+      validation: 'Human QA',
+      access: 'Commercial',
+      tags: ['Commercial', 'Text', 'Human QA'],
       action: {
-        label: 'Direct Access',
-        href: 'https://huggingface.co/datasets/tonative/healthbench-africa-extension',
+        label: 'Preview Sample',
+        href: 'https://raw.githubusercontent.com/Tonative/open_files/refs/heads/main/naijahealth-benchmark/naijahealthbench.json',
       },
       curationYear: '2026',
+      metadata: {
+        label: 'Croissant Metadata',
+        href: 'https://raw.githubusercontent.com/Tonative/open_files/refs/heads/main/naijahealth-benchmark/croissant_metadata.json',
+      },
+      licensing: 'CC BY-NC-ND 4.0',
     },
     {
       name: 'Swahili Parallel Text Extension',
@@ -65,7 +93,8 @@ export default function DatasetToolsMain() {
         label: 'Direct Access',
         href: 'https://huggingface.co/datasets/tonative/swahili-parallel-text-extension',
       },
-      curationYear: '2026',
+      curationYear: '2025',
+      licensing: 'CC-BY-NC-4.0',
     },
     {
       name: 'XNLI',
@@ -82,22 +111,7 @@ export default function DatasetToolsMain() {
         href: 'https://huggingface.co/datasets/Tonative/Extended-XNLI',
       },
       curationYear: '2025',
-    },
-    {
-      name: 'KKD Parallel Corpora',
-      description: 'Kiswahilli-African language parallel text for machine translation',
-      curationMethod: 'Adapted',
-      recordsCurated: '29,231',
-      languages: "Kiswahili ↔ English, Kidaw'ida, Kalenjin and Dholuo",
-      dataType: 'Parallel Text - MT',
-      validation: 'Human QA',
-      access: 'Public',
-      tags: ['Public', 'Text', 'Parallel', 'Human QA'],
-      action: {
-        label: 'Direct Access',
-        href: 'https://huggingface.co/datasets/Tonative/Extended-KKD',
-      },
-      curationYear: '2025',
+      licensing: 'CC BY 4.0',
     },
     {
       name: 'MRL-Benchmark',
@@ -114,6 +128,7 @@ export default function DatasetToolsMain() {
         href: 'https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel',
       },
       curationYear: '2025',
+      licensing: 'CC-BY-SA-4.0',
     },
     // {
     //   name: 'Tonative Speech Dataset',
@@ -133,7 +148,7 @@ export default function DatasetToolsMain() {
 
   const filters = ['Public', 'Commercial', 'Text', 'Speech', 'Parallel', 'Human QA', 'AI-Validated']
 
-  const toggleFilter = (filter) => {
+  const toggleFilter = (filter: string) => {
     setActiveFilters((prev) =>
       prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter]
     )
@@ -326,7 +341,23 @@ export default function DatasetToolsMain() {
                           {dataset.action.label}
                         </a>
                       </td>
-                      
+                      <td className="px-6 py-4 text-sm">
+                        {dataset.metadata ? (
+                          <a
+                            href={dataset.metadata.href}
+                            target="_blank"
+                            onClick={() => captureClick(dataset.name)}
+                            className="text-primary-500 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-semibold underline"
+                          >
+                            {dataset.metadata.label}
+                          </a>
+                        ) : (
+                          <span className="text-gray-400 dark:text-gray-500">—</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">
+                        {dataset.licensing || '—'}
+                      </td>
                     </tr>
                   ))
                 )}
@@ -336,7 +367,7 @@ export default function DatasetToolsMain() {
         </div>
       </section>
 
-      <ContactUs heading="For custom data requests, please contact us at" message = ""/>
+      <ContactUs heading="For custom data requests, please contact us at" message="" />
     </main>
   )
 }
