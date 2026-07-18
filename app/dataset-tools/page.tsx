@@ -2,9 +2,9 @@ import { genPageMetadata } from 'app/seo'
 import DatasetToolsMain from '@/components/dataset-tools/Main'
 
 export const metadata = genPageMetadata({
-  title: 'Datasets & Tools',
+  title: 'Datasets',
   description:
-    'Browse and download open-source African language datasets — including XNLI, HealthBench-Africa, and KKD Parallel Corpora — plus AI-powered tools for translation validation and NLP development.',
+    'Browse and download African language datasets for NLP and AI training. Translation, reasoning, evaluation benchmarks, speech, domain-specific and cultural narrative datasets across many languages.',
   keywords: [
     'African language datasets download',
     'open-source African NLP datasets',

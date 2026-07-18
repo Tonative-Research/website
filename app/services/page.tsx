@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata = genPageMetadata({
   title: 'Services',
   description:
-    'Tonative offers the Data Academy (a 6-week African language data curation program), Language Translators Training, and African language data translation services for AI model development.',
+    'Custom data curation, validation, dataset localization, QA, and expert staffing for AI that works in Africa. Language datasets, domain-specific training data, and evaluation benchmarks across many African languages.',
   keywords: [
     'African language services',
     'Tonative Data Academy',
@@ -31,6 +31,40 @@ type Service = {
 }
 
 const services: Service[] = [
+  
+  {
+    title: 'Custom Data Curation',
+    description:
+      'We build custom datasets to your specifications either in African languages or English grounded in African contexts. This covers training and alignment datasets, or evaluation benchmarks to improve AI model performance.',
+    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600',
+    features: [
+      'Translation & Parallel Text',
+      'Reasoning & NLI',
+      'Evaluation Benchmarks',
+      'Agentic Workflow Data',
+      'Speech & Transcription',
+      'Image Descriptions',
+      'Cultural Narratives',
+    ],
+    cta: 'Curate A Dataset',
+    href: '/#contact-form',
+    variant: 'primary',
+  },
+  {
+    title: 'Data Validation & Evaluation',
+    description:
+      'We validate, review, and score existing datasets for linguistic accuracy, cultural authenticity, and domain correctness.',
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600',
+    features: [
+      'Linguistic accuracy & cultural authenticity checks',
+      'Multi-stage review pipeline',
+      'Trained curators & linguistics-background language leads',
+      'Quality assurance for production-ready data',
+    ],
+    cta: 'Learn More',
+    href: '/#contact-form',
+    variant: 'primary',
+  },
   {
     title: 'Tonative Data Academy',
     description:
@@ -48,34 +82,19 @@ const services: Service[] = [
     variant: 'accent',
   },
   {
-    title: 'Language Translators Training',
+    title: 'Expert Network',
     description:
-      'Master the art and science of translation. Our comprehensive program equips you with advanced skills, cultural expertise, and industry-recognized certification to thrive in the global language market.',
-    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=600',
+      'Hire vetted, trained African language and domain specialists for your annotation, validation, translation, or evaluation projects.',
+    image: 'https://images.unsplash.com/photo-1643000867361-cd545336249b?q=80&w=1181&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
-      'Advanced training in specialized translation domains',
-      'Proven techniques for higher accuracy and fluency',
-      'Enhanced cultural competency',
-      'Industry-recognized certification upon completion',
+      'Vetted African language & domain specialists',
+      'Annotation, validation, translation & evaluation',
+      'Trained through the Tonative Data Academy',
+      'Supervised by technical & language leads',
     ],
-    cta: 'Learn More',
-    href: '/#data-curator',
-    variant: 'primary',
-  },
-  {
-    title: 'African Language Data Translation for AI Models',
-    description:
-      'We provide high-quality, culturally-sensitive data translation services for African languages to train and improve AI models.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600',
-    features: [
-      'High-quality, accurate data sets',
-      'Culturally nuanced translations',
-      'Improved AI model performance',
-      'Access to a wide range of African languages',
-    ],
-    cta: 'Learn More',
+    cta: 'Hire A Specialist',
     href: '/#contact-form',
-    variant: 'primary',
+    variant: 'accent',
   },
 ]
 
@@ -109,15 +128,14 @@ export default async function Page() {
               Our Services
             </h1>
             <p className="mx-auto max-w-2xl text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
-              Bridging cultures through expert language services, empowering communities with
-              cutting-edge translation technology and culturally authentic AI solutions.
+              Data Services for African Context Intelligence
             </p>
           </div>
         </div>
 
         {/* Services Cards */}
-        <div className="mx-auto max-w-7xl px-4 pb-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-6xl px-4 pb-16">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 ">
             {services.map((service) => (
               <div
                 key={service.title}

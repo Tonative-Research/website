@@ -6,13 +6,12 @@ import Main from './Main'
 export const metadata = genPageMetadata({
   title: 'Tonative',
   description:
-    'Tonative trains African data curators, creates custom language datasets, and builds AI tools to include African languages in the future of artificial intelligence.',
+    'Tonative is an African AI data company. We build expert-curated language datasets and domain-specific training data that help AI models work accurately across African languages and contexts.',
   keywords: [
     'African language datasets',
     'AI data curation Africa',
     'NLP African languages',
     'African language AI',
-    'Volang translation app',
     'low-resource language data',
     'African NLP datasets',
     'data curator Africa',

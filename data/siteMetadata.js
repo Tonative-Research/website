@@ -30,10 +30,7 @@ const siteMetadata = {
     'https://docs.google.com/forms/d/e/1FAIpQLScynluFvDYq27-lxTLqHaTkTyUdfmBesTy2ZwVFECoPGbQr9Q/viewform',
   volunteerForm:
     'https://docs.google.com/forms/d/e/1FAIpQLScMmXlrcw5REcFLUdm5ln_bvqjUZEFHwWb-fz_Sdz3m3_IzbA/viewform',
-  volangUrl: 'https://volang.tonative.org/',
-  volangContactEmail: 'volang@tonative.org',
-  volangContactUrl: 'https://volang.app/contact',
-  cynthiaEmail: 'amol@tonative.org',
+  cynthiaEmail: 'services@tonative.org',
   locale: 'en-US',
   // set to true if you want a navbar fixed to the top
   stickyNav: true,

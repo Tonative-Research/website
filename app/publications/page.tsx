@@ -6,9 +6,9 @@ import ListLayout from '@/layouts/ListLayoutWithTags'
 const POSTS_PER_PAGE = 5
 
 export const metadata = genPageMetadata({
-  title: 'Publications',
+  title: 'Research',
   description:
-    'Read Tonative research publications on African language datasets, NLP benchmarks, commonsense reasoning, and community-driven approaches to building inclusive AI systems.',
+    'Research papers and publications from Tonative, including work presented at NeurIPS 2025 and contributions to African language benchmarks and evaluation frameworks.',
   keywords: [
     'African language research publications',
     'NLP research papers Africa',
