@@ -2,7 +2,6 @@
 import { useState } from 'react'
 import DataCuratorImg from '@/data/images/home-data-curator.png'
 import Image from 'next/image'
-import siteMetadata from '@/data/siteMetadata'
 
 export default function DatasetPortfolio() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -52,7 +51,7 @@ export default function DatasetPortfolio() {
 
   return (
     <section className="bg-gray-50 py-16 lg:pb-32" id="dataset-portfolio">
-      <div className="container mx-auto px-6 sm:px-8">
+      <div className="container mx-auto px-4 sm:px-10">
         <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
           {/* Left Content */}
           <div>
@@ -60,16 +59,20 @@ export default function DatasetPortfolio() {
               className="text-primary-900 mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
               style={{ fontFamily: 'var(--font-header)' }}
             >
-              Our Dataset Portfolio{' '}
+              Explore Our{' '}
+              <span className="text-accent-600 relative inline-block">
+                <span className="relative z-10">Dataset Portfolio</span>
+                <span className="bg-accent-200 absolute bottom-2 left-0 -z-0 h-3 w-full"></span>
+              </span>
             </h2>
 
             <p
               className="mb-8 text-lg leading-relaxed text-gray-700"
               style={{ fontFamily: 'var(--font-body)' }}
             >
-              High-quality African language datasets for training, fine-tuning, and benchmarking AI models.
+              High-quality African language datasets for training, fine-tuning, and benchmarking AI
+              models.
             </p>
-
 
             {/* Accordion datasets */}
             <div className="space-y-3">
@@ -103,7 +106,6 @@ export default function DatasetPortfolio() {
                 </div>
               ))}
             </div>
-
           </div>
 
           {/* Right Image */}

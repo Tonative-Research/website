@@ -5,18 +5,17 @@ import OurCoverage from '@/components/home/OurCoverage'
 import DataAcademy from '@/components/home/DataAcademy'
 import Image from 'next/image'
 import HeroBusinessBenefit from '@/data/images/hero_business_benefit.png'
-import Link from 'next/link'
 
 export default function Home({ posts }) {
   return (
     <>
       <main className="w-full">
         <Hero />
-        <OurCoverage /> 
-        
+        <OurCoverage />
+
         {/* CTA Button */}
-        <section className="bg-gray-50 md:p-16">
-          <div className="from-primary-900 via-primary-800 relative overflow-hidden bg-linear-to-br to-slate-950">
+        <section className="bg-gray-50 px-4 sm:px-10">
+          <div className="from-primary-900 via-primary-800 relative overflow-hidden rounded-md bg-linear-to-br to-slate-950">
             {/* Product Introduction */}
             <section className="bg-primary-800 py-16">
               <div className="container mx-auto px-6 sm:px-8">
@@ -24,8 +23,9 @@ export default function Home({ posts }) {
                   <div className="text-center md:text-left">
                     <h2 className="text-3xl font-bold text-white sm:text-4xl">Work With Us</h2>
                     <p className="text-primary-50 mt-4 text-base leading-relaxed">
-                      We develop custom, high-fidelity Africa NLP datasets that reflect its local languages, cultural nuances and regional realities. 
-                      You can also explore our pre-built dataset catalog.
+                      We develop custom, high-fidelity Africa NLP datasets that reflect its local
+                      languages, cultural nuances and regional realities. You can also explore our
+                      pre-built dataset catalog.
                     </p>
                     <div className="mt-6 flex flex-wrap gap-4">
                       <a href="#contact-form">
@@ -62,7 +62,7 @@ export default function Home({ posts }) {
         <DataAcademy />
 
         {/* Community Section has been removed */}
-       
+
         <ContactForm />
       </main>
     </>

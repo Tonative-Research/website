@@ -3,22 +3,53 @@ import * as Flags from 'country-flag-icons/react/3x2'
 export default function OurCoverage() {
   return (
     <section className="bg-gray-50 py-16">
-      <div className="container mx-auto px-6 sm:px-8">
-        
-        <div className="space-y-10">
+      <div className="container mx-auto px-4 sm:px-10">
+        <h2
+          className="text-primary-900 mb-6 text-4xl font-bold sm:text-5xl lg:text-6xl"
+          style={{ fontFamily: 'var(--font-header)' }}
+        >
+          Our{' '}
+          <span className="text-accent-600 relative inline-block">
+            <span className="relative z-10">Coverage</span>
+            <span className="bg-accent-200 absolute bottom-2 left-0 -z-0 h-3 w-full"></span>
+          </span>
+        </h2>
+
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* Languages */}
           <div>
-            <h3 className="mb-4 text-2xl font-semibold text-gray-900">Languages</h3>
+            <p
+              className="mb-5 text-xs font-semibold tracking-widest text-gray-400 uppercase"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              Languages
+            </p>
             <div className="flex flex-wrap gap-2">
               {[
-                'English', 'French', 'Lingala', 'Luo', 'Kikuyu', 'Maasai',
-                'Swahili', 'Chichewa', 'Efik', 'Fula', 'Hausa', 'Ibibio',
-                'Igbo', 'Kanuri', 'Nigerian Pidgin', 'Yoruba', 'Kinyarwanda',
-                'Luganda', 'Lusoga',
+                'English',
+                'French',
+                'Lingala',
+                'Luo',
+                'Kikuyu',
+                'Maasai',
+                'Swahili',
+                'Chichewa',
+                'Efik',
+                'Fula',
+                'Hausa',
+                'Ibibio',
+                'Igbo',
+                'Kanuri',
+                'Nigerian Pidgin',
+                'Yoruba',
+                'Kinyarwanda',
+                'Luganda',
+                'Lusoga',
               ].map((lang) => (
                 <span
                   key={lang}
-                  className="rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800"
+                  className="rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-sm text-gray-700"
+                  style={{ fontFamily: 'var(--font-body)' }}
                 >
                   {lang}
                 </span>
@@ -28,13 +59,19 @@ export default function OurCoverage() {
 
           {/* Domains */}
           <div>
-            <h3 className="mb-4 text-2xl font-semibold text-gray-900">Domains</h3>
+            <p
+              className="mb-5 text-xs font-semibold tracking-widest text-gray-400 uppercase"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              Domains
+            </p>
             <div className="flex flex-wrap gap-2">
               {['Healthcare', 'Banking & Finance', 'Agriculture', 'Civic Tech', 'Education'].map(
                 (domain) => (
                   <span
                     key={domain}
-                    className="rounded-full bg-green-100 px-4 py-2 text-sm font-medium text-green-800"
+                    className="rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-sm text-gray-700"
+                    style={{ fontFamily: 'var(--font-body)' }}
                   >
                     {domain}
                   </span>
@@ -43,21 +80,27 @@ export default function OurCoverage() {
             </div>
           </div>
 
-          {/* Countries with Flags */}
+          {/* Countries */}
           <div>
-            <h3 className="mb-4 text-2xl font-semibold text-gray-900">Countries</h3>
+            <p
+              className="mb-5 text-xs font-semibold tracking-widest text-gray-400 uppercase"
+              style={{ fontFamily: 'var(--font-body)' }}
+            >
+              Countries
+            </p>
             <div className="flex flex-wrap gap-2">
               {[
                 { name: 'DR Congo', Flag: Flags.CD },
-                { name: 'Kenya',    Flag: Flags.KE },
-                { name: 'Malawi',   Flag: Flags.MW },
-                { name: 'Nigeria',  Flag: Flags.NG },
-                { name: 'Rwanda',   Flag: Flags.RW },
-                { name: 'Uganda',   Flag: Flags.UG },
+                { name: 'Kenya', Flag: Flags.KE },
+                { name: 'Malawi', Flag: Flags.MW },
+                { name: 'Nigeria', Flag: Flags.NG },
+                { name: 'Rwanda', Flag: Flags.RW },
+                { name: 'Uganda', Flag: Flags.UG },
               ].map(({ name, Flag }) => (
                 <span
                   key={name}
-                  className="flex items-center gap-2 rounded-full bg-teal-100 px-4 py-2 text-sm font-medium text-teal-800"
+                  className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-sm text-gray-700"
+                  style={{ fontFamily: 'var(--font-body)' }}
                 >
                   <Flag title={name} className="h-4 w-auto rounded-sm" />
                   {name}

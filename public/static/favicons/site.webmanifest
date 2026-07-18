@@ -3,9 +3,9 @@
   "short_name": "Tonative",
   "icons": [
     {
-      "src": "/favicon-32x32.png",
+      "src": "/icon0.svg",
       "sizes": "96x96",
-      "type": "image/png"
+      "type": "image/svg+xml"
     },
     {
       "src": "/static/favicons/web-app-manifest-192x192.png",

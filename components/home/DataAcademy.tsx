@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function DataAcademy() {
   return (
     <section className="bg-white py-16">
-      <div className="container mx-auto px-6 sm:px-8">
+      <div className="container mx-auto px-4 sm:px-10">
         <div className="from-primary-900 via-primary-800 relative overflow-hidden rounded-2xl bg-linear-to-br to-slate-950 px-8 py-12 sm:px-12 lg:px-16">
           {/* Background patterns */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[42px_42px]"></div>
