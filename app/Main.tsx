@@ -20,21 +20,22 @@ export default function Home({ posts }) {
             <section className="bg-primary-800 py-16">
               <div className="container mx-auto px-6 sm:px-8">
                 <div className="grid items-center gap-12 md:grid-cols-2">
-                  <div className="text-center md:text-left">
+                  <div className="text-left">
                     <h2 className="text-3xl font-bold text-white sm:text-4xl">Work With Us</h2>
                     <p className="text-primary-50 mt-4 text-base leading-relaxed">
                       We develop custom, high-fidelity Africa NLP datasets that reflect its local
                       languages, cultural nuances and regional realities. You can also explore our
                       pre-built dataset catalog.
                     </p>
-                    <div className="mt-6 flex flex-wrap gap-4">
+
+                    <div className="mt-6 flex flex-col gap-4 sm:flex-row">
                       <a href="#contact-form">
-                        <button className="bg-accent-500 hover:bg-accent-600 w-full cursor-pointer rounded-lg px-8 py-3.5 text-sm font-bold text-white transition-colors sm:w-auto">
+                        <button className="bg-accent-500 hover:bg-accent-600 w-[80%] cursor-pointer rounded-lg px-8 py-3.5 text-sm font-bold text-white transition-colors sm:w-auto">
                           Request Custom Dataset
                         </button>
                       </a>
                       <a href="/dataset-tools">
-                        <button className="w-full cursor-pointer rounded-lg border border-white/30 bg-white/10 px-8 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20 sm:w-auto">
+                        <button className="w-[80%] cursor-pointer rounded-lg border border-white/30 bg-white/10 px-8 py-3.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/20 sm:w-auto">
                           Browse Our Datasets
                         </button>
                       </a>
