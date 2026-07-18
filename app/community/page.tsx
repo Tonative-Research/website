@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata = genPageMetadata({
   title: 'Community',
   description:
-    'Join a growing community of 400+ members across 23 African countries working to advance African language representation in AI. Become a Language Champion at Tonative.',
+    "Join Tonative's network of trained linguists and domain specialists across many African countries. Get trained through the Data Academy, contribute to real projects, and earn from commercial work.",
   keywords: [
     'African AI community',
     'language champion Africa',
@@ -69,9 +69,10 @@ export default function Page() {
               </h2>
             </div>
             <p className="leading-relaxed text-gray-300 sm:text-xl">
-              Our mission is to empower African language representation in AI technology by creating
-              high-quality datasets, tools, and expertise that can bridge existing language and
-              cultural gaps.
+              To empower Africa’s representation in AI technology by creating high-quality datasets,
+              tools, and expertise that can bridge existing language and local domain gaps. Join us
+              if you are a native speaker, industry domain expert, NLP researcher, or software
+              engineer.
             </p>
             <a href={siteMetadata.volunteerForm} target="_blank">
               <button className="bg-accent-500 hover:bg-accent-600 mt-6 cursor-pointer rounded-md px-8 py-3 font-semibold text-white transition-colors sm:mb-10">
@@ -84,7 +85,7 @@ export default function Page() {
         {/* Stats Section */}
         <section className="relative -mt-16 bg-transparent pb-8 sm:pb-16">
           <div className="container mx-auto px-4">
-            <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
+            <div className="mx-auto grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-3">
               {/* Members Card */}
               <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl">
                 <div className="bg-primary-500/10 absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full blur-2xl transition-transform group-hover:scale-150"></div>
@@ -102,7 +103,7 @@ export default function Page() {
                 </div>
               </div>
 
-              {/* Countries Card */}
+              {/* Languages Card */}
               <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl">
                 <div className="absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full bg-blue-500/10 blur-2xl transition-transform group-hover:scale-150"></div>
                 <div className="relative">
@@ -113,10 +114,104 @@ export default function Page() {
                   </div>
                   <div className="flex items-center gap-2 text-lg font-semibold text-gray-600">
                     <div className="bg-accent-500 h-px w-8"></div>
-                    African Countries
+                    African Languages
                   </div>
                 </div>
               </div>
+
+              {/* Domain Card */}
+              <div className="group relative overflow-hidden rounded-2xl bg-white p-8 shadow-2xl">
+                <div className="absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full bg-green-500/10 blur-2xl transition-transform group-hover:scale-150"></div>
+                <div className="relative">
+                  <div className="mb-1 text-3xl font-black text-gray-900 md:text-7xl">
+                    <span className="bg-linear-to-br from-green-600 to-green-800 bg-clip-text text-transparent">
+                      8+
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-2 text-lg font-semibold text-gray-600">
+                    <div className="h-px w-8 bg-green-500"></div>
+                    Domains
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/*data curator pipeline */}
+        <section className="bg-gray-50 py-16 sm:py-24" id="data-curator">
+          <div className="container mx-auto max-w-6xl px-4">
+            <div className="mb-16 text-center">
+              <h2 className="relative inline-block text-3xl font-black text-gray-900 sm:text-5xl">
+                Become a Data Curator
+                <div className="from-accent-500 to-accent-300 absolute -bottom-3 left-1/2 h-1 w-24 -translate-x-1/2 bg-linear-to-r"></div>
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
+                We accept applications from fluent African language speakers who want to translate,
+                validate, or organize data that improves AI models. No prior experience required —
+                here's how the journey works.
+              </p>
+            </div>
+
+            <div className="relative">
+              {/* Connecting line (desktop) */}
+              <div className="from-accent-400 to-primary-400 absolute top-8 right-0 left-0 hidden h-0.5 bg-linear-to-r lg:block"></div>
+
+              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
+                {[
+                  {
+                    step: '01',
+                    title: 'Get Trained',
+                    description:
+                      'Complete our linguistics training program to learn data quality standards before your first project.',
+                  },
+                  {
+                    step: '02',
+                    title: 'Join Our Network',
+                    description:
+                      'Once certified, join our community of expert curators who receive project assignments in their languages.',
+                  },
+                  {
+                    step: '03',
+                    title: 'Language Supervision',
+                    description:
+                      'Work with a supervisor who speaks your language and guides you throughout your projects.',
+                  },
+                  {
+                    step: '04',
+                    title: 'Data Protection',
+                    description:
+                      'Our secure pipeline keeps your personal information confidential across all curated datasets.',
+                  },
+                  {
+                    step: '05',
+                    title: 'Fair Compensation',
+                    description:
+                      'Earn competitive hourly rates, equitable across all contributors, varying by project type.',
+                  },
+                ].map((item, idx) => (
+                  <div key={idx} className="relative flex flex-col items-center text-center">
+                    {/* Step circle */}
+                    <div className="from-accent-500 to-accent-600 relative z-10 mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-linear-to-br text-xl font-black text-white shadow-lg">
+                      {item.step}
+                    </div>
+                    <h3 className="mb-2 text-lg font-bold text-gray-900">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-gray-600">{item.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* CTA */}
+            <div className="mt-14 text-center">
+              <a
+                href={siteMetadata.dataCuratorUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent-600 hover:bg-accent-700 inline-block rounded-md px-8 py-3 font-bold text-white transition-colors"
+              >
+                Apply to Become a Curator
+              </a>
             </div>
           </div>
         </section>
@@ -256,40 +351,6 @@ export default function Page() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Language Champions */}
-        <section className="bg-gray-50 py-16">
-          <div className="container mx-auto px-4">
-            <div className="mx-auto max-w-4xl rounded-lg bg-white p-8 shadow-md md:p-12">
-              <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
-                <div>
-                  <h2 className="mb-4 text-3xl font-bold">Become a Language Champion</h2>
-                  <p className="mb-6 text-gray-700">
-                    Join us in our mission to preserve and promote Africa linguistic diversity.
-                    Whether you're a language enthusiast, educator, or technologist, there's a place
-                    for you in our community to drive equitable AI.
-                  </p>
-                  <a href={siteMetadata.volunteerForm} target="_blank">
-                    <button className="bg-primary-600 hover:bg-primary-700 rounded-md px-8 py-3 font-semibold text-white transition-colors">
-                      Request to Join
-                    </button>
-                  </a>
-                </div>
-                <div className="flex justify-center">
-                  <div className="rounded-full bg-green-100 p-12">
-                    <svg
-                      className="text-primary-600 h-32 w-32"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" />
-                    </svg>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>

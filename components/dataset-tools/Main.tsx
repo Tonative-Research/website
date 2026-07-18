@@ -1,8 +1,24 @@
 'use client'
 import { useState } from 'react'
 import ContactUs from 'components/ContactUs'
-import siteMetadata from 'data/siteMetadata'
 import { usePostHog } from 'posthog-js/react'
+
+type Dataset = {
+  name: string
+  description: string
+  curationMethod: string
+  recordsCurated: string
+  languages: string
+  languagesExtendable?: boolean
+  dataType: string
+  validation: string
+  access: string
+  tags: string[]
+  action: { label: string; href: string }
+  curationYear: string
+  metadata?: { label: string; href: string }
+  licensing?: string
+}
 
 export default function DatasetToolsMain() {
   const [activeFilters, setActiveFilters] = useState<string[]>([])
@@ -16,39 +32,51 @@ export default function DatasetToolsMain() {
       dataset_name: name,
     })
   }
-  const datasets = [
+
+  const datasets: Dataset[] = [
     {
-      name: 'Storytelling',
-      description: 'African language storytelling corpus for speech recognition and NLP tasks',
-      curationMethod: 'Collaborated',
-      recordsCurated: '24',
+      name: 'African Storytelling',
+      description:
+        'Multilingual dataset of African contemporary and folk stories featuring 5–10 minute natural narrations for ASR, TTS, and speech-text alignment research',
+      curationMethod: 'Commissioned',
+      recordsCurated: '5',
       languages: 'Igbo, Hausa, Yoruba, Dholuo',
       dataType: 'Speech + Transcript',
       validation: 'Human QA',
       access: 'Public',
       tags: ['Public', 'Speech', 'Human QA'],
       action: {
-        label: 'Direct Access',
-        href: 'https://drive.google.com/drive/folders/1bXFBpYH3v8B612b8mms1fEM7u0e0xS2O?usp=sharing',
+        label: 'Preview Sample',
+        href: 'https://github.com/Tonative/open_files/tree/main/storytelling',
       },
       curationYear: '2026',
+      metadata: {
+        label: 'Croissant Metadata',
+        href: 'https://raw.githubusercontent.com/Tonative/open_files/refs/heads/main/storytelling/croissant_metadata.json',
+      },
+      licensing: 'CC BY-NC-ND 4.0',
     },
     {
-      name: 'HealthBench-Africa Extension',
+      name: 'NaijaHealthBench',
       description:
-        'Multilingual medical evaluation dataset extending the OpenAI HealthBench benchmark into African languages for AI safety and cross-lingual model evaluation',
+        ' Benchmarking dataset for evaluating LLM performance on medical queries within the Nigerian healthcare context, and across different Nigerian languages',
       curationMethod: 'Adapted',
       recordsCurated: '500',
-      languages: 'Igbo, Yoruba, Nigerian Pidgin, Kikuyu',
-      dataType: 'Non-Parallel Text',
-      validation: 'AI Validated + Human QA',
-      access: 'Public',
-      tags: ['Public', 'Text', 'AI-Validated', 'Human QA'],
+      languages: 'English, Nigerian Pidgin, Igbo, Yoruba, Hausa, Fula',
+      dataType: 'Parallel Text',
+      validation: 'Human QA',
+      access: 'Commercial',
+      tags: ['Commercial', 'Text', 'Human QA'],
       action: {
-        label: 'Direct Access',
-        href: 'https://huggingface.co/datasets/tonative/healthbench-africa-extension',
+        label: 'Preview Sample',
+        href: 'https://raw.githubusercontent.com/Tonative/open_files/refs/heads/main/naijahealth-benchmark/naijahealthbench.json',
       },
       curationYear: '2026',
+      metadata: {
+        label: 'Croissant Metadata',
+        href: 'https://raw.githubusercontent.com/Tonative/open_files/refs/heads/main/naijahealth-benchmark/croissant_metadata.json',
+      },
+      licensing: 'CC BY-NC-ND 4.0',
     },
     {
       name: 'Swahili Parallel Text Extension',
@@ -65,7 +93,8 @@ export default function DatasetToolsMain() {
         label: 'Direct Access',
         href: 'https://huggingface.co/datasets/tonative/swahili-parallel-text-extension',
       },
-      curationYear: '2026',
+      curationYear: '2025',
+      licensing: 'CC-BY-NC-4.0',
     },
     {
       name: 'XNLI',
@@ -82,22 +111,7 @@ export default function DatasetToolsMain() {
         href: 'https://huggingface.co/datasets/Tonative/Extended-XNLI',
       },
       curationYear: '2025',
-    },
-    {
-      name: 'KKD Parallel Corpora',
-      description: 'Kiswahilli-African language parallel text for machine translation',
-      curationMethod: 'Adapted',
-      recordsCurated: '29,231',
-      languages: "Kiswahili ↔ English, Kidaw'ida, Kalenjin and Dholuo",
-      dataType: 'Parallel Text - MT',
-      validation: 'Human QA',
-      access: 'Public',
-      tags: ['Public', 'Text', 'Parallel', 'Human QA'],
-      action: {
-        label: 'Direct Access',
-        href: 'https://huggingface.co/datasets/Tonative/Extended-KKD',
-      },
-      curationYear: '2025',
+      licensing: 'CC BY 4.0',
     },
     {
       name: 'MRL-Benchmark',
@@ -114,6 +128,7 @@ export default function DatasetToolsMain() {
         href: 'https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel',
       },
       curationYear: '2025',
+      licensing: 'CC-BY-SA-4.0',
     },
     // {
     //   name: 'Tonative Speech Dataset',
@@ -133,7 +148,7 @@ export default function DatasetToolsMain() {
 
   const filters = ['Public', 'Commercial', 'Text', 'Speech', 'Parallel', 'Human QA', 'AI-Validated']
 
-  const toggleFilter = (filter) => {
+  const toggleFilter = (filter: string) => {
     setActiveFilters((prev) =>
       prev.includes(filter) ? prev.filter((f) => f !== filter) : [...prev, filter]
     )
@@ -147,15 +162,36 @@ export default function DatasetToolsMain() {
   return (
     <main className="flex-1 bg-gray-50 py-10 dark:bg-gray-900">
       {/* Header Section */}
-      <div className="mx-auto mb-8 max-w-7xl px-4">
+      <div className="mx-auto mb-8 max-w-7xl px-4 sm:px-10">
         <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
           Our Datasets and AI Tools
         </h1>
-        <p className="max-w-3xl text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
-          Build better language models with expertly curated datasets and enterprise-grade AI tools.
-          Access expertly curated African language datasets and AI-powered tools to build more
-          accurate, inclusive language technology
-        </p>
+        <div className="max-w-3xl space-y-4 text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
+          <p>
+            Browse our dataset catalog for AI training, evaluation, and benchmarking. Our datasets
+            are available in two tiers:
+          </p>
+          <p>
+            <span className="font-bold text-gray-900 dark:text-white">Public Access:</span> Full
+            datasets available for download under their respective open-source licenses. Suitable
+            for research and non-commercial use.
+          </p>
+          <p>
+            <span className="font-bold text-gray-900 dark:text-white">Commercial License:</span>{' '}
+            Preview samples available for review. Full datasets available for purchase for
+            commercial AI development.
+          </p>
+          <p>
+            Contact{' '}
+            <a
+              href="mailto:services@tonative.org"
+              className="text-primary-600 dark:text-primary-400 hover:underline"
+            >
+              services@tonative.org
+            </a>{' '}
+            for pricing and licensing.
+          </p>
+        </div>
       </div>
 
       {/* Datasets Section */}
@@ -243,7 +279,10 @@ export default function DatasetToolsMain() {
                     Action
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-700 uppercase dark:text-gray-300">
-                    Curation Year
+                    Metadata
+                  </th>
+                  <th className="px-6 py-3 text-left text-xs font-medium tracking-wider text-gray-700 uppercase dark:text-gray-300">
+                    Licensing
                   </th>
                 </tr>
               </thead>
@@ -310,41 +349,28 @@ export default function DatasetToolsMain() {
                           {dataset.action.label}
                         </a>
                       </td>
+                      <td className="px-6 py-4 text-sm">
+                        {dataset.metadata ? (
+                          <a
+                            href={dataset.metadata.href}
+                            target="_blank"
+                            onClick={() => captureClick(dataset.name)}
+                            className="text-primary-500 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300 font-semibold underline"
+                          >
+                            {dataset.metadata.label}
+                          </a>
+                        ) : (
+                          <span className="text-gray-400 dark:text-gray-500">—</span>
+                        )}
+                      </td>
                       <td className="px-6 py-4 text-sm text-gray-600 dark:text-gray-400">
-                        {dataset.curationYear}
+                        {dataset.licensing || '—'}
                       </td>
                     </tr>
                   ))
                 )}
               </tbody>
             </table>
-          </div>
-        </div>
-      </section>
-
-      {/* AI Tools Section */}
-      <section className="mx-auto mb-12 max-w-7xl px-4">
-        <h2 className="mb-6 text-2xl leading-tight font-bold tracking-[-0.015em] text-gray-900 dark:text-white">
-          AI-Powered Language Tools
-        </h2>
-        <div className="rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
-          <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-            <div className="flex-1">
-              <h3 className="mb-2 text-lg font-bold text-gray-900 dark:text-white">
-                Language Data Translation Validation Tool
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Automatically validate translation accuracy and cultural appropriateness at scale.
-              </p>
-            </div>
-            <a
-              href={`mailto:${siteMetadata.email}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-primary-500 hover:bg-primary-600 dark:bg-primary-600 dark:hover:bg-primary-700 rounded-lg px-6 py-2.5 text-sm font-semibold whitespace-nowrap text-white transition-colors"
-            >
-              Access Custom Language Tools
-            </a>
           </div>
         </div>
       </section>

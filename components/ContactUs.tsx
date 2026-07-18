@@ -21,9 +21,11 @@ export default function ContactUs({
         {heading}
       </h2>
 
-      <p className="mt-2 text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
-        {message}
-      </p>
+      {message && (
+        <p className="mt-2 text-base leading-normal font-normal text-gray-500 dark:text-gray-400">
+          {message}
+        </p>
+      )}
 
       <a
         className="text-primary-500 dark:text-primary-400 mt-4 inline-block text-lg font-medium hover:underline"

@@ -18,7 +18,7 @@ import siteMetadata from 'data/siteMetadata'
 export const metadata = genPageMetadata({
   title: 'Tonative Data Academy',
   description:
-    'Join the Tonative Data Academy, an intensive program in African Language Data Curation for AI and NLP. Learn to collect, annotate, and curate African language data. Join the next cohort.',
+    "Learn to curate AI-ready language data through Tonative's 6-week Data Academy. No prior experience required. Graduates join our expert network and gain access to paid commercial projects across 20+ African languages.",
   keywords: [
     'Tonative Data Academy',
     'African language data curation course',

@@ -5,7 +5,7 @@ import { allAuthors } from '.contentlayer/generated'
 export const metadata = genPageMetadata({
   title: 'About',
   description:
-    'Learn about Tonative — a community-driven initiative bringing together native speakers, linguists, and technologists to build high-quality African language datasets for inclusive AI.',
+    'Tonative is an African AI data company building the data layer that enables African AI innovation. NeurIPS 2025 published. Trusted by research institutions and AI companies.',
   keywords: [
     'about Tonative',
     'African language data curation',
@@ -86,75 +86,44 @@ export default function About() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-gray-700">
             <p>
-              Tonative is a community-driven initiative focused on AI data curation for
-              under-resourced languages, with a strong emphasis on African languages. We bring
-              together native speakers, linguists, and technologists to build, validate, and extend
-              high-quality language datasets that enable inclusive and culturally grounded AI
-              systems.
+              Tonative is an African AI data company. Our goal is to ethically provide high-quality
+              datasets that teach AI to understand Africans better. This means the data we curate
+              reflects how Africans actually speak a language, and how they interact with industry
+              domains in ways unique to their country or region.
             </p>
             <p>
-              Our work sits at the intersection of human expertise and machine intelligence, using
-              human-AI collaboration to create datasets that are both scalable and linguistically
-              accurate.
+              By closing this data gap, we enable AI models to become more reliable and serve a
+              wider audience than it currently does. Our work is successful because we collaborate
+              with a trained network of linguists and industry experts who live and work across the
+              continent
             </p>
           </div>
         </div>
       </section>
 
-      {/* What We Do */}
+      {/* Founder's narrative */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
-            <h2 className="mb-4 text-4xl font-black text-gray-900">What We Do</h2>
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Founder's narrative</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           </div>
-          <p className="mb-12 text-lg text-gray-700">
-            Tonative focuses on the creation, extension, and validation of language data for AI,
-            especially in contexts where data scarcity limits technological progress.
+          <p className="mb-3 text-lg text-gray-700">
+            The rapid growth of AI research and innovation across Africa has created unprecedented
+            opportunities. As global investment, research partnerships, and technological interest
+            in African markets accelerate, the demand for language models that understand local
+            linguistic and contextual diversity has increased.
           </p>
-
-          <div className="grid gap-6 md:grid-cols-2">
-            {[
-              {
-                title: 'Community-driven data curation',
-                desc: 'We work directly with native speakers and language experts to curate, annotate, and validate text and language data.',
-                icon: '👥',
-                color: 'from-purple-500 to-pink-500',
-              },
-              {
-                title: 'Human-AI collaborative dataset extension',
-                desc: 'We use AI-assisted methods (such as machine translation or language models) combined with human review to efficiently grow high-quality datasets.',
-                icon: '🤝',
-                color: 'from-primary-700to-primary-700 to-cyan-500',
-              },
-              {
-                title: 'African and low-resource language datasets',
-                desc: 'We prioritize languages that are under-represented in existing AI systems, helping ensure these languages are included in the future of AI.',
-                icon: '🌍',
-                color: 'from-green-500 to-emerald-500',
-              },
-              {
-                title: 'Open and reusable research outputs',
-                desc: 'Where possible, we publish datasets, tools, and methodological insights to support broader research and development.',
-                icon: '📚',
-                color: 'from-orange-500 to-red-500',
-              },
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div
-                  className={`absolute top-0 right-0 h-32 w-32 translate-x-8 -translate-y-8 rounded-full bg-linear-to-br ${item.color} opacity-10 blur-2xl transition-all group-hover:scale-150`}
-                ></div>
-                <div className="relative">
-                  <div className="mb-4 text-4xl">{item.icon}</div>
-                  <h3 className="mb-3 text-xl font-bold text-gray-900">{item.title}</h3>
-                  <p className="leading-relaxed text-gray-600">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <p className="mb-12 text-lg text-gray-700">
+            However, the continent's data needs have outgrown what grant-funded and volunteer-driven
+            efforts can sustain. Meeting this demand requires a scalable, commercial-grade data
+            infrastructure.
+          </p>
+          <p className="mb-12 text-lg text-gray-700">
+            Tonative was built to be the data layer that enables African AI innovation by combining
+            trained domain experts with AI-assisted curation workflows to preserve and scale
+            Africa’s cultural and contextual knowledge
+          </p>
         </div>
       </section>
 
@@ -178,129 +147,72 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our Focus Areas */}
+      {/* Credentials */}
       <section className="py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
-            <h2 className="mb-4 text-4xl font-black text-gray-900">Our Focus Areas</h2>
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Credentials</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           </div>
-          <p className="mb-12 text-lg text-gray-700">
-            Our work centers on several key areas that contribute to creating a more inclusive and
-            ethically responsible AI ecosystem.
-          </p>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             {[
               {
-                title: 'Commercial and Open-Source AI Data Curation for Under-Resourced Languages',
-                desc: 'We focus on the meticulous collection, preparation, and management of data for AI systems, specializing in languages that are often neglected by mainstream AI development. This includes creating datasets for both commercial applications and open-source initiatives.',
+                logo: '/static/images/neurips.png',
+                title: 'Published at NeurIPS 2025 Conference',
+                desc: 'Human-AI collaborative data curation methodology.',
               },
               {
-                title: 'Language Datasets for NLP and Machine Learning',
-                desc: 'A core part of our mission is building high-quality, relevant language datasets essential for training robust Natural Language Processing (NLP) models and other machine learning applications.',
+                logo: '/static/images/HealthBench.png',
+                title: 'HealthBench Extended',
+                desc: 'Localised OpenAI HealthBench dataset to 6 Nigerian languages with medical practitioners rewriting scoring rubrics to match the Nigerian healthcare system.',
               },
               {
-                title: 'Annotation and Validation Workflows',
-                desc: 'We develop and implement rigorous workflows for annotating and validating data. This ensures the accuracy and reliability of the datasets, which is crucial for the performance of the AI models built upon them.',
+                logo: '/static/images/mlc.png',
+                title: 'MLC data validation partner',
+                desc: 'Validated custom dataset for research purposes.',
               },
               {
-                title: 'Ethical and Inclusive AI Data Practices',
-                desc: 'Ethics and inclusion are at the foundation of our work. We adhere to and promote practices that ensure AI data is collected and used responsibly, respects linguistic diversity, and minimizes bias against under-represented communities.',
+                logo: '/static/images/techcabal.png',
+                title: 'Featured in TechCabal YPIT',
+                desc: "Recognized in Africa's AI ecosystem as a dataset infrastructure provider.",
               },
-              {
-                title: 'Translation Applications that Enable Easy Access to African Languages',
-                desc: 'We work on developing and improving translation technologies that make African languages more accessible, facilitating communication and access to information for native speakers and the global community.',
-              },
-            ].map((area, i) => (
+            ].map((item, i) => (
               <div
                 key={i}
-                className="group border-primary-700 relative overflow-hidden rounded-xl border-l-4 bg-white p-6 shadow-md transition-all hover:shadow-lg"
+                className="group border-primary-700 flex items-start gap-6 rounded-xl border-l-4 bg-white p-6 shadow-md transition-all hover:shadow-lg"
               >
-                <h3 className="mb-3 text-xl font-bold text-gray-900">{area.title}</h3>
-                <p className="leading-relaxed text-gray-600">{area.desc}</p>
+                <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center">
+                  <img
+                    src={item.logo}
+                    alt={item.title}
+                    className="max-h-24 w-auto object-contain"
+                  />
+                </div>
+                <div>
+                  <h3 className="mb-2 text-xl font-bold text-gray-900">{item.title}</h3>
+                  <p className="leading-relaxed text-gray-600">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Who We Work With */}
-      <section className="bg-gray-50 py-20">
-        <div className="container mx-auto max-w-5xl px-4">
-          <div className="mb-12">
-            <h2 className="mb-4 text-4xl font-black text-gray-900">Who We Work With</h2>
-            <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: 'Native Speakers and Language Communities',
-                desc: 'Our strongest partnerships are with the native speakers and communities whose languages we work with. Their insights and expertise are invaluable to the quality and cultural relevance of our data.',
-                icon: '🗣️',
-              },
-              {
-                title: 'Linguists and Language Technologists',
-                desc: 'We collaborate with experts in language structure, acquisition, and technology to ensure the scientific rigor and technical excellence of our datasets and applications.',
-                icon: '📖',
-              },
-              {
-                title: 'Software Developers',
-                desc: 'Partnerships with software developers are key to building and deploying the tools, platforms, and applications necessary for data curation, model training, and end-user access.',
-                icon: '💻',
-              },
-              {
-                title: 'Academic and Independent AI Researchers and Initiatives',
-                desc: 'We actively engage with researchers, both within academia and independent initiatives, to advance the state-of-the-art in AI for low-resource languages.',
-                icon: '🔬',
-              },
-              {
-                title: 'Organizations Interested in Inclusive and Responsible AI',
-                desc: 'We partner with different organizations, from businesses to non-profits; that are committed to integrating inclusive and responsible principles into their AI strategies and products.',
-                icon: '🏢',
-              },
-            ].map((partner, i) => (
-              <div
-                key={i}
-                className="rounded-xl bg-white p-6 shadow-md transition-all hover:shadow-lg"
-              >
-                <div className="mb-4 text-4xl">{partner.icon}</div>
-                <h3 className="mb-3 text-lg font-bold text-gray-900">{partner.title}</h3>
-                <p className="text-sm leading-relaxed text-gray-600">{partner.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How We Operate */}
+      {/* How We Work */}
       <section className="py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
-            <h2 className="mb-4 text-4xl font-black text-gray-900">How We Operate</h2>
+            <h2 className="mb-4 text-4xl font-black text-gray-900">How We Work</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           </div>
 
           <div className="space-y-6 text-lg leading-relaxed text-gray-700">
             <p>
-              We are a community-first organisation, which mostly comprises trained language
-              speakers who are responsible for the annotation and validation of the datasets we
-              publish. We are constantly open to having new members join us provided they are
-              African speakers, with a fair understanding of English that serves as our common
-              language, and is willing to go through our training program.
-            </p>
-            <p>
-              Speakers contribute to both open-source and free datasets, and payable commercial
-              datasets. Aside language speakers, we have a rich team of AI researchers and software
-              developers. The researchers contribute to identifying data gaps and how Tonative can
-              come in, as well as carrying out useful experiments with the datasets to show
-              scientific contribution, while the software developers contribute to building,
-              deploying and maintaining software tools.
-            </p>
-            <p>
-              Commercial datasets are usually carried out when we get contracts from research
-              organisations, or done ahead by us for research organisations to purchase.
+              Every dataset passes through a multi-stage pipeline. Our trained curators produce
+              initial data, the quality assurance layer validates the data, the language or domain
+              leads resolve inter-annotator disagreement before the final data is licensed. This
+              process applies equally to both the custom and open-source datasets.
             </p>
           </div>
         </div>
@@ -318,13 +230,9 @@ export default function About() {
             <h2 className="mb-8 text-4xl font-black text-white md:text-5xl">Our Vision</h2>
             <div className="space-y-6 text-xl leading-relaxed text-gray-300">
               <p>
-                We envision a future where African languages can meaningfully participate in AI
-                systems, and its communities have agency over how their languages are represented in
-                technology.
-              </p>
-              <p>
-                By combining community knowledge with AI tools, Tonative aims to make high-quality
-                language data more accessible, ethical, and inclusive.
+                We envision a future where African languages can significantly participate in AI
+                systems, and its communities have agency over how their languages and experiences
+                are represented in technology.
               </p>
             </div>
           </div>
