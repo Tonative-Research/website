@@ -90,20 +90,14 @@ const organizers = [
 
 const speakers = [
   {
-    name: 'Samuel Rutunda',
-    role: 'Digital Umuganda',
-    bio: "Building Rwanda's community-driven digital infrastructure initiative like Digital Umuganda which harnesses collective civic action to power open language datasets and AI tools for Kinyarwanda.",
-    linkedin: 'https://rw.linkedin.com/in/samuel-rutunda-07bb818a',
-    avatar: 'SR',
-    org: 'Digital Umuganda',
-  },
-  {
-    name: 'Lilian Wanzare',
-    role: 'KenCorpus',
-    bio: 'Researcher at KenCorpus dedicated to building large-scale corpora for Kenyan languages, enabling downstream NLP tasks and lowering the barrier for researchers working with East African language data.',
-    linkedin: 'https://ke.linkedin.com/in/liliwanzie',
+    name: 'Lilian D. A. Wanzare, PhD',
+    role: 'Guest Speaker',
+    bio: 'Co-founder of KenCorpus and Research Lead at the Maseno Centre for Applied Artificial Intelligence (MCAAI), with a decade of experience curating datasets across Kenyan languages including Dholuo, Kikuyu, Kalenjin, Maasai, Somali and Kenyan Sign Language (KSL). As Principal Investigator for KenCorpus, African Next Voices – Kenya and AI4KSL, she led the collection of some of the largest speech, text and sign language datasets for Kenyan languages, working directly with language communities throughout. Her research centres the empowerment of human data infrastructure as foundational to the AI development pipeline.',
+    session:
+      'In this session, Dr. Wanzare will share insights on capacity building for African language data curators, the infrastructure needed for a scalable curation pipeline, and how to govern these datasets.',
+    linkedin: 'https://www.linkedin.com/in/liliwanzie/',
     avatar: 'LW',
-    org: 'KenCorpus',
+    org: 'KenCorpus · MCAAI, Maseno University',
   },
 ]
 
@@ -327,17 +321,17 @@ export default function Indaba2026Page() {
       </section>
 
       {/* ── Guest Speakers ───────────────────────────────────────────────── */}
-      {/* <section className="bg-white py-20">
+      <section className="bg-white py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
             <h2 className="mb-4 text-4xl font-black text-gray-900">Guest Speakers</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
             <p className="mt-4 text-lg text-gray-600">
-              Confirmed speakers already attending DLI 2026.
+              Please join us in welcoming our confirmed speaker.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-8">
             {speakers.map((speaker, i) => (
               <div
                 key={i}
@@ -352,11 +346,18 @@ export default function Indaba2026Page() {
                     </div>
                     <div>
                       <h3 className="text-xl font-black text-gray-900">{speaker.name}</h3>
-                      <p className="font-semibold text-gray-500">{speaker.org}</p>
+                      <p className="text-sm font-semibold text-gray-500">{speaker.org}</p>
+                      <p className="text-primary-600 text-xs font-bold tracking-wide uppercase">
+                        {speaker.role}
+                      </p>
                     </div>
                   </div>
 
-                  <p className="mb-6 leading-relaxed text-gray-600">{speaker.bio}</p>
+                  <p className="mb-4 leading-relaxed text-gray-600">{speaker.bio}</p>
+
+                  <p className="border-primary-200 mb-6 border-l-2 pl-4 text-sm leading-relaxed text-gray-700 italic">
+                    {speaker.session}
+                  </p>
 
                   <a
                     href={speaker.linkedin}
@@ -374,7 +375,7 @@ export default function Indaba2026Page() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* ── Organisers ───────────────────────────────────────────────────── */}
       <section className="bg-gray-50 py-20">
@@ -447,8 +448,8 @@ export default function Indaba2026Page() {
             <h2 className="mb-4 text-4xl font-black text-gray-900">Who Should Attend</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
             <p className="mt-4 text-lg text-gray-600">
-              This workshop is designed for a broad community of African AI practitioners and
-              contributors.
+              Our workshop is open to anyone attending the Deep Learning Indaba Conference this year
+              who is interested in the data layer of language technologies.
             </p>
           </div>
 

@@ -31,7 +31,22 @@ type Service = {
 }
 
 const services: Service[] = [
-  
+  {
+    title: 'Tonative Data Academy',
+    description:
+      'A 6-week intensive program in African Language Data Curation for AI and NLP. Open to all backgrounds. No prior technical experience required.',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
+    badge: 'Now Enrolling',
+    features: [
+      '6 weeks of live online sessions',
+      'Expert African linguist tutors',
+      'Certificate of completion',
+      'Contribute to open-source African AI datasets',
+    ],
+    cta: 'Join the Next Cohort',
+    href: '/services/data-academy',
+    variant: 'accent',
+  },
   {
     title: 'Custom Data Curation',
     description:
@@ -66,26 +81,11 @@ const services: Service[] = [
     variant: 'primary',
   },
   {
-    title: 'Tonative Data Academy',
-    description:
-      'A 6-week intensive program in African Language Data Curation for AI and NLP. Open to all backgrounds. No prior technical experience required.',
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600',
-    badge: 'Now Enrolling',
-    features: [
-      '6 weeks of live online sessions',
-      'Expert African linguist tutors',
-      'Certificate of completion',
-      'Contribute to open-source African AI datasets',
-    ],
-    cta: 'Join the Next Cohort',
-    href: '/services/data-academy',
-    variant: 'accent',
-  },
-  {
     title: 'Expert Network',
     description:
       'Hire vetted, trained African language and domain specialists for your annotation, validation, translation, or evaluation projects.',
-    image: 'https://images.unsplash.com/photo-1643000867361-cd545336249b?q=80&w=1181&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    image:
+      'https://images.unsplash.com/photo-1643000867361-cd545336249b?q=80&w=1181&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
     features: [
       'Vetted African language & domain specialists',
       'Annotation, validation, translation & evaluation',
