@@ -97,6 +97,7 @@ const speakers = [
       'In this session, Dr. Wanzare will share insights on capacity building for African language data curators, the infrastructure needed for a scalable curation pipeline, and how to govern these datasets.',
     linkedin: 'https://www.linkedin.com/in/liliwanzie/',
     avatar: 'LW',
+    image: '/static/images/authors/dr_lilian.png',
     org: 'KenCorpus · MCAAI, Maseno University',
   },
 ]
@@ -342,7 +343,17 @@ export default function Indaba2026Page() {
                 <div className="p-8">
                   <div className="mb-6 flex items-center gap-4">
                     <div className="from-primary-600 to-primary-800 flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full bg-linear-to-br text-xl font-black text-white shadow-lg">
-                      {speaker.avatar}
+                      {speaker.image ? (
+                        <NextImage
+                          src={speaker.image}
+                          alt={speaker.name}
+                          width={64}
+                          height={64}
+                          className="h-full w-full rounded-lg object-cover"
+                        />
+                      ) : (
+                        speaker.avatar
+                      )}
                     </div>
                     <div>
                       <h3 className="text-xl font-black text-gray-900">{speaker.name}</h3>

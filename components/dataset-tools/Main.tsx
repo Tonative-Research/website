@@ -43,8 +43,8 @@ export default function DatasetToolsMain() {
       languages: 'Igbo, Hausa, Yoruba, Dholuo',
       dataType: 'Speech + Transcript',
       validation: 'Human QA',
-      access: 'Public',
-      tags: ['Public', 'Speech', 'Human QA'],
+      access: 'Commercial',
+      tags: ['Commercial', 'Speech', 'Human QA'],
       action: {
         label: 'Preview Sample',
         href: 'https://github.com/Tonative/open_files/tree/main/storytelling',
@@ -59,7 +59,7 @@ export default function DatasetToolsMain() {
     {
       name: 'NaijaHealthBench',
       description:
-        ' Benchmarking dataset for evaluating LLM performance on medical queries within the Nigerian healthcare context, and across different Nigerian languages',
+        'Rubric-scoring dataset for evaluating LLM performance on medical queries within the Nigerian healthcare context, and across different Nigerian languages',
       curationMethod: 'Adapted',
       recordsCurated: '500',
       languages: 'English, Nigerian Pidgin, Igbo, Yoruba, Hausa, Fula',
