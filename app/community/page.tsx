@@ -218,7 +218,7 @@ export default function Page() {
 
         {/* Community in Action */}
         <section className="bg-white py-10 sm:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 sm:px-10">
             <div className="mb-16 text-center">
               <h2 className="relative inline-block text-3xl font-black text-gray-900 sm:text-5xl">
                 Community in Action

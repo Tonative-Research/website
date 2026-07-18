@@ -195,7 +195,7 @@ export default function DatasetToolsMain() {
       </div>
 
       {/* Datasets Section */}
-      <section className="mx-auto mb-12 max-w-7xl px-4">
+      <section className="mx-auto mb-12 max-w-7xl px-4 sm:px-10">
         <h2 className="mb-4 text-2xl leading-tight font-bold tracking-[-0.015em] text-gray-900 dark:text-white">
           Available Datasets
         </h2>

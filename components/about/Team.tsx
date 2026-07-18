@@ -11,7 +11,7 @@ export default function Team({ authors }: { authors: Authors[] }) {
     <>
       {/* Meet Our Team */}
       <section className="bg-white py-20">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 sm:px-10">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-4xl font-black text-gray-900 md:text-5xl">Meet Our Team</h2>
             <div className="from-primary-500 to-primary-700 mx-auto h-1.5 w-24 rounded-full bg-gradient-to-r"></div>
