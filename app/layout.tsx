@@ -2,7 +2,6 @@ import 'css/tailwind.css'
 import 'pliny/search/algolia.css'
 import 'remark-github-blockquote-alert/alert.css'
 
-
 import { SearchProvider, SearchConfig } from 'pliny/search'
 import { PostHogProvider } from './providers'
 import Header from '@/components/Header'
@@ -108,17 +107,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${cirka.variable} ${mulish.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <link
-        rel="apple-touch-icon"
-        sizes="76x76"
-        href={`${basePath}/icon.png`}
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href={`${basePath}/icon.png`}
-      />
+      <link rel="apple-touch-icon" sizes="76x76" href={`${basePath}/icon.png`} />
+      <link rel="icon" type="image/png" sizes="32x32" href={`${basePath}/icon.png`} />
       <link rel="manifest" href={`${basePath}/static/favicons/site.webmanifest`} />
       <link
         rel="mask-icon"
@@ -136,7 +126,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </Suspense>
           <ThemeProviders>
             <Header />
-            
+
             <SectionContainer>
               <SearchProvider searchConfig={siteMetadata.search as SearchConfig}>
                 <main>{children}</main>

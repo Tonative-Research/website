@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import ContactUs from 'components/ContactUs'
-import siteMetadata from 'data/siteMetadata'
 import { usePostHog } from 'posthog-js/react'
 
 type Dataset = {
@@ -37,7 +36,8 @@ export default function DatasetToolsMain() {
   const datasets: Dataset[] = [
     {
       name: 'African Storytelling',
-      description: 'Multilingual dataset of African contemporary and folk stories featuring 5–10 minute natural narrations for ASR, TTS, and speech-text alignment research',
+      description:
+        'Multilingual dataset of African contemporary and folk stories featuring 5–10 minute natural narrations for ASR, TTS, and speech-text alignment research',
       curationMethod: 'Commissioned',
       recordsCurated: '5',
       languages: 'Igbo, Hausa, Yoruba, Dholuo',
@@ -162,23 +162,31 @@ export default function DatasetToolsMain() {
   return (
     <main className="flex-1 bg-gray-50 py-10 dark:bg-gray-900">
       {/* Header Section */}
-      <div className="mx-auto mb-8 max-w-7xl px-4">
+      <div className="mx-auto mb-8 max-w-7xl px-4 sm:px-10">
         <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
           Our Datasets and AI Tools
         </h1>
         <div className="max-w-3xl space-y-4 text-base leading-normal font-normal text-gray-600 dark:text-gray-400">
           <p>
-            Browse our dataset catalog for AI training, evaluation, and benchmarking. Our datasets are available in two tiers:
+            Browse our dataset catalog for AI training, evaluation, and benchmarking. Our datasets
+            are available in two tiers:
           </p>
           <p>
-            <span className="font-bold text-gray-900 dark:text-white">Public Access:</span> Full datasets available for download under their respective open-source licenses. Suitable for research and non-commercial use.
+            <span className="font-bold text-gray-900 dark:text-white">Public Access:</span> Full
+            datasets available for download under their respective open-source licenses. Suitable
+            for research and non-commercial use.
           </p>
           <p>
-            <span className="font-bold text-gray-900 dark:text-white">Commercial License:</span> Preview samples available for review. Full datasets available for purchase for commercial AI development.
+            <span className="font-bold text-gray-900 dark:text-white">Commercial License:</span>{' '}
+            Preview samples available for review. Full datasets available for purchase for
+            commercial AI development.
           </p>
           <p>
             Contact{' '}
-            <a href="mailto:services@tonative.org" className="text-primary-600 hover:underline dark:text-primary-400">
+            <a
+              href="mailto:services@tonative.org"
+              className="text-primary-600 dark:text-primary-400 hover:underline"
+            >
               services@tonative.org
             </a>{' '}
             for pricing and licensing.
@@ -187,7 +195,7 @@ export default function DatasetToolsMain() {
       </div>
 
       {/* Datasets Section */}
-      <section className="mx-auto mb-12 max-w-7xl px-4">
+      <section className="mx-auto mb-12 max-w-7xl px-4 sm:px-10">
         <h2 className="mb-4 text-2xl leading-tight font-bold tracking-[-0.015em] text-gray-900 dark:text-white">
           Available Datasets
         </h2>
@@ -367,7 +375,7 @@ export default function DatasetToolsMain() {
         </div>
       </section>
 
-      <ContactUs heading="For custom data requests, please contact us at" message="" />
+      <ContactUs heading="For technical inquiries or data access requests, please contact us at" />
     </main>
   )
 }

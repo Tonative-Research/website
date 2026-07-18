@@ -21,7 +21,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/dataset-tools" className="text-gray-300 hover:text-white">
-                  Datasets 
+                  Datasets
                 </Link>
               </li>
               <li>
@@ -63,7 +63,7 @@ export default function Footer() {
           <div>
             <h4 className="mb-4 text-sm font-semibold">Connect</h4>
             <div className="mb-3 flex space-x-4">
-              <SocialIcon kind="mail" href={`mailto:${siteMetadata.cynthiaEmail}`} size={6} />
+              <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
               <SocialIcon kind="github" href={siteMetadata.github} size={6} />
               <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
               <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />

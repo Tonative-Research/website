@@ -123,7 +123,7 @@ export default function ListLayoutWithTags({
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
 
   return (
-    <main className="flex-1 bg-gray-50 px-4 py-8 md:py-12 dark:bg-gray-900">
+    <main className="flex-1 bg-gray-50 px-4 py-8 sm:px-10 md:py-12 dark:bg-gray-900">
       <div className="mx-auto max-w-7xl">
         {/* Header Section */}
         <div className="mb-8 flex flex-wrap justify-between gap-4">

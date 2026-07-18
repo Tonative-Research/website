@@ -54,15 +54,15 @@ export default function Hero() {
         {/* Main heading */}
         <div className="mb-6 text-center">
           <h1 className="text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
-            African Context Intelligence 
+            African Context Intelligence
           </h1>
         </div>
 
         {/* Subtitle */}
         <p className="mx-auto mb-10 max-w-4xl text-center text-lg text-gray-400 sm:text-xl">
-          We collaborate with domain experts and language communities to provide datasets that 
-           reflect the linguistic, social and industry nuances in Africa, 
-           ensuring AI models understand local contexts.{' '}
+          We collaborate with domain experts and language communities to provide datasets that
+          reflect the linguistic, social and industry nuances in Africa, ensuring AI models
+          understand local contexts.{' '}
         </p>
 
         {/* CTA Button */}

@@ -135,7 +135,7 @@ export default async function Page() {
 
         {/* Services Cards */}
         <div className="mx-auto max-w-6xl px-4 pb-16">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 ">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
             {services.map((service) => (
               <div
                 key={service.title}

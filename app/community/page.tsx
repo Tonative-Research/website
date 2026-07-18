@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata = genPageMetadata({
   title: 'Community',
   description:
-    'Join Tonative\'s network of trained linguists and domain specialists across many African countries. Get trained through the Data Academy, contribute to real projects, and earn from commercial work.',
+    "Join Tonative's network of trained linguists and domain specialists across many African countries. Get trained through the Data Academy, contribute to real projects, and earn from commercial work.",
   keywords: [
     'African AI community',
     'language champion Africa',
@@ -70,8 +70,9 @@ export default function Page() {
             </div>
             <p className="leading-relaxed text-gray-300 sm:text-xl">
               To empower Africa’s representation in AI technology by creating high-quality datasets,
-               tools, and expertise that can bridge existing language and local domain gaps.
-               Join us if you are a native speaker, industry domain expert, NLP researcher, or software engineer.
+              tools, and expertise that can bridge existing language and local domain gaps. Join us
+              if you are a native speaker, industry domain expert, NLP researcher, or software
+              engineer.
             </p>
             <a href={siteMetadata.volunteerForm} target="_blank">
               <button className="bg-accent-500 hover:bg-accent-600 mt-6 cursor-pointer rounded-md px-8 py-3 font-semibold text-white transition-colors sm:mb-10">
@@ -123,7 +124,7 @@ export default function Page() {
                 <div className="absolute top-0 right-0 h-32 w-32 translate-x-16 -translate-y-16 rounded-full bg-green-500/10 blur-2xl transition-transform group-hover:scale-150"></div>
                 <div className="relative">
                   <div className="mb-1 text-3xl font-black text-gray-900 md:text-7xl">
-                    <span className="from-green-600 to-green-800 bg-linear-to-br bg-clip-text text-transparent">
+                    <span className="bg-linear-to-br from-green-600 to-green-800 bg-clip-text text-transparent">
                       8+
                     </span>
                   </div>
@@ -136,7 +137,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-        
 
         {/*data curator pipeline */}
         <section className="bg-gray-50 py-16 sm:py-24" id="data-curator">
@@ -148,8 +148,8 @@ export default function Page() {
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
                 We accept applications from fluent African language speakers who want to translate,
-                validate, or organize data that improves AI models. No prior experience required — here's
-                how the journey works.
+                validate, or organize data that improves AI models. No prior experience required —
+                here's how the journey works.
               </p>
             </div>
 
@@ -216,10 +216,9 @@ export default function Page() {
           </div>
         </section>
 
-
         {/* Community in Action */}
         <section className="bg-white py-10 sm:py-20">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 sm:px-10">
             <div className="mb-16 text-center">
               <h2 className="relative inline-block text-3xl font-black text-gray-900 sm:text-5xl">
                 Community in Action
@@ -355,7 +354,6 @@ export default function Page() {
             </div>
           </div>
         </section>
-
 
         {/* Newsletter Section */}
         {/* {siteMetadata.newsletter?.provider && (

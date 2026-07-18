@@ -86,15 +86,16 @@ export default function About() {
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-gray-700">
             <p>
-              Tonative is an African AI data company. Our goal is to ethically provide high-quality 
-              datasets that teach AI to understand Africans better. 
-              This means the data we curate reflects how Africans actually speak a language,
-              and how they interact with industry domains in ways unique to their country or region.
+              Tonative is an African AI data company. Our goal is to ethically provide high-quality
+              datasets that teach AI to understand Africans better. This means the data we curate
+              reflects how Africans actually speak a language, and how they interact with industry
+              domains in ways unique to their country or region.
             </p>
             <p>
-               By closing this data gap, we enable AI models to become more reliable and serve a wider audience than it currently does. 
-               Our work is successful because we collaborate with a trained network of linguists 
-               and industry experts who live and work across the continent
+              By closing this data gap, we enable AI models to become more reliable and serve a
+              wider audience than it currently does. Our work is successful because we collaborate
+              with a trained network of linguists and industry experts who live and work across the
+              continent
             </p>
           </div>
         </div>
@@ -108,19 +109,21 @@ export default function About() {
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           </div>
           <p className="mb-3 text-lg text-gray-700">
-            The rapid growth of AI research and innovation across Africa has created unprecedented opportunities. 
-            As global investment, research partnerships, and technological interest in African markets accelerate, 
-            the demand for language models that understand local linguistic and contextual diversity has increased.
+            The rapid growth of AI research and innovation across Africa has created unprecedented
+            opportunities. As global investment, research partnerships, and technological interest
+            in African markets accelerate, the demand for language models that understand local
+            linguistic and contextual diversity has increased.
           </p>
           <p className="mb-12 text-lg text-gray-700">
-            However, the continent's data needs have outgrown what grant-funded and volunteer-driven efforts can sustain. 
-            Meeting this demand requires a scalable, commercial-grade data infrastructure.   
+            However, the continent's data needs have outgrown what grant-funded and volunteer-driven
+            efforts can sustain. Meeting this demand requires a scalable, commercial-grade data
+            infrastructure.
           </p>
           <p className="mb-12 text-lg text-gray-700">
-            Tonative was built to be the data layer that enables African AI innovation by combining trained 
-            domain experts with AI-assisted curation workflows to preserve and scale Africa’s cultural and contextual knowledge
+            Tonative was built to be the data layer that enables African AI innovation by combining
+            trained domain experts with AI-assisted curation workflows to preserve and scale
+            Africa’s cultural and contextual knowledge
           </p>
-
         </div>
       </section>
 
@@ -153,8 +156,6 @@ export default function About() {
           </div>
 
           <div className="space-y-6">
- 
-
             {[
               {
                 logo: '/static/images/neurips.png',
@@ -174,12 +175,12 @@ export default function About() {
               {
                 logo: '/static/images/techcabal.png',
                 title: 'Featured in TechCabal YPIT',
-                desc: 'Recognized in Africa\'s AI ecosystem as a dataset infrastructure provider.',
+                desc: "Recognized in Africa's AI ecosystem as a dataset infrastructure provider.",
               },
             ].map((item, i) => (
               <div
                 key={i}
-                className="group flex items-start gap-6 rounded-xl border-l-4 border-primary-700 bg-white p-6 shadow-md transition-all hover:shadow-lg"
+                className="group border-primary-700 flex items-start gap-6 rounded-xl border-l-4 bg-white p-6 shadow-md transition-all hover:shadow-lg"
               >
                 <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center">
                   <img
@@ -208,11 +209,11 @@ export default function About() {
 
           <div className="space-y-6 text-lg leading-relaxed text-gray-700">
             <p>
-              Every dataset passes through a multi-stage pipeline. Our trained curators produce initial data, the quality assurance layer validates the data, 
-              the language or domain leads resolve inter-annotator disagreement before the final data is licensed. 
-              This process applies equally to both the custom and open-source datasets.
+              Every dataset passes through a multi-stage pipeline. Our trained curators produce
+              initial data, the quality assurance layer validates the data, the language or domain
+              leads resolve inter-annotator disagreement before the final data is licensed. This
+              process applies equally to both the custom and open-source datasets.
             </p>
-            
           </div>
         </div>
       </section>
@@ -229,9 +230,9 @@ export default function About() {
             <h2 className="mb-8 text-4xl font-black text-white md:text-5xl">Our Vision</h2>
             <div className="space-y-6 text-xl leading-relaxed text-gray-300">
               <p>
-                We envision a future where African languages can significantly participate in AI systems,
-                 and its communities have agency over how their languages and experiences are represented in technology.
-
+                We envision a future where African languages can significantly participate in AI
+                systems, and its communities have agency over how their languages and experiences
+                are represented in technology.
               </p>
             </div>
           </div>
