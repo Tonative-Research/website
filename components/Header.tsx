@@ -3,6 +3,7 @@ import headerNavLinks from '@/data/headerNavLinks'
 import Logo from '@/data/logos/logo-with-text.png'
 import Link from 'components/Link'
 import MobileNav from 'components/MobileNav'
+import NavDropdown from 'components/NavDropdown'
 import Image from 'next/image'
 // import ThemeSwitch from 'components/ThemeSwitch'
 // import SearchButton from 'components/SearchButton'
@@ -38,15 +39,19 @@ const Header = () => {
         <nav className="hidden flex-wrap items-center gap-x-6 sm:flex lg:gap-x-8">
           {headerNavLinks
             .filter((link) => link.href !== '/')
-            .map((link) => (
-              <Link
-                key={link.title}
-                href={link.href}
-                className="hover:text-primary-500 dark:hover:text-primary-400 font-medium text-gray-900 transition-colors dark:text-gray-100"
-              >
-                {link.title}
-              </Link>
-            ))}
+            .map((link) =>
+              link.subLinks ? (
+                <NavDropdown key={link.title} link={link} />
+              ) : (
+                <Link
+                  key={link.title}
+                  href={link.href}
+                  className="hover:text-primary-500 dark:hover:text-primary-400 font-medium text-gray-900 transition-colors dark:text-gray-100"
+                >
+                  {link.title}
+                </Link>
+              )
+            )}
         </nav>
 
         {/* Utility Buttons */}

@@ -25,6 +25,11 @@ const siteMetadata = {
   medium: 'https://medium.com',
   bluesky: 'https://bsky.app/',
   huggingFace: 'https://huggingface.co/tonative-org',
+  tonalkeysUrl:
+    'https://chromewebstore.google.com/detail/tonalkeys-african-languag/hpancnlkbahagcopnopahadijkammphn',
+  volangUrl: 'https://www.volang.app/',
+  labelStudioUrl: 'https://validation.tonative.org/user/login/',
+  mtStudioUrl: 'https://mtstudio.tonative.org/',
   validationUrl: 'https://validation.tonative.org/',
   dataCuratorUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLScynluFvDYq27-lxTLqHaTkTyUdfmBesTy2ZwVFECoPGbQr9Q/viewform',
