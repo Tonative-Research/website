@@ -2,20 +2,20 @@ import { genPageMetadata } from 'app/seo'
 import ProductMain from 'components/product/Main'
 
 export const metadata = genPageMetadata({
-  title: 'Product',
+  title: 'Products',
   description:
-    'Volang by Tonative is an AI-powered real-time translation app for face-to-face business settings, supporting 100+ languages including African languages with cultural accuracy and enterprise-grade security.',
+    'Tonative products: TonalKeys African language keyboard, Label Studio annotation platform, Volang speech translation app, and MTStudio machine translation studio. These tools are built to make African languages first-class in the digital world.',
   keywords: [
-    'Volang translation app',
-    'real-time translation Africa',
-    'AI translation app',
-    'African language translation',
-    'business translation tool',
-    'face-to-face translation',
-    'multilingual communication app',
-    'cultural translation AI',
-    'enterprise translation tool',
-    '100 languages translation',
+    'TonalKeys African keyboard',
+    'African language keyboard Chrome extension',
+    'Volang speech translation',
+    'African language translation app',
+    'Label Studio annotation platform',
+    'African language data annotation',
+    'MTStudio machine translation',
+    'African language AI tools',
+    'Tonative products',
+    'African NLP tools',
   ],
 })
 

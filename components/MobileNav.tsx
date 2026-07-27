@@ -7,6 +7,7 @@ import headerNavLinks from '@/data/headerNavLinks'
 
 const MobileNav = () => {
   const [navShow, setNavShow] = useState(false)
+  const [expandedDropdown, setExpandedDropdown] = useState<string | null>(null)
   const navRef = useRef(null)
 
   const onToggleNav = () => {
@@ -71,16 +72,82 @@ const MobileNav = () => {
                 ref={navRef}
                 className="mt-8 flex h-full basis-0 flex-col items-start overflow-y-auto pt-2 pl-12 text-left"
               >
-                {headerNavLinks.map((link) => (
-                  <Link
-                    key={link.title}
-                    href={link.href}
-                    className="hover:text-primary-500 dark:hover:text-primary-400 mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline dark:text-gray-100"
-                    onClick={onToggleNav}
-                  >
-                    {link.title}
-                  </Link>
-                ))}
+                {headerNavLinks.map((link) =>
+                  link.subLinks ? (
+                    <div key={link.title} className="w-full">
+                      {/* Parent row. Tapping this toggles sub-list; navigates on second tap */}
+                      <button
+                        className="hover:text-primary-500 dark:hover:text-primary-400 mb-2 flex items-center gap-2 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 dark:text-gray-100"
+                        onClick={() =>
+                          setExpandedDropdown((prev) => (prev === link.title ? null : link.title))
+                        }
+                      >
+                        {link.title}
+                        <svg
+                          className={`h-5 w-5 transition-transform duration-200 ${
+                            expandedDropdown === link.title ? 'rotate-180' : ''
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth={2.5}
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+
+                      {expandedDropdown === link.title && (
+                        <div className="mb-4 ml-2 flex flex-col gap-0 border-l-2 border-gray-200 pl-4 dark:border-gray-700">
+                          {link.subLinks.map((sub) =>
+                            sub.comingSoon ? (
+                              <div
+                                key={sub.href}
+                                className="flex cursor-not-allowed items-center gap-2 py-2 pr-4 opacity-50"
+                              >
+                                <span className="text-lg font-semibold text-gray-800 dark:text-gray-200">
+                                  {sub.title}
+                                </span>
+                                <span className="rounded-full bg-gray-200 px-1.5 py-0.5 text-[10px] font-bold tracking-wide text-gray-500 uppercase dark:bg-gray-700 dark:text-gray-400">
+                                  Soon
+                                </span>
+                              </div>
+                            ) : (
+                              <a
+                                key={sub.href}
+                                href={sub.href}
+                                target={sub.external ? '_blank' : undefined}
+                                rel={sub.external ? 'noopener noreferrer' : undefined}
+                                onClick={onToggleNav}
+                                className="hover:text-primary-500 dark:hover:text-primary-400 py-2 pr-4 text-lg font-semibold text-gray-800 dark:text-gray-200"
+                              >
+                                {sub.title}
+                                <span className="ml-2 text-sm font-normal text-gray-400">
+                                  {sub.description}
+                                </span>
+                              </a>
+                            )
+                          )}
+                          <Link
+                            href={link.href}
+                            onClick={onToggleNav}
+                            className="text-primary-600 dark:text-primary-400 mt-1 py-1 pr-4 text-sm font-medium"
+                          >
+                            View all products →
+                          </Link>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      key={link.title}
+                      href={link.href}
+                      className="hover:text-primary-500 dark:hover:text-primary-400 mb-4 py-2 pr-4 text-2xl font-bold tracking-widest text-gray-900 outline dark:text-gray-100"
+                      onClick={onToggleNav}
+                    >
+                      {link.title}
+                    </Link>
+                  )
+                )}
                 <Link
                   href="/#contact-form"
                   target="_blank"

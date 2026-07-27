@@ -26,7 +26,8 @@ export default function DataAcademy() {
               </h2>
               <p className="text-base leading-relaxed text-gray-300">
                 A 6-week intensive program in African Language Data Curation for AI. Learn to
-                collect, annotate, and curate African language data — no prior experience required.
+                collect, annotate, and curate African language data. No prior experience is
+                required.
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row">
