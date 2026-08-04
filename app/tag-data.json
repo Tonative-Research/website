@@ -1,17 +1,17 @@
 {
-  "education": 1,
-  "academy": 1,
-  "data-curation": 1,
-  "pilot": 1,
+  "research-paper": 2,
+  "datasets": 1,
+  "ai": 2,
+  "community": 1,
+  "nlp": 1,
+  "commonsense": 1,
+  "culture": 1,
   "article": 1,
   "story": 1,
   "organisation": 1,
   "annual-report": 1,
-  "research-paper": 2,
-  "ai": 2,
-  "commonsense": 1,
-  "culture": 1,
-  "datasets": 1,
-  "community": 1,
-  "nlp": 1
+  "education": 1,
+  "academy": 1,
+  "data-curation": 1,
+  "pilot": 1
 }

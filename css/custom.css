@@ -1,0 +1,23 @@
+.fixed-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffcc00; /* Change this to match your theme */
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  animation: blink 1s infinite;
+  z-index: 1000;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
