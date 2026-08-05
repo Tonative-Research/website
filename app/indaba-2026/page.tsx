@@ -215,7 +215,8 @@ export default function Indaba2026Page() {
               DLI 2026 Website
             </a>
             <a
-              href="#workshop-details"
+              href="/static/downloads/tonative_indaba_workshop.pdf"
+              download
               className="rounded-md border border-white/30 px-8 py-3 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/10"
             >
               Workshop Details
