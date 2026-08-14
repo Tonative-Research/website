@@ -35,55 +35,59 @@ export const metadata = genPageMetadata({
 
 const curriculumWeeks = [
   {
-    week: 'Week 1',
-    date: 'Mar 9',
-    topic: 'Kick-off Event & Prerequisites',
-    description: 'Orientation, program overview, and prerequisite materials to get you started.',
+    week: 'Pre-requisite',
+    date: 'Aug 16',
+    topic: 'Onboarding & Program Kick-off',
+    description:
+      'Introduction to the program and soft skills, including the Google Workspace environment and communication channels such as email and Slack.',
     icon: '🚀',
   },
   {
     week: 'Week 1',
-    date: 'Mar 10',
-    topic: 'African Languages & Linguistics for NLP',
+    date: 'Aug 17 – 21',
+    topic: 'Introduction to Language',
     description:
-      'Explore the linguistic diversity of African languages and their role in natural language processing.',
+      'African languages and linguistics, phonetics, morphology, orthography, and language variation (dialects, registers, sociolinguistics).',
     icon: '🌍',
   },
   {
     week: 'Week 2',
-    date: 'Mar 17',
-    topic: 'Introduction to Data & AI Fundamentals',
-    description: 'Core concepts of data science and artificial intelligence applied to language.',
+    date: 'Aug 24 – 28',
+    topic: 'Introduction to NLP',
+    description:
+      'Introduction to Artificial Intelligence, Machine Learning, and Deep Learning; intro to NLP; structured vs. unstructured and quantitative vs. qualitative data; data preprocessing; types of language datasets (audio, text, MT) and corpus-based approaches; training vs. evaluation (benchmarking) datasets; and dataset documentation, including Hugging Face.',
     icon: '🤖',
   },
   {
     week: 'Week 3',
-    date: 'Mar 24',
+    date: 'Aug 31 – Sep 4',
     topic: 'African Data Collection & Preparation',
     description:
-      'Hands-on techniques for collecting, cleaning, and preparing African language data.',
+      'Audio data curation (recording tools, audio format, background noise, noise cancellation, sample rates) and text data types and curation methods; data validation for audio and text through automated and manual methods; and quality control frameworks.',
     icon: '📊',
   },
   {
     week: 'Week 4',
-    date: 'Mar 31',
+    date: 'Sep 7 – 11',
     topic: 'Data Ethics and Governance',
-    description: 'Critical frameworks for ethical data practices, consent, and responsible AI.',
+    description:
+      'Data policy and governance frameworks, data law, and data quality principles (consistency, coverage, edge cases); ethics around consent, data ownership, cultural sensitivity, and community benefit; and equitable licensing frameworks for African data, including Creative Commons and novel frameworks like NOODL and Esethu.',
     icon: '⚖️',
   },
   {
     week: 'Week 5',
-    date: 'Apr 7',
+    date: 'Sep 14 – 18',
     topic: 'Data Annotation Tools & Techniques',
-    description: 'Practical training on industry-standard no-code annotation tools and workflows.',
+    description:
+      'Hands-on training with industry-standard tools (Label Studio, Prodigy, or custom platforms); text classification and PoS tagging; named entity recognition for African contexts; sentiment analysis considerations across cultures; machine translation annotation and evaluation; plus further reading on speech, image, and video annotation.',
     icon: '🏷️',
   },
   {
     week: 'Week 6',
-    date: 'Apr 14',
+    date: 'Sep 21 – 25',
     topic: 'Capstone Project',
     description:
-      'Apply everything you have learned in a final project that contributes to open-source African language datasets.',
+      'Data documentation and open-source data translation, validation, and publication on Hugging Face to close out the program.',
     icon: '🎓',
   },
 ]
@@ -256,22 +260,26 @@ export default function DataAcademyPage() {
               </h2>
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
                 <p className="leading-relaxed">
-                  This program is designed to be completed over 6 weeks through a blend of{' '}
-                  <strong>live online sessions</strong>, self-paced reading materials, and
-                  interactive projects.
+                  This program is designed to be completed over 6 weeks (plus a pre-requisite
+                  onboarding session) through a blend of <strong>live online sessions</strong>,
+                  self-paced reading materials, and interactive projects. Onboarding takes place on{' '}
+                  <strong>August 16, 2026</strong>, with weekly teaching running from{' '}
+                  <strong>August 17 to September 25, 2026</strong>.
                 </p>
                 <p className="leading-relaxed">
                   All live sessions are conducted via Google Meet links shared through Google
                   Classroom, where you will find all course materials, assignments, and resources.
                 </p>
                 <p className="leading-relaxed">
-                  Live sessions run on{' '}
-                  <strong>Tuesdays and/or Thursdays from 5:00 PM to 6:30 PM WAT</strong> (7:00 PM –
-                  8:30 PM EAT), accommodating participants across various African time zones.
+                  Live sessions run on <strong>Tuesdays and Thursdays</strong> at minimum, with{' '}
+                  <strong>Friday</strong> as an optional third class (maximum of three classes per
+                  week). Each class lasts <strong>1 hour 30 minutes</strong>: 45 minutes of teaching
+                  followed by 35 minutes of classwork or interactive session.
                 </p>
                 <p className="leading-relaxed">
-                  Every live session includes a compulsory 10-minute break after the first 45
-                  minutes. All classes are recorded, transcribed, and shared via email.
+                  Tutors post all teaching materials for the week on Google Classroom, and an
+                  assignment is given at the end of every class, marked and released the following
+                  Friday.
                 </p>
               </div>
 
@@ -286,11 +294,11 @@ export default function DataAcademyPage() {
                 <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                   <li className="flex items-start gap-2">
                     <Calendar className="text-primary-500 mt-0.5 h-4 w-4 flex-shrink-0" />
-                    <span>Tuesdays and/or Thursdays, weekly</span>
+                    <span>Tuesdays and Thursdays, with an optional Friday session, weekly</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <Clock className="text-primary-500 mt-0.5 h-4 w-4 flex-shrink-0" />
-                    <span>5:00 PM – 6:30 PM WAT / 7:00 PM – 8:30 PM EAT</span>
+                    <span>Each class runs 1 hr 30 mins (45 min teaching + 35 min classwork)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <BookOpen className="text-primary-500 mt-0.5 h-4 w-4 flex-shrink-0" />
@@ -339,7 +347,9 @@ export default function DataAcademyPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <BarChart3 className="text-accent-500 mt-0.5 h-4 w-4 flex-shrink-0" />
-                    <span>Take-home assignments given on Thursdays, due Monday 11:59 PM WAT</span>
+                    <span>
+                      Assignment given after every class, scores released the following Friday
+                    </span>
                   </li>
                   <li className="flex items-start gap-2">
                     <BarChart3 className="text-accent-500 mt-0.5 h-4 w-4 flex-shrink-0" />
@@ -363,8 +373,9 @@ export default function DataAcademyPage() {
               Curriculum Structure
             </h2>
             <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
-              7 sessions across 6 weeks, covering everything from African linguistics to capstone
-              project delivery.
+              A pre-requisite onboarding session plus 6 weekly modules, running August 16 –
+              September 25, 2026, covering everything from African linguistics to capstone project
+              delivery.
             </p>
           </div>
 
@@ -387,9 +398,9 @@ export default function DataAcademyPage() {
                         <span className="bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded-full px-3 py-0.5 text-xs font-semibold">
                           {item.week}
                         </span>
-                        {/* <span className="text-xs text-gray-500 dark:text-gray-400">
+                        <span className="text-xs text-gray-500 dark:text-gray-400">
                           {item.date}, 2026
-                        </span> */}
+                        </span>
                       </div>
                       <h3
                         className="text-primary-900 mb-1 font-bold dark:text-white"
@@ -421,7 +432,7 @@ export default function DataAcademyPage() {
                 Your Tutors
               </h2>
               <p className="text-gray-600 dark:text-gray-400">
-                Each module has a dedicated primary tutor and a secondary backup tutor.
+                Each module has a dedicated primary tutor and a backup tutor.
               </p>
             </div>
 
@@ -433,46 +444,46 @@ export default function DataAcademyPage() {
                       <th className="px-4 py-3 text-left font-semibold">Week</th>
                       <th className="px-4 py-3 text-left font-semibold">Module</th>
                       <th className="px-4 py-3 text-left font-semibold">Primary Tutor</th>
-                      <th className="px-4 py-3 text-left font-semibold">Secondary Tutor</th>
+                      <th className="px-4 py-3 text-left font-semibold">Backup Tutor</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 dark:divide-gray-700">
                     {[
                       {
-                        week: 'Week 1',
-                        module: 'Kick-off Event',
+                        week: 'Pre-requisite',
+                        module: 'Onboarding & Program Kick-off',
                         primary: 'Sharon Ibejih',
-                        secondary: 'Joy Olusanya',
+                        secondary: 'Naomi',
                       },
                       {
                         week: 'Week 1',
-                        module: 'African Languages & Linguistics for NLP',
-                        primary: 'Mwihaki Thuo',
-                        secondary: 'Odunayo Buliaminu',
+                        module: 'Introduction to Language',
+                        primary: 'Cynthia Thuo',
+                        secondary: 'Odunayo',
                       },
                       {
                         week: 'Week 2',
-                        module: 'Introduction to Data & AI Fundamentals',
-                        primary: 'Joy Olusanya',
-                        secondary: 'Mwihaki Thuo',
+                        module: 'Introduction to NLP',
+                        primary: 'Sharon Ibejih',
+                        secondary: 'Cynthia Thuo',
                       },
                       {
                         week: 'Week 3',
                         module: 'African Data Collection & Preparation',
-                        primary: 'Odunayo Buliaminu',
+                        primary: 'Odunayo',
                         secondary: 'Cynthia Amol',
                       },
                       {
                         week: 'Week 4',
                         module: 'Data Ethics and Governance',
-                        primary: 'Doreen Abiero (Guest)',
+                        primary: 'Doreen (Guest)',
                         secondary: 'Cynthia Amol',
                       },
                       {
                         week: 'Week 5',
                         module: 'Data Annotation Tools & Techniques',
-                        primary: 'Ezekiel Maina (Guest)',
-                        secondary: 'Sharon Ibejih',
+                        primary: 'Sharon Ibejih',
+                        secondary: '—',
                       },
                       {
                         week: 'Week 6',
@@ -490,15 +501,11 @@ export default function DataAcademyPage() {
                         </td>
                         <td className="px-4 py-3 text-gray-700 dark:text-gray-300">{row.module}</td>
                         <td className="text-primary-600 dark:text-primary-400 px-4 py-3 font-medium">
-                          TBA
-                        </td>
-                        <td className="px-4 py-3 text-gray-500 dark:text-gray-400">TBA</td>
-                        {/* <td className="text-primary-600 dark:text-primary-400 px-4 py-3 font-medium">
                           {row.primary}
                         </td>
                         <td className="px-4 py-3 text-gray-500 dark:text-gray-400">
                           {row.secondary}
-                        </td> */}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -547,7 +554,7 @@ export default function DataAcademyPage() {
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 {[
                   'Course materials and assignments via Google Classroom',
-                  'WhatsApp group for announcements and informal discussions',
+                  'Slack for announcements and informal discussions',
                   'All live classes recorded and shared via email',
                   `Support: Email ${siteMetadata.academyEmail} for any questions or issues`,
                 ].map((ch, i) => (
@@ -593,7 +600,7 @@ export default function DataAcademyPage() {
                 'Access to all course materials',
                 'Expert tutor support',
                 'Certificate of completion',
-                'WhatsApp community access',
+                'Slack community access',
                 'Recorded class replays',
               ].map((feature, i) => (
                 <li key={i} className="flex items-center gap-3">
