@@ -14,6 +14,7 @@ import {
   BarChart3,
 } from 'lucide-react'
 import siteMetadata from 'data/siteMetadata'
+import CountdownToStart from 'components/data-academy/CountdownToStart'
 
 export const metadata = genPageMetadata({
   title: 'Tonative Data Academy',
@@ -36,7 +37,7 @@ export const metadata = genPageMetadata({
 const curriculumWeeks = [
   {
     week: 'Pre-requisite',
-    date: 'Aug 16',
+    date: 'Sep 6',
     topic: 'Onboarding & Program Kick-off',
     description:
       'Introduction to the program and soft skills, including the Google Workspace environment and communication channels such as email and Slack.',
@@ -44,7 +45,7 @@ const curriculumWeeks = [
   },
   {
     week: 'Week 1',
-    date: 'Aug 17 – 21',
+    date: 'Sep 7 – 11',
     topic: 'Introduction to Language',
     description:
       'African languages and linguistics, phonetics, morphology, orthography, and language variation (dialects, registers, sociolinguistics).',
@@ -52,7 +53,7 @@ const curriculumWeeks = [
   },
   {
     week: 'Week 2',
-    date: 'Aug 24 – 28',
+    date: 'Sep 14 – 18',
     topic: 'Introduction to NLP',
     description:
       'Introduction to Artificial Intelligence, Machine Learning, and Deep Learning; intro to NLP; structured vs. unstructured and quantitative vs. qualitative data; data preprocessing; types of language datasets (audio, text, MT) and corpus-based approaches; training vs. evaluation (benchmarking) datasets; and dataset documentation, including Hugging Face.',
@@ -60,7 +61,7 @@ const curriculumWeeks = [
   },
   {
     week: 'Week 3',
-    date: 'Aug 31 – Sep 4',
+    date: 'Sep 21 – 25',
     topic: 'African Data Collection & Preparation',
     description:
       'Audio data curation (recording tools, audio format, background noise, noise cancellation, sample rates) and text data types and curation methods; data validation for audio and text through automated and manual methods; and quality control frameworks.',
@@ -68,7 +69,7 @@ const curriculumWeeks = [
   },
   {
     week: 'Week 4',
-    date: 'Sep 7 – 11',
+    date: 'Sep 28 – Oct 2',
     topic: 'Data Ethics and Governance',
     description:
       'Data policy and governance frameworks, data law, and data quality principles (consistency, coverage, edge cases); ethics around consent, data ownership, cultural sensitivity, and community benefit; and equitable licensing frameworks for African data, including Creative Commons and novel frameworks like NOODL and Esethu.',
@@ -76,7 +77,7 @@ const curriculumWeeks = [
   },
   {
     week: 'Week 5',
-    date: 'Sep 14 – 18',
+    date: 'Oct 5 – 9',
     topic: 'Data Annotation Tools & Techniques',
     description:
       'Hands-on training with industry-standard tools (Label Studio, Prodigy, or custom platforms); text classification and PoS tagging; named entity recognition for African contexts; sentiment analysis considerations across cultures; machine translation annotation and evaluation; plus further reading on speech, image, and video annotation.',
@@ -84,7 +85,7 @@ const curriculumWeeks = [
   },
   {
     week: 'Week 6',
-    date: 'Sep 21 – 25',
+    date: 'Oct 12 – 16',
     topic: 'Capstone Project',
     description:
       'Data documentation and open-source data translation, validation, and publication on Hugging Face to close out the program.',
@@ -173,20 +174,8 @@ export default function DataAcademyPage() {
               applications.
             </p>
 
-            {/* Stats row */}
-            <div className="mb-12 flex flex-wrap justify-center gap-8 text-center">
-              {[
-                { value: '6', label: 'Weeks' },
-                { value: '7', label: 'Modules' },
-                { value: '75%', label: 'Min. Attendance' },
-                // { value: '$45', label: '2nd Cohort' },
-              ].map((stat) => (
-                <div key={stat.label} className="flex flex-col">
-                  <span className="text-accent-400 text-3xl font-bold">{stat.value}</span>
-                  <span className="text-sm text-gray-400">{stat.label}</span>
-                </div>
-              ))}
-            </div>
+            {/* Countdown to kickoff */}
+            <CountdownToStart />
 
             {/* CTA Buttons */}
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -263,8 +252,9 @@ export default function DataAcademyPage() {
                   This program is designed to be completed over 6 weeks (plus a pre-requisite
                   onboarding session) through a blend of <strong>live online sessions</strong>,
                   self-paced reading materials, and interactive projects. Onboarding takes place on{' '}
-                  <strong>August 16, 2026</strong>, with weekly teaching running from{' '}
-                  <strong>August 17 to September 25, 2026</strong>.
+                  <strong>September 6, 2026</strong>, with weekly teaching running from{' '}
+                  <strong>September 7 to October 16, 2026</strong>. Registration closes{' '}
+                  <strong>August 30, 2026</strong>.
                 </p>
                 <p className="leading-relaxed">
                   All live sessions are conducted via Google Meet links shared through Google
@@ -373,8 +363,8 @@ export default function DataAcademyPage() {
               Curriculum Structure
             </h2>
             <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
-              A pre-requisite onboarding session plus 6 weekly modules, running August 16 –
-              September 25, 2026, covering everything from African linguistics to capstone project
+              A pre-requisite onboarding session plus 6 weekly modules, running September 6 –
+              October 16, 2026, covering everything from African linguistics to capstone project
               delivery.
             </p>
           </div>
@@ -592,7 +582,9 @@ export default function DataAcademyPage() {
               2nd Cohort
             </div>
             <div className="mb-1 text-5xl font-bold text-white">$45</div>
-            <div className="mb-6 text-sm text-gray-400">Limited spots available</div>
+            <div className="mb-6 text-sm text-gray-400">
+              Limited spots available — registration closes August 30, 2026
+            </div>
 
             <ul className="mb-8 space-y-3 text-left text-sm text-gray-300">
               {[
