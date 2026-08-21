@@ -433,8 +433,10 @@ export default function DataAcademyPage() {
                     <tr className="bg-primary-900 text-white">
                       <th className="px-4 py-3 text-left font-semibold">Week</th>
                       <th className="px-4 py-3 text-left font-semibold">Module</th>
-                      <th className="px-4 py-3 text-left font-semibold">Primary Tutor</th>
-                      <th className="px-4 py-3 text-left font-semibold">Backup Tutor</th>
+
+                      {/* <th className="px-4 py-3 text-left font-semibold">Primary Tutor</th>
+                      <th className="px-4 py-3 text-left font-semibold">Backup Tutor</th> 
+                      */}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-100 dark:divide-gray-700">
@@ -490,12 +492,13 @@ export default function DataAcademyPage() {
                           {row.week}
                         </td>
                         <td className="px-4 py-3 text-gray-700 dark:text-gray-300">{row.module}</td>
-                        <td className="text-primary-600 dark:text-primary-400 px-4 py-3 font-medium">
+
+                        {/* <td className="text-primary-600 dark:text-primary-400 px-4 py-3 font-medium">
                           {row.primary}
                         </td>
                         <td className="px-4 py-3 text-gray-500 dark:text-gray-400">
                           {row.secondary}
-                        </td>
+                        </td> */}
                       </tr>
                     ))}
                   </tbody>
