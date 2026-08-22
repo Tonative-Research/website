@@ -1,12 +1,11 @@
 import { genPageMetadata } from 'app/seo'
 import NextImage from 'next/image'
 import Link from 'next/link'
-import IndabaGallery from 'components/indaba/Gallery2026'
 
 export const metadata = genPageMetadata({
   title: 'DLI 2026 Workshop - Tonative',
   description:
-    "Tonative at Deep Learning Indaba 2026, Nigeria. Recap of our workshop and community booth on capacity building for community-led dataset creation and sustainable AI pipelines strengthening Africa's human data infrastructure.",
+    "Tonative at Deep Learning Indaba 2026, Nigeria. Workshop on capacity building for community-led dataset creation and sustainable AI pipelines thereby strengthening Africa's human data infrastructure.",
   keywords: [
     'Deep Learning Indaba 2026',
     'DLI 2026 Nigeria',
@@ -95,7 +94,7 @@ const speakers = [
     role: 'Guest Speaker',
     bio: 'Co-founder of KenCorpus and Research Lead at the Maseno Centre for Applied Artificial Intelligence (MCAAI), with a decade of experience curating datasets across Kenyan languages including Dholuo, Kikuyu, Kalenjin, Maasai, Somali and Kenyan Sign Language (KSL). As Principal Investigator for KenCorpus, African Next Voices – Kenya and AI4KSL, she led the collection of some of the largest speech, text and sign language datasets for Kenyan languages, working directly with language communities throughout. Her research centres the empowerment of human data infrastructure as foundational to the AI development pipeline.',
     session:
-      'In her keynote, Dr. Wanzare shared insights on capacity building for African language data curators, the infrastructure needed for a scalable curation pipeline, and how to govern these datasets.',
+      'In this session, Dr. Wanzare will share insights on capacity building for African language data curators, the infrastructure needed for a scalable curation pipeline, and how to govern these datasets.',
     linkedin: 'https://www.linkedin.com/in/liliwanzie/',
     avatar: 'LW',
     image: '/static/images/authors/dr_lilian.png',
@@ -107,7 +106,7 @@ const agenda = [
   {
     time: 'Section 1 · ~3 min',
     title: 'Opening & Context',
-    desc: 'Welcome, session goals, and an introduction to the Tonative Data Academy and African AI data challenges. Facilitated by Cynthia Amol.',
+    desc: 'Welcome, session goals, and introduction to the Tonative Data Academy and African AI data challenges. Facilitated by Cynthia Amol.',
     icon: '🌍',
   },
   {
@@ -119,19 +118,19 @@ const agenda = [
   {
     time: 'Section 3 · ~35 min',
     title: 'Breakout Discussions',
-    desc: 'Participants split into groups around key pipeline stages, dataset creation & collection, translation & validation & annotation, and dataset usage & evaluation, to surface challenges, needs, and opportunities.',
+    desc: 'Participants split into groups around key pipeline stages which encompasses dataset creation & collection, translation & validation & annotation, and dataset usage & evaluation in order to identify challenges, needs, and opportunities.',
     icon: '🤝',
   },
   {
     time: 'Section 4 · ~30 min',
     title: 'Collaborative Roadmap Building',
-    desc: 'Groups shared key insights and co-developed a shared roadmap for strengthening capacity, improving coordination across language communities, and designing scalable data pipelines.',
+    desc: 'Groups share key insights and co-develop a shared roadmap for strengthening capacity, improving coordination across language communities, and designing scalable data pipelines.',
     icon: '🗺️',
   },
   {
     time: 'Section 5 · ~10 min',
     title: 'Synthesis & Next Steps',
-    desc: 'Key takeaways, opportunities for collaboration, and post-Indaba follow-up plans, including a shared resource toolkit and cross-community collaboration network.',
+    desc: 'Key takeaways, opportunities for collaboration, and post-Indaba follow-up plans including a shared resource toolkit and cross-community collaboration network.',
     icon: '💬',
   },
 ]
@@ -140,17 +139,12 @@ const logistics = [
   {
     icon: '📍',
     label: 'Location',
-    value: 'Abuja Hall, Pan-Atlantic University, Lagos, Nigeria',
+    value: 'Nigeria: Deep Learning Indaba 2026 (in-person only)',
   },
   {
     icon: '🗓️',
-    label: 'Date',
-    value: 'Thursday, 6 August 2026',
-  },
-  {
-    icon: '🕐',
-    label: 'Time',
-    value: '12:00 PM',
+    label: 'Format',
+    value: 'Forums and dialogues (in-person; virtual or hybrid not supported)',
   },
   {
     icon: '⏱️',
@@ -159,13 +153,13 @@ const logistics = [
   },
   {
     icon: '🎫',
-    label: 'Programme',
-    value: 'Official Deep Learning Indaba 2026 programme',
+    label: 'Registration',
+    value: 'Via the DLI 2026 conference registration process',
   },
   {
     icon: '📡',
-    label: 'Format',
-    value: 'In-person forum, dialogues, and community booth',
+    label: 'AV & Scheduling',
+    value: 'Coordinated directly with the Indaba organising team',
   },
 ]
 
@@ -194,7 +188,7 @@ export default function Indaba2026Page() {
         <div className="relative container mx-auto max-w-4xl px-4 text-center">
           {/* Badge */}
           <div className="border-l-primary-100 mx-auto mb-6 w-fit border-l-[3px] pl-3 text-center text-[13px] font-medium tracking-[0.4px] text-white/55">
-            Deep Learning Indaba 2026 · Nigeria · Recap
+            Deep Learning Indaba 2026 · Nigeria
           </div>
 
           <h1 className="mb-5 text-4xl leading-tight font-black tracking-tight text-white md:text-6xl">
@@ -206,17 +200,19 @@ export default function Indaba2026Page() {
           </h1>
 
           <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-gray-300">
-            Tonative brought a community booth and a capacity-building workshop to DLI 2026,
-            bringing together dataset creators, translators, validators, and researchers working to
-            strengthen the people, skills, and systems Africa's AI future depends on.
+            A capacity-building workshop at DLI 2026 on community-led dataset creation and
+            sustainable AI pipelines focused on strengthening the people, skills, and systems
+            Africa's AI future depends on.
           </p>
 
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#gallery"
+              href="https://deeplearningindaba.com/2026/accepted-workshops-and-short-sessions/#:~:text=Building%20Africa%27s%20Human%20Data%20Infrastructure"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-accent-500 hover:bg-accent-600 rounded-md px-8 py-3 font-semibold text-white transition-colors"
             >
-              See Photos
+              DLI 2026 Website
             </a>
             <a
               href="/static/downloads/tonative_indaba_workshop.pdf"
@@ -249,18 +245,15 @@ export default function Indaba2026Page() {
               <p>
                 Hosted by <strong className="text-gray-900">Tonative Africa</strong> at the{' '}
                 <strong className="text-gray-900">Deep Learning Indaba 2026</strong> in Nigeria,
-                this session brought together creators, translators, validators, and annotators for
-                capacity building. Through a keynote from Dr. Lilian Wanzare, breakout discussions,
-                and collaborative roadmap design, participants explored best practices for dataset
-                creation, quality assurance, and long-term capacity development across African
-                language communities.
+                this session focuses on capacity building for creators, translators, validators, and
+                annotators. Through short talks, breakout discussions, and collaborative roadmap
+                design, participants will explore best practices for dataset creation, quality
+                assurance, and long-term capacity development across African language communities.
               </p>
               <p>
-                Alongside the workshop, Tonative also ran a community booth throughout the
-                conference, connecting with attendees, demoing the platform, and welcoming new
-                contributors. Together, the two produced shared guidelines, surfaced priority
-                challenges, and a roadmap for strengthening Africa's sovereign, sustainable, and
-                locally owned AI ecosystems.
+                The session aims to produce shared guidelines, identify priority challenges, and
+                co-develop a roadmap for strengthening Africa's sovereign, sustainable, and locally
+                owned AI ecosystems. All participants must be present in person.
               </p>
             </div>
 
@@ -285,18 +278,15 @@ export default function Indaba2026Page() {
         </div>
       </section>
 
-      {/* ── Photo Gallery ────────────────────────────────────────────────── */}
-      <div id="gallery">
-        <IndabaGallery />
-      </div>
-
       {/* ── Agenda ───────────────────────────────────────────────────────── */}
       <section className="bg-gray-50 py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
             <h2 className="mb-4 text-4xl font-black text-gray-900">Session Agenda</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
-            <p className="mt-4 text-lg text-gray-600">How the session ran, section by section.</p>
+            <p className="mt-4 text-lg text-gray-600">
+              Full schedule to be confirmed with the Indaba organising team.
+            </p>
           </div>
 
           <div className="relative">
@@ -336,10 +326,10 @@ export default function Indaba2026Page() {
       <section className="bg-white py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
-            <h2 className="mb-4 text-4xl font-black text-gray-900">Guest Speaker</h2>
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Guest Speakers</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
             <p className="mt-4 text-lg text-gray-600">
-              We were glad to welcome the following speaker.
+              Please join us in welcoming our confirmed speaker.
             </p>
           </div>
 
@@ -463,14 +453,79 @@ export default function Indaba2026Page() {
         </div>
       </section>
 
-      {/* ── Outputs ──────────────────────────────────────────────────────── */}
+      {/* ── Target Audience ──────────────────────────────────────────────── */}
       <section className="bg-white py-20">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="mb-12">
-            <h2 className="mb-4 text-4xl font-black text-gray-900">What Came Out of It</h2>
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Who Should Attend</h2>
             <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
             <p className="mt-4 text-lg text-gray-600">
-              Tangible, community-owned resources and connections from the session.
+              Our workshop is open to anyone attending the Deep Learning Indaba Conference this year
+              who is interested in the data layer of language technologies.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                icon: '🔬',
+                label: 'Researchers',
+                desc: 'Working on African language technologies',
+              },
+              {
+                icon: '✏️',
+                label: 'Dataset Creators & Annotators',
+                desc: 'Building training data for African languages',
+              },
+              {
+                icon: '🌐',
+                label: 'Translators & Validators',
+                desc: 'Ensuring linguistic accuracy and contextual relevance',
+              },
+              {
+                icon: '💻',
+                label: 'Open-Source Contributors',
+                desc: 'Supporting community-driven AI tools and pipelines',
+              },
+              {
+                icon: '🎓',
+                label: 'Students & Educators',
+                desc: 'Working on data-centric AI in academic settings',
+              },
+              {
+                icon: '🏗️',
+                label: 'AI Practitioners',
+                desc: 'Building AI products and services for African users',
+              },
+              {
+                icon: '📖',
+                label: 'African Linguists',
+                desc: 'With an interest in data creation for their languages',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="border-primary-100 flex items-start gap-4 rounded-xl border bg-gray-50 p-5"
+              >
+                <span className="text-2xl">{item.icon}</span>
+                <div>
+                  <p className="font-semibold text-gray-900">{item.label}</p>
+                  <p className="mt-0.5 text-sm text-gray-600">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Expected Outputs ─────────────────────────────────────────────── */}
+      <section className="bg-gray-50 py-20">
+        <div className="container mx-auto max-w-5xl px-4">
+          <div className="mb-12">
+            <h2 className="mb-4 text-4xl font-black text-gray-900">Expected Outputs</h2>
+            <div className="from-primary-500 to-primary-700 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
+            <p className="mt-4 text-lg text-gray-600">
+              The workshop aims to produce tangible, community-owned resources and connections.
             </p>
           </div>
 
@@ -515,14 +570,65 @@ export default function Indaba2026Page() {
         </div>
       </section>
 
+      {/* ── Requirements / What to Expect ────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-linear-to-br from-gray-900 to-gray-800 py-24">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        </div>
+        <div className="bg-primary-600/20 absolute top-1/4 right-1/3 h-96 w-96 rounded-full blur-3xl"></div>
+
+        <div className="relative container mx-auto max-w-5xl px-4">
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 text-4xl font-black text-white md:text-5xl">
+              Participation Requirements
+            </h2>
+            <p className="text-lg text-gray-400">What you need to know before attending</p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {[
+              {
+                title: 'In-Person Attendance Required',
+                desc: 'This workshop is exclusively delivered in person at DLI 2026 in Nigeria. Virtual or hybrid participation cannot be supported.',
+                icon: '🎟️',
+              },
+              {
+                title: 'Register via DLI 2026',
+                desc: 'Workshop participation is through the official Deep Learning Indaba 2026 registration. See the DLI website for registration deadlines and details.',
+                icon: '📝',
+              },
+              {
+                title: 'Speaker & Organiser Deadline',
+                desc: 'All confirmed speakers and organisers must finalise their participation by the ticket allocation deadline communicated by the DLI team.',
+                icon: '📅',
+              },
+              {
+                title: 'AV & Logistics',
+                desc: 'Audio-visual requirements and scheduling will be coordinated directly with the Indaba organising team ahead of the event.',
+                icon: '🎙️',
+              },
+            ].map((item, i) => (
+              <div
+                key={i}
+                className="border-primary-700/40 group relative overflow-hidden rounded-2xl border bg-white/5 p-6 backdrop-blur-sm transition-all hover:bg-white/10"
+              >
+                <div className="mb-4 text-3xl">{item.icon}</div>
+                <h3 className="mb-2 text-lg font-bold text-white">{item.title}</h3>
+                <p className="leading-relaxed text-gray-400">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CTA / Contact ────────────────────────────────────────────────── */}
       <section className="bg-white py-20">
         <div className="container mx-auto max-w-3xl px-4 text-center">
-          <h2 className="mb-4 text-4xl font-black text-gray-900">Stay Involved</h2>
+          <h2 className="mb-4 text-4xl font-black text-gray-900">Get Involved</h2>
           <div className="from-primary-500 to-primary-700 mx-auto mb-6 h-1.5 w-24 rounded-full bg-linear-to-r"></div>
           <p className="mb-8 text-lg leading-relaxed text-gray-600">
-            Missed us at DLI 2026 or want to keep building on what came out of the session? Reach
-            out to the Tonative team - we'd love to hear from you.
+            Interested in collaborating, co-organising, or presenting at this workshop? Reach out to
+            the Tonative team... We want to hear from you.
           </p>
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
