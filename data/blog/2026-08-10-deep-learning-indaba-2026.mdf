@@ -1,0 +1,133 @@
+---
+
+title: 'From Data Creation to Community Capacity: Tonative at Deep Learning Indaba 2026'
+date: '2026-08-06'
+tags: ['workshop', 'datasets', 'AI', 'community', 'African languages', 'capacity building']
+draft: false
+summary: A look at Tonative's workshop at Deep Learning Indaba 2026, where participants discussed the people, tools, and policies needed to build better African language data pipelines.
+authors: ['Tonative Team']
+---
+
+On Thursday, 6 August 2026, Tonative Africa hosted **Building Africa's Human Data Infrastructure** at Deep Learning Indaba 2026 in Abuja Hall, Pan-Atlantic University, Lagos, Nigeria.
+
+The 90-minute workshop brought together people working across the African AI data pipeline, including data creators, translators, validators, and annotators. Rather than focusing on models themselves, the session looked at something that is often less visible: the people and systems needed to create the data those models depend on.
+
+The workshop was built around three areas: **capacity building for data curation, tools and infrastructure, and governance, ethics, and policy**.
+
+The aim was practical. Participants were asked to discuss the problems they encounter in their own work and think together about what better systems could look like.
+
+## Why human data infrastructure matters
+
+The growth of generative AI has created a growing demand for training and evaluation data. For African languages, however, the challenge is not simply that there are not enough datasets.
+
+There are also gaps in the skills and systems needed to create, translate, validate, document, and maintain those datasets.
+
+Someone has to collect the data. Someone has to check whether a translation actually sounds natural. Someone has to understand the linguistic context. Someone has to document how a dataset was created and decide how it can be used.
+
+These roles are easy to overlook when we talk about AI infrastructure because they sit behind the model.
+
+The workshop was an attempt to put those roles at the centre of the conversation.
+
+## Starting with the people behind the data
+
+The session began with an introduction to Tonative and the work we are doing around African language data.
+
+Tonative trains African data curators, builds custom training and evaluation datasets, and develops AI tools for African languages and local contexts. Our work currently spans more than 20 languages and five industry domains.
+
+One part of this work is the [Tonative Data Academy](https://www.tonative.org/services/data-academy), a six-week programme that trains people to collect, annotate, validate, and curate African language data for AI and NLP.
+
+The workshop built on this experience and asked a broader question:
+
+**What would it take to make African language data work something people can build skills and careers around, rather than something they are brought in to do for a single project?**
+
+That question shaped the first breakout.
+
+## Three breakout groups
+
+Participants split into three groups, each looking at a different part of the data pipeline.
+
+### 1. Capacity Building for Data Curation
+
+**Led by Sharon and Naomi**
+
+The first group looked at the people doing the actual data work.
+
+The discussion started with some basic terms: training, qualification, and empowerment. What do these mean for someone who wants to become a data curator?
+
+Participants considered whether formal training should be required, what a standard curriculum should cover, and how someone could progress from being a beginner to becoming an experienced curator.
+
+Another question was harder:
+
+**How do we make data curation a sustainable and respected livelihood rather than another form of short-term gig work?**
+
+This matters because African language communities already have the linguistic knowledge needed for much of this work. The missing piece is often the training, structure, and opportunity to turn that knowledge into a useful technical skill.
+
+### 2. Tools and Infrastructure
+
+**Led by Okechukwu and Chinenye**
+
+The second group focused on the tools and infrastructure used to create and manage datasets.
+
+Participants discussed the annotation platforms, libraries, frameworks, cloud services, storage, and connectivity they currently depend on.
+
+The conversation also got into the practical issues that can determine whether a project is even possible: hosting costs, API costs, internet access, and whether existing tools properly support African languages.
+
+One question stood out:
+
+**What would it take to make more of these tools offline-first and self-hostable?**
+
+That question is especially relevant when data creators are working in places where connectivity is unreliable or where recurring cloud and API costs can become a barrier.
+
+Tonative's own tools provided examples for the discussion. These include TonalKeys, an African language keyboard for tone marks and diacritics; MTStudio, our translation engine for creating parallel-text data; and a self-hosted Label Studio environment for annotation and quality validation.
+
+The point was not that one tool solves the problem. It was to examine what the tooling around African language data actually needs to look like.
+
+### 3. Governance, Ethics and Policy
+
+**Led by Cynthia and Faisal**
+
+The third group looked at what happens when datasets are created and someone needs to decide who owns them, how they can be used, and who benefits from them.
+
+Participants discussed licensing, open versus commercial data, and whether existing frameworks such as Creative Commons work well for African language datasets.
+
+They also considered a more fundamental question:
+
+**Who should have a say in how African language data is reused?**
+
+A dataset can be technically useful while still raising questions about consent, ownership, cultural context, and community benefit.
+
+The group therefore looked beyond simply making datasets available. It considered what fairer approaches to licensing and data governance could look like in different African contexts.
+
+## From breakout discussions to a shared roadmap
+
+The breakout groups came back together after their discussions to share their key points.
+
+This was the final part of the workshop: moving from three separate conversations to a shared view of what needs attention across the data pipeline.
+
+The three areas are closely connected.
+
+Training people is difficult if the tools they need are inaccessible. Good tools are less useful if people do not have the skills to use them. And neither solves the problem of ownership and responsible data use.
+
+That is why the workshop brought **people, tools, and governance** into the same conversation.
+
+The intention was not to produce a perfect answer in 90 minutes. It was to identify the questions that deserve more attention and start building a common roadmap around them.
+
+## What comes next
+
+The workshop is part of a larger effort to make African language data work more sustainable.
+
+For Tonative, that includes training more data curators through the [Tonative Data Academy](https://www.tonative.org/services/data-academy), improving the tools used in data workflows, and continuing to work on better approaches to dataset creation, validation, documentation, and governance.
+
+The larger goal is straightforward: African language communities should have more of a role in creating the data used to build AI systems that work for them.
+
+That means developing the skills to create and evaluate data. It means having tools that work in local conditions. It means having clearer conversations about ownership and reuse.
+
+And it means creating spaces where the people doing this work can compare what is working, talk openly about what is not, and decide what should come next.
+
+Deep Learning Indaba gave us one of those spaces.
+
+## Workshop Materials
+
+If you would like to see the original session structure, discussion questions, agenda, and tools presented during the workshop, you can access the full [Workshop Details](https://www.tonative.org/static/downloads/tonative_indaba_workshop.pdf).
+
+The guide includes the three breakout themes, the discussion questions used by each group, and the full 90-minute session agenda.
