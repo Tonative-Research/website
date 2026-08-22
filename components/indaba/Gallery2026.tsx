@@ -44,29 +44,29 @@ const photos: GalleryPhoto[] = [
   },
   {
     src: '/static/images/dli2026/booth_4.jpg',
-    alt: 'Tonative booth setup at Deep Learning Indaba 2026',
+    alt: 'Tonative booth setup at Deep Learning Indaba 2026 (1)',
     category: 'Community Booth',
   },
   {
     src: '/static/images/dli2026/booth_5.jpg',
-    alt: 'Attendees signing up as contributors at the booth',
+    alt: 'Tonative booth setup at Deep Learning Indaba 2026 (2)',
     category: 'Community Booth',
   },
   {
     src: '/static/images/dli2026/booth_6.jpg',
-    alt: 'Team member demoing the Tonative platform at the booth',
+    alt: 'Tonative booth setup at Deep Learning Indaba 2026 (3)',
     category: 'Community Booth',
   },
 
   // Dr. Wanzare's Keynote
   {
-    src: '/static/images/dli2026/keynote_speech_1.jpg',
+    src: '/static/images/dli2026/keynote_speech_2.jpg',
     alt: 'Dr. Lilian Wanzare delivering her keynote talk',
     category: "Dr. Wanzare's Keynote",
   },
   {
-    src: '/static/images/dli2026/keynote_speech_2.jpg',
-    alt: 'Dr. Wanzare presenting slides on human data infrastructure',
+    src: '/static/images/dli2026/keynote_speech_1.jpg',
+    alt: 'Dr. Wanzare presenting slides on localizing AI Tools',
     category: "Dr. Wanzare's Keynote",
   },
   {
@@ -105,17 +105,17 @@ const photos: GalleryPhoto[] = [
   // Breakout Sessions
   {
     src: '/static/images/dli2026/breakout_session_1.jpg',
-    alt: 'Breakout Session 1 group discussing dataset creation and collection',
+    alt: 'Breakout Session 1 group discussing Capacity Building for Data Curation',
     category: 'Breakout Session 1',
   },
   {
     src: '/static/images/dli2026/breakout_session_2.jpg',
-    alt: 'Breakout Session 2 group discussing translation and validation',
+    alt: 'Breakout Session 2 group discussing Tools and Infrastructure',
     category: 'Breakout Session 2',
   },
   {
     src: '/static/images/dli2026/breakout_session_3.jpg',
-    alt: 'Breakout Session 3 group discussing dataset usage and evaluation',
+    alt: 'Breakout Session 3 group discussing Governance, Ethics & Policy',
     category: 'Breakout Session 3',
   },
 ]
