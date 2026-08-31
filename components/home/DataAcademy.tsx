@@ -16,7 +16,7 @@ export default function DataAcademy() {
                 <span className="bg-accent-500 rounded-full px-2 py-0.5 text-xs font-bold">
                   New
                 </span>
-                <span>2nd Cohort - Now Enrolling</span>
+                <span>Cohort Starting Soon</span>
               </div>
               <h2
                 className="mb-3 text-3xl font-bold text-white sm:text-4xl"

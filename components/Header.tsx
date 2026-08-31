@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header className={headerClass}>
-      <div className="from-accent-600 via-accent-500 to-accent-600 flex items-center justify-center gap-3 border-b border-white/10 bg-gradient-to-r px-4 py-2.5 text-white shadow-lg">
+      {/* <div className="from-accent-600 via-accent-500 to-accent-600 flex items-center justify-center gap-3 border-b border-white/10 bg-gradient-to-r px-4 py-2.5 text-white shadow-lg">
         <span className="hidden rounded-full bg-white/15 px-2.5 py-0.5 text-xs font-semibold tracking-wide sm:inline-block">
           🎓 2nd Cohort
         </span>
@@ -31,7 +31,7 @@ const Header = () => {
             Apply Now
           </button>
         </Link>
-      </div>
+      </div> */}
       <div className={innerHeaderClass}>
         {/* Left Section - Logo */}
         <Link href="/" aria-label={siteMetadata.headerTitle}>
