@@ -7,14 +7,12 @@ import {
   Award,
   CheckCircle,
   Calendar,
-  ChevronRight,
   Globe,
   Shield,
   Lightbulb,
   BarChart3,
 } from 'lucide-react'
 import siteMetadata from 'data/siteMetadata'
-import CountdownToStart from 'components/data-academy/CountdownToStart'
 
 export const metadata = genPageMetadata({
   title: 'Tonative Data Academy',
@@ -141,21 +139,21 @@ export default function DataAcademyPage() {
       {/* Hero Section */}
       <section className="from-primary-900 via-primary-800 relative overflow-hidden bg-linear-to-br to-slate-950 py-20 lg:py-32">
         {/* Background patterns */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[42px_42px]"></div>
-        <div className="bg-primary-600/20 absolute top-20 right-1/4 h-72 w-72 animate-pulse rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-size-[42px_42px]" />
+        <div className="bg-primary-600/20 absolute top-20 right-1/4 h-72 w-72 animate-pulse rounded-full blur-3xl" />
         <div
           className="absolute bottom-20 left-1/4 h-72 w-72 animate-pulse rounded-full bg-blue-600/20 blur-3xl"
           style={{ animationDelay: '1s' }}
-        ></div>
+        />
 
         <div className="relative container mx-auto px-6 sm:px-8">
           <div className="mx-auto max-w-4xl text-center">
             {/* Badge */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm">
-              <span className="bg-accent-500 rounded-full px-2 py-0.5 text-xs font-bold text-white">
-                2nd Cohort
+              <span className="rounded-full bg-red-500 px-2 py-0.5 text-xs font-bold text-white">
+                Closed
               </span>
-              <span>Applications Open</span>
+              <span>Applications Closed</span>
             </div>
 
             <h1
@@ -168,23 +166,25 @@ export default function DataAcademyPage() {
             <p className="mx-auto mb-4 max-w-2xl text-lg leading-relaxed text-gray-300">
               African Language Data Curation for AI
             </p>
+
             <p className="mx-auto mb-10 max-w-2xl text-base leading-relaxed text-gray-400">
               A 6-week intensive program equipping you with skills to collect, annotate, and curate
               African language data for artificial intelligence and natural language processing
               applications.
             </p>
 
-            {/* Countdown to kickoff */}
-            <CountdownToStart />
+            {/* Countdown removed because applications are closed */}
 
             {/* CTA Buttons */}
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link href="#enroll">
-                <button className="bg-accent-500 hover:bg-accent-600 inline-flex cursor-pointer items-center gap-2 rounded-lg px-8 py-4 text-base font-bold text-white shadow-lg transition-all hover:shadow-xl">
-                  Join the Next Cohort
-                  <ChevronRight className="h-5 w-5" />
-                </button>
-              </Link>
+              <button
+                type="button"
+                disabled
+                className="inline-flex cursor-not-allowed items-center gap-2 rounded-lg bg-gray-500 px-8 py-4 text-base font-bold text-white opacity-70"
+              >
+                Applications Closed
+              </button>
+
               <Link href="#curriculum">
                 <button className="inline-flex cursor-pointer items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-8 py-4 text-base font-medium text-white backdrop-blur-sm transition-all hover:bg-white/20">
                   View Curriculum
@@ -247,6 +247,7 @@ export default function DataAcademyPage() {
               >
                 Program Overview
               </h2>
+
               <div className="space-y-4 text-gray-700 dark:text-gray-300">
                 <p className="leading-relaxed">
                   This program is designed to be completed over 6 weeks (plus a pre-requisite
@@ -256,16 +257,19 @@ export default function DataAcademyPage() {
                   <strong>September 7 to October 16, 2026</strong>. Registration closes{' '}
                   <strong>August 30, 2026</strong>.
                 </p>
+
                 <p className="leading-relaxed">
                   All live sessions are conducted via Google Meet links shared through Google
                   Classroom, where you will find all course materials, assignments, and resources.
                 </p>
+
                 <p className="leading-relaxed">
                   Live sessions run on <strong>Tuesdays and Thursdays</strong> at minimum, with{' '}
                   <strong>Friday</strong> as an optional third class (maximum of three classes per
                   week). Each class lasts <strong>1 hour 30 minutes</strong>: 45 minutes of teaching
                   followed by 35 minutes of classwork or interactive session.
                 </p>
+
                 <p className="leading-relaxed">
                   Tutors post all teaching materials for the week on Google Classroom, and an
                   assignment is given at the end of every class, marked and released the following
@@ -281,6 +285,7 @@ export default function DataAcademyPage() {
                 >
                   Session Details
                 </h3>
+
                 <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
                   <li className="flex items-start gap-2">
                     <Calendar className="text-primary-500 mt-0.5 h-4 w-4 flex-shrink-0" />
@@ -310,9 +315,11 @@ export default function DataAcademyPage() {
               >
                 What You Will Learn
               </h2>
+
               <p className="mb-6 text-gray-600 dark:text-gray-400">
                 By the end of the program, participants will be able to:
               </p>
+
               <ul className="space-y-4">
                 {objectives.map((obj, idx) => (
                   <li key={idx} className="flex items-start gap-3">
@@ -330,6 +337,7 @@ export default function DataAcademyPage() {
                 >
                   Assessments
                 </h3>
+
                 <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <li className="flex items-start gap-2">
                     <BarChart3 className="text-accent-500 mt-0.5 h-4 w-4 flex-shrink-0" />
@@ -362,6 +370,7 @@ export default function DataAcademyPage() {
             >
               Curriculum Structure
             </h2>
+
             <p className="mx-auto max-w-2xl text-gray-600 dark:text-gray-400">
               A pre-requisite onboarding session plus 6 weekly modules, running September 6 –
               October 16, 2026, covering everything from African linguistics to capstone project
@@ -372,7 +381,7 @@ export default function DataAcademyPage() {
           <div className="mx-auto max-w-4xl">
             <div className="relative">
               {/* Vertical timeline line */}
-              <div className="from-primary-500 absolute top-0 bottom-0 left-6 w-0.5 bg-linear-to-b to-transparent sm:left-8"></div>
+              <div className="from-primary-500 absolute top-0 bottom-0 left-6 w-0.5 bg-linear-to-b to-transparent sm:left-8" />
 
               <div className="space-y-6">
                 {curriculumWeeks.map((item, idx) => (
@@ -388,16 +397,19 @@ export default function DataAcademyPage() {
                         <span className="bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300 rounded-full px-3 py-0.5 text-xs font-semibold">
                           {item.week}
                         </span>
+
                         <span className="text-xs text-gray-500 dark:text-gray-400">
                           {item.date}, 2026
                         </span>
                       </div>
+
                       <h3
                         className="text-primary-900 mb-1 font-bold dark:text-white"
                         style={{ fontFamily: 'var(--font-header)' }}
                       >
                         {item.topic}
                       </h3>
+
                       <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                         {item.description}
                       </p>
@@ -421,6 +433,7 @@ export default function DataAcademyPage() {
               >
                 Your Tutors
               </h2>
+
               <p className="text-gray-600 dark:text-gray-400">
                 Each module has a dedicated primary tutor and a backup tutor.
               </p>
@@ -433,55 +446,38 @@ export default function DataAcademyPage() {
                     <tr className="bg-primary-900 text-white">
                       <th className="px-4 py-3 text-left font-semibold">Week</th>
                       <th className="px-4 py-3 text-left font-semibold">Module</th>
-
-                      {/* <th className="px-4 py-3 text-left font-semibold">Primary Tutor</th>
-                      <th className="px-4 py-3 text-left font-semibold">Backup Tutor</th> 
-                      */}
                     </tr>
                   </thead>
+
                   <tbody className="divide-y divide-gray-100 dark:divide-gray-700">
                     {[
                       {
                         week: 'Pre-requisite',
                         module: 'Onboarding & Program Kick-off',
-                        primary: 'Sharon Ibejih',
-                        secondary: 'Naomi',
                       },
                       {
                         week: 'Week 1',
                         module: 'Introduction to Language',
-                        primary: 'Cynthia Thuo',
-                        secondary: 'Odunayo',
                       },
                       {
                         week: 'Week 2',
                         module: 'Introduction to NLP',
-                        primary: 'Sharon Ibejih',
-                        secondary: 'Cynthia Thuo',
                       },
                       {
                         week: 'Week 3',
                         module: 'African Data Collection & Preparation',
-                        primary: 'Odunayo',
-                        secondary: 'Cynthia Amol',
                       },
                       {
                         week: 'Week 4',
                         module: 'Data Ethics and Governance',
-                        primary: 'Doreen (Guest)',
-                        secondary: 'Cynthia Amol',
                       },
                       {
                         week: 'Week 5',
                         module: 'Data Annotation Tools & Techniques',
-                        primary: 'Sharon Ibejih',
-                        secondary: '—',
                       },
                       {
                         week: 'Week 6',
                         module: 'Capstone Project',
-                        primary: 'Cynthia Amol',
-                        secondary: '—',
                       },
                     ].map((row, idx) => (
                       <tr
@@ -492,13 +488,6 @@ export default function DataAcademyPage() {
                           {row.week}
                         </td>
                         <td className="px-4 py-3 text-gray-700 dark:text-gray-300">{row.module}</td>
-
-                        {/* <td className="text-primary-600 dark:text-primary-400 px-4 py-3 font-medium">
-                          {row.primary}
-                        </td>
-                        <td className="px-4 py-3 text-gray-500 dark:text-gray-400">
-                          {row.secondary}
-                        </td> */}
                       </tr>
                     ))}
                   </tbody>
@@ -521,6 +510,7 @@ export default function DataAcademyPage() {
               >
                 Technical Requirements
               </h3>
+
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 {[
                   'Laptop or desktop computer',
@@ -544,6 +534,7 @@ export default function DataAcademyPage() {
               >
                 Communication Channels
               </h3>
+
               <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                 {[
                   'Course materials and assignments via Google Classroom',
@@ -574,19 +565,21 @@ export default function DataAcademyPage() {
           >
             Ready to Shape the <span className="text-accent-400">Future of African AI?</span>
           </h2>
+
           <p className="mx-auto mb-8 max-w-2xl text-lg leading-relaxed text-gray-300">
-            Join the next cohort of the Tonative Data Academy. No prior experience required, just a
-            passion for African languages and AI.
+            Applications for the 2nd cohort of the Tonative Data Academy are now closed.
           </p>
 
-          {/* Pricing / Enrollment Card */}
-          <div className="mx-auto mb-10 max-w-md rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
+          {/* Enrollment Status Card */}
+          <div className="mx-auto max-w-md rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
             <div className="mb-2 text-sm font-medium tracking-wider text-gray-300 uppercase">
               2nd Cohort
             </div>
-            <div className="mb-1 text-5xl font-bold text-white">$45</div>
+
+            <div className="mb-1 text-3xl font-bold text-white">Applications Closed</div>
+
             <div className="mb-6 text-sm text-gray-400">
-              Limited spots available — registration closes August 30, 2026
+              Registration for this cohort closed on August 30, 2026.
             </div>
 
             <ul className="mb-8 space-y-3 text-left text-sm text-gray-300">
@@ -605,11 +598,13 @@ export default function DataAcademyPage() {
               ))}
             </ul>
 
-            <a href="https://forms.gle/6GEQ43fD5pTryVvq5" target="_blank" rel="noopener noreferrer">
-              <button className="bg-accent-500 hover:bg-accent-600 w-full rounded-lg py-4 text-base font-bold text-white shadow-lg transition-all hover:shadow-xl">
-                Join the Next Cohort
-              </button>
-            </a>
+            <button
+              type="button"
+              disabled
+              className="w-full cursor-not-allowed rounded-lg bg-gray-500 py-4 text-base font-bold text-white opacity-70"
+            >
+              Applications Closed
+            </button>
 
             <p className="mt-4 text-xs text-gray-400">
               Questions? Email{' '}
