@@ -45,6 +45,11 @@ export default function OurCoverage() {
                 'Kinyarwanda',
                 'Luganda',
                 'Lusoga',
+                'Portuguese',
+                'Ekegusii',
+                'Gtonga',
+                'Changana',
+                'Citswa',
               ].map((lang) => (
                 <span
                   key={lang}
@@ -96,6 +101,7 @@ export default function OurCoverage() {
                 { name: 'Nigeria', Flag: Flags.NG },
                 { name: 'Rwanda', Flag: Flags.RW },
                 { name: 'Uganda', Flag: Flags.UG },
+                { name: 'Mozambique', Flag: Flags.MZ },
               ].map(({ name, Flag }) => (
                 <span
                   key={name}
