@@ -6,7 +6,6 @@ import { CoreContent } from 'pliny/utils/contentlayer'
 import type { Blog } from 'contentlayer/generated'
 import Link from '@/components/Link'
 import siteMetadata from '@/data/siteMetadata'
-import tagData from 'app/tag-data.json'
 
 interface PaginationProps {
   totalPages: number
@@ -112,15 +111,38 @@ export default function ListLayoutWithTags({
   initialDisplayPosts = [],
   pagination,
 }: ListLayoutProps) {
-  const [showTopicFilter, setShowTopicFilter] = useState(false)
-  const [showAuthorFilter, setShowAuthorFilter] = useState(false)
-  const [showSortFilter, setShowSortFilter] = useState(false)
+  const [activeTab, setActiveTab] = useState('All')
+  const [searchValue, setSearchValue] = useState('')
 
   const pathname = usePathname()
-  const tagCounts = tagData as Record<string, number>
-  const tagKeys = Object.keys(tagCounts)
-  const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
-  const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
+
+  const isFiltering = activeTab !== 'All' || searchValue.trim() !== ''
+  const displayPosts = isFiltering
+    ? posts
+    : initialDisplayPosts.length > 0
+      ? initialDisplayPosts
+      : posts
+
+  const tabs = ['All', 'Journal', 'Conference', 'Datasets', 'Posters & Demos', 'Announcements']
+
+  const filteredPosts = displayPosts.filter((post) => {
+    const searchContent = (
+      post.title +
+      (post.summary || '') +
+      (post.tags?.join(' ') || '')
+    ).toLowerCase()
+    const matchesSearch = searchContent.includes(searchValue.toLowerCase())
+
+    if (activeTab === 'All') return matchesSearch
+
+    const matchesTab = post.tags?.some(
+      (tag) =>
+        activeTab.toLowerCase().includes(tag.toLowerCase()) ||
+        tag.toLowerCase().includes(activeTab.toLowerCase())
+    )
+
+    return matchesSearch && matchesTab
+  })
 
   return (
     <main className="flex-1 bg-gray-50 px-4 py-8 sm:px-10 md:py-12 dark:bg-gray-900">
@@ -129,69 +151,61 @@ export default function ListLayoutWithTags({
         <div className="mb-8 flex flex-wrap justify-between gap-4">
           <div className="flex flex-col gap-2">
             <h1 className="mb-3 text-4xl leading-tight font-black tracking-[-0.033em] text-gray-900 md:text-5xl dark:text-white">
-              All Posts
+              Research
             </h1>
             <p className="text-base font-normal text-gray-600 dark:text-gray-400">
               Explore our latest publications and articles on language technology and cultural AI.
             </p>
           </div>
         </div>
-        <div className="mb-8 border-b border-gray-200 pb-6"></div>
 
-        {/* Filter Buttons */}
-        {/* <div className="mb-8 flex flex-wrap gap-3 border-b border-gray-200 pb-6 dark:border-gray-700">
-          <button
-            onClick={() => setShowTopicFilter(!showTopicFilter)}
-            className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary-700/10 px-4 transition-colors hover:bg-primary-700/20 dark:bg-primary-600/20 dark:hover:bg-primary-600/30"
-          >
-            <p className="text-sm font-medium text-primary-700 dark:text-primary-400">Filter by Topic</p>
+        {/* Search Bar */}
+        <div className="mb-6">
+          <div className="relative max-w-lg">
+            <input
+              aria-label="Search publications"
+              type="text"
+              onChange={(e) => setSearchValue(e.target.value)}
+              placeholder="Search publications..."
+              className="focus:border-primary-500 focus:ring-primary-500 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
+            />
             <svg
-              className="h-4 w-4 text-primary-700 dark:text-primary-400"
+              className="absolute top-3 right-3 h-5 w-5 text-gray-400 dark:text-gray-300"
+              xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              stroke="currentColor"
               viewBox="0 0 24 24"
+              stroke="currentColor"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={2}
-                d="M19 9l-7 7-7-7"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-          </button>
-          <button
-            onClick={() => setShowAuthorFilter(!showAuthorFilter)}
-            className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 px-4 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
-          >
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Filter by Author</p>
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={() => setShowSortFilter(!showSortFilter)}
-            className="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 px-4 transition-colors hover:bg-gray-300 dark:bg-gray-700 dark:hover:bg-gray-600"
-          >
-            <p className="text-sm font-medium text-gray-700 dark:text-gray-300">Sort by Date</p>
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-        </div> */}
+          </div>
+        </div>
+
+        {/* Category Tabs */}
+        <div className="mb-8 flex flex-wrap gap-2 border-b border-gray-200 dark:border-gray-700">
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`-mb-[1px] border-b-2 px-4 py-3 text-sm font-semibold transition-colors ${
+                activeTab === tab
+                  ? 'border-primary-500 text-primary-600 dark:text-primary-400'
+                  : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-400 dark:hover:border-gray-600 dark:hover:text-gray-300'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
         {/* Blog Posts Grid */}
         <div className="space-y-8">
-          {displayPosts.map((post) => {
+          {filteredPosts.map((post) => {
             const { path, date, title, summary, tags, images } = post
             const imageUrl =
               images?.[0] || 'https://images.unsplash.com/photo-1516414447565-b14be0adf13e?w=600'
@@ -262,7 +276,7 @@ export default function ListLayoutWithTags({
         </div>
 
         {/* Pagination */}
-        {pagination && pagination.totalPages > 1 && (
+        {pagination && pagination.totalPages > 1 && !isFiltering && (
           <Pagination totalPages={pagination.totalPages} currentPage={pagination.currentPage} />
         )}
       </div>
