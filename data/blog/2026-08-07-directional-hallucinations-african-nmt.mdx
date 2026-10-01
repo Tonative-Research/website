@@ -1,0 +1,15 @@
+---
+title: 'Directional Hallucinations in African Neural Machine Translation(NMT): How Source Language Typology Shapes Translation Faithfulness'
+date: '2026-08-07'
+tags: ['Conference']
+draft: false
+summary: 'Multilingual neural machine translation systems exhibit well-documented performance asymmetries across translation directions, but the structural drivers and scale-dependence of these asymmetries remain largely understudied for African languages. Existing work largely attributes asymmetries in directional translation faithfulness to model-level factors such as training data imbalance and decoding strategies, without isolating the role of source language typology or quantifying how training data coverage moderates per-language performance. We present a direction-controlled empirical investigation using 1,000 meaning-equivalent English--Swahili sentence pairs translated into six African target languages by three multilingual NMT systems under a cont…'
+authors:
+  ['alfred-kondoro', 'chikezie-simon-amalagu', 'verrah-akinyi-otiende', 'okechukwu-godspraise']
+---
+
+**Accepted to Deep Learning Indaba 2026**
+
+## Abstract
+
+Multilingual neural machine translation systems exhibit well-documented performance asymmetries across translation directions, but the structural drivers and scale-dependence of these asymmetries remain largely understudied for African languages. Existing work largely attributes asymmetries in directional translation faithfulness to model-level factors such as training data imbalance and decoding strategies, without isolating the role of source language typology or quantifying how training data coverage moderates per-language performance. We present a direction-controlled empirical investigation using 1,000 meaning-equivalent English--Swahili sentence pairs translated into six African target languages by three multilingual NMT systems under a controlled 2x6 design, where translation faithfulness is assessed through forward semantic similarity using LaBSE and round-trip evaluation in which each translated sentence is translated back into its source language to measure meaning preservation across the full translation process. Our analysis reveals that directional asymmetry in African MT is more structured, more predictable, and more reversible than previously recognised, with training data coverage emerging as a stronger predictor of per-language faithfulness than geographic region or typological family, model scale amplifying rather than correcting the bias, and the direction of advantage reversing when training data favours the African source language. We additionally propose an operational hallucination taxonomy of four diagnostically defined error types, providing translation practitioners and validation researchers with an empirically grounded framework for understanding, anticipating, and addressing directional faithfulness failures in African NLP.

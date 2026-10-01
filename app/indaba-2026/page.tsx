@@ -49,8 +49,8 @@ const organizers = [
   {
     name: 'Chinenye Anikwenze',
     role: 'Organiser',
-    occupation: 'Engineering Lead, Tonative Africa',
-    bio: 'Chinenye is a Software Engineer and Automation Specialist focusing on defensive infrastructure and AI safety. As Engineering Lead at Tonative Africa, she manages technical infrastructure for 400+ contributors. Her research on Semantic Collapse and the security of tonal languages was recently presented at AFLC 2026 and Impact Fellowship Summit IREX 2026.',
+    occupation: 'Software Engineer, Tonative Africa',
+    bio: 'Chinenye is a Software Engineer and Automation Specialist focusing on defensive infrastructure and AI safety. As Software Engineer at Tonative Africa, she manages technical infrastructure for 400+ contributors. Her research on Semantic Collapse and the security of tonal languages was recently presented at AFLC 2026 and Impact Fellowship Summit IREX 2026.',
     linkedin: 'https://www.linkedin.com/in/chinenye-anikwenze/',
     image: '/static/images/authors/chinenye_anikwenze.png',
   },
