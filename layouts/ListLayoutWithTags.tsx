@@ -123,7 +123,7 @@ export default function ListLayoutWithTags({
       ? initialDisplayPosts
       : posts
 
-  const tabs = ['All', 'Journal', 'Conference', 'Datasets', 'Posters & Demos', 'Announcements']
+  const tabs = ['All', 'Journal', 'Conference', 'Datasets', 'Posters & Demos' /*, 'Announcements'*/]
 
   const filteredPosts = displayPosts.filter((post) => {
     const searchContent = (
@@ -163,10 +163,10 @@ export default function ListLayoutWithTags({
         <div className="mb-6">
           <div className="relative max-w-lg">
             <input
-              aria-label="Search publications"
+              aria-label="Search research/articles"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search publications..."
+              placeholder="Search research/articles..."
               className="focus:border-primary-500 focus:ring-primary-500 block w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-900 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
@@ -206,17 +206,17 @@ export default function ListLayoutWithTags({
         {/* Blog Posts Grid */}
         <div className="space-y-8">
           {filteredPosts.map((post) => {
-            const { path, date, title, summary, tags, images } = post
+            const { slug, date, title, summary, tags, images } = post
             const imageUrl =
               images?.[0] || 'https://images.unsplash.com/photo-1516414447565-b14be0adf13e?w=600'
 
             return (
               <article
-                key={path}
+                key={slug}
                 className="group border-primary-600 dark:border-primary-500 overflow-hidden rounded-lg border-l-4 bg-white shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-gray-800"
               >
                 {/* Image */}
-                {/* <Link href={`/${path}`} className="block">
+                {/* <Link href={`/research/${slug}`} className="block">
                   <div
                     className="aspect-video w-full bg-cover bg-center bg-no-repeat transition-transform duration-300 group-hover:scale-105"
                     style={{ backgroundImage: `url('${imageUrl}')` }}
@@ -233,7 +233,7 @@ export default function ListLayoutWithTags({
                   )}
 
                   {/* Title */}
-                  <Link href={`/${path}`} className="block">
+                  <Link href={`/research/${slug}`} className="block">
                     <h3 className="group-hover:text-primary-700 dark:group-hover:text-primary-400 mb-4 text-xl leading-tight font-bold text-gray-900 transition-colors md:text-2xl dark:text-white">
                       {title}
                     </h3>
@@ -251,7 +251,7 @@ export default function ListLayoutWithTags({
 
                   {/* Read More Link */}
                   <Link
-                    href={`/${path}`}
+                    href={`/research/${slug}`}
                     className="group/link text-primary-700 hover:text-primary-900 dark:text-primary-400 dark:hover:text-primary-300 inline-flex items-center text-sm font-semibold transition-colors md:text-base"
                   >
                     <span>Read Full Article</span>
